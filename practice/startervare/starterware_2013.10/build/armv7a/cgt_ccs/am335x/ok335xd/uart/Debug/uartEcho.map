@@ -1,0 +1,448 @@
+******************************************************************************
+                  TI ARM Linker PC v5.0.4                      
+******************************************************************************
+>> Linked Tue Nov 26 18:58:50 2013
+
+OUTPUT FILE NAME:   <../../../../../../../binary/armv7a/cgt_ccs/am335x/ok335xd/uart/Debug/uartEcho.out>
+ENTRY POINT SYMBOL: "Entry"  address: 80000000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  DDR_MEM               80000000   07ffffff  00003144  07ffcebb  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+80000000    80000000    00002ec8   00002ec8    r-x
+  80000000    80000000    000000d4   000000d4    r-x .text:Entry
+  800000d4    800000d4    00002df4   00002df4    r-x .text
+80002ec8    80002ec8    00000200   00000000    rw-
+  80002ec8    80002ec8    00000200   00000000    rw- .bss
+800030c8    800030c8    0000003c   0000003c    r--
+  800030c8    800030c8    0000003c   0000003c    r-- .const
+80003104    80003104    00000038   00000038    rw-
+  80003104    80003104    00000038   00000038    rw- .data
+87fffff0    87fffff0    00000008   00000000    rw-
+  87fffff0    87fffff0    00000008   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text:Entry 
+*          0    80000000    000000d4     
+                  80000000    000000c8     system.lib : init.obj (.text:Entry)
+                  800000c8    0000000c     rtsv7A8_A_le_eabi.lib : auto_init.obj (.tramp.__TI_auto_init.1)
+
+.text      0    800000d4    00002df4     
+                  800000d4    00001d08     drivers.lib : uart_irda_cir.obj (.text)
+                  80001ddc    00000488     system.lib : cp15.obj (.text)
+                  80002264    000003e4                : interrupt.obj (.text)
+                  80002648    000001fc     uartEcho.obj (.text)
+                  80002844    00000180     rtsv7A8_A_le_eabi.lib : memcpy32.obj (.text)
+                  800029c4    0000010c     system.lib : exceptionhandler.obj (.text)
+                  80002ad0    000000f4     rtsv7A8_A_le_eabi.lib : u_div32.obj (.text)
+                  80002bc4    000000d4                           : auto_init.obj (.text)
+                  80002c98    000000a0     platform.lib : uart.obj (.text)
+                  80002d38    00000084     system.lib : startup.obj (.text)
+                  80002dbc    00000080     rtsv7A8_A_le_eabi.lib : cpy_tbl.obj (.text)
+                  80002e3c    00000060     system.lib : cpu.obj (.text)
+                  80002e9c    00000020     rtsv7A8_A_le_eabi.lib : icall32.obj (.text)
+                  80002ebc    0000000c     system.lib : cpu.obj (.text:CPUIntStatus)
+
+.bss       0    80002ec8    00000200     UNINITIALIZED
+                  80002ec8    00000200     system.lib : interrupt.obj (.bss:fnRAMVectors)
+
+.const     0    800030c8    0000003c     
+                  800030c8    00000038     system.lib : startup.obj (.const:vecTbl)
+                  80003100    00000004                : startup.obj (.const)
+
+.data      0    80003104    00000038     
+                  80003104    00000030     uartEcho.obj (.data:txArray)
+                  80003134    00000008     uartEcho.obj (.data)
+
+.stack     0    87fffff0    00000008     UNINITIALIZED
+                  87fffff0    00000008     --HOLE--
+
+
+FAR CALL TRAMPOLINES
+
+callee name               trampoline name
+   callee addr  tramp addr   call addr  call info
+--------------  -----------  ---------  ----------------
+__TI_auto_init            $Tramp$AA$S$$__TI_auto_init
+   80002bc4     800000c8     800000a0   system.lib : init.obj (.text:Entry)
+
+[1 trampolines]
+[1 trampoline calls]
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+80003100   AM335X_VECTOR_BASE
+80002ab8   AbortHandler
+80002238   CP15AuxControlFeatureDisable
+80002224   CP15AuxControlFeatureEnable
+800021cc   CP15BranchPredictionDisable
+800021bc   CP15BranchPredictionEnable
+800021b0   CP15BranchPredictorInvalidate
+800021ec   CP15ControlFeatureDisable
+80002200   CP15ControlFeatureEnable
+80001ec8   CP15DCacheClean
+80002000   CP15DCacheCleanBuff
+80001f5c   CP15DCacheCleanFlush
+80002054   CP15DCacheCleanFlushBuff
+80001df8   CP15DCacheDisable
+80001e24   CP15DCacheEnable
+80001e34   CP15DCacheFlush
+800020a8   CP15DCacheFlushBuff
+800021dc   CP15DomainAccessClientSet
+80001ddc   CP15ICacheDisable
+80001e14   CP15ICacheEnable
+80001ff0   CP15ICacheFlush
+8000210c   CP15ICacheFlushBuff
+80002178   CP15MMUDisable
+80002190   CP15MMUEnable
+8000224c   CP15MainIdPrimPartNumGet
+8000216c   CP15TlbInvalidate
+80002160   CP15Ttb0Set
+80002214   CP15TtbCtlTtb0Config
+800021a4   CP15VectorBaseAddrSet
+80002e58   CPUAbortHandler
+80002ebc   CPUIntStatus
+80002e3c   CPUSwitchToPrivilegedMode
+80002e44   CPUSwitchToUserMode
+80002e7c   CPUfiqd
+80002e8c   CPUfiqe
+80002e5c   CPUirqd
+80002e6c   CPUirqe
+80000000   Entry
+80002ab4   FIQHandler
+80002e9c   IND_CALL
+80002a08   IRQHandler
+800022ac   IntAINTCInit
+800023e4   IntActiveIrqNumGet
+8000247c   IntCurrIrqPriorityGet
+800025d4   IntDisable
+800025ec   IntEnable
+80002468   IntFuncClkAutoGateSet
+80002454   IntFuncClkFreeRunSet
+800023d0   IntIfClkAutoGateSet
+800023bc   IntIfClkFreeRunSet
+800025bc   IntMasterFIQDisable
+800025b0   IntMasterFIQEnable
+800025a4   IntMasterIRQDisable
+80002598   IntMasterIRQEnable
+800025c8   IntMasterStatusGet
+8000255c   IntPendingIrqMaskedStatusGet
+8000231c   IntPrioritySet
+8000248c   IntPriorityThresholdGet
+8000249c   IntPriorityThresholdSet
+80002418   IntProtectionDisable
+80002408   IntProtectionEnable
+800024bc   IntRawStatusGet
+80002268   IntRegister
+8000252c   IntSoftwareIntClear
+800024fc   IntSoftwareIntSet
+800023f4   IntSpurIrqFlagGet
+80002440   IntSyncClkAutoGateSet
+8000242c   IntSyncClkFreeRunSet
+80002388   IntSystemDisable
+80002354   IntSystemEnable
+8000228c   IntUnRegister
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+800029e0   SVC_Handler
+80002ce0   UART0ModuleClkConfig
+8000170c   UARTAutoIdleModeControl
+800014b8   UARTAutoRTSAutoCTSControl
+80001bf4   UARTAutobaudParityGet
+80001c8c   UARTAutobaudSpeedGet
+80001c40   UARTAutobaudWordLenGet
+80000454   UARTBreakCtl
+80001194   UARTCharGet
+8000113c   UARTCharGetNonBlocking
+800011ec   UARTCharGetTimeout
+8000127c   UARTCharPut
+800010d0   UARTCharPutNonBlocking
+8000107c   UARTCharsAvail
+80001b64   UARTDMACounterResetControl
+80000990   UARTDMADisable
+80000934   UARTDMAEnable
+80001a7c   UARTDSRInterruptControl
+80000398   UARTDivisorLatchDisable
+80000374   UARTDivisorLatchEnable
+800001f0   UARTDivisorLatchWrite
+80000134   UARTDivisorValCompute
+80000ab4   UARTEnhanFuncBitValRestore
+80000a54   UARTEnhanFuncEnable
+800012f0   UARTFIFOCharGet
+800012d0   UARTFIFOCharPut
+80000570   UARTFIFOConfig
+80001464   UARTFIFOEnableStatusGet
+800009c8   UARTFIFORegisterWrite
+80001a18   UARTFIFOTrigLvlGranControl
+8000130c   UARTFIFOWrite
+80001750   UARTFlowCtrlTrigLvlConfig
+80001684   UARTIdleModeConfigure
+80000f60   UARTIntDisable
+80000e7c   UARTIntEnable
+800013c4   UARTIntIdentityGet
+80001410   UARTIntPendingStatusGet
+80000498   UARTLineCharacConfig
+800018c4   UARTLoopbackModeControl
+80001938   UARTModemControlClear
+80001908   UARTModemControlSet
+80001984   UARTModemStatusChangeCheck
+80001968   UARTModemStatusGet
+80001650   UARTModuleReset
+80001d38   UARTModuleVersionNumberGet
+800000d4   UARTOperatingModeSelect
+80000554   UARTParityModeGet
+80000510   UARTParityModeSet
+80002c98   UARTPinMuxSetup
+8000160c   UARTPulseShapingControl
+80001b48   UARTRXCTSDSRTransitionStatusGet
+80001b04   UARTRXCTSDSRWakeUpConfigure
+80000434   UARTRegConfModeRestore
+800003bc   UARTRegConfigModeEnable
+800019a0   UARTResumeOperation
+80001378   UARTRxErrorGet
+80001bdc   UARTRxFIFOLevelGet
+80001d1c   UARTScratchPadRegRead
+80001cd8   UARTScratchPadRegWrite
+800015a8   UARTSoftwareFlowCtrlOptSet
+80001028   UARTSpaceAvail
+80001544   UARTSpecialCharDetectControl
+80000b18   UARTSubConfigMSRSPRModeEn
+80000bf0   UARTSubConfigTCRTLRModeEn
+80000cc8   UARTSubConfigXOFFModeEn
+80000da0   UARTTCRTLRBitValRestore
+80001d54   UARTTxDMAThresholdControl
+80001d98   UARTTxDMAThresholdValConfig
+80001ac0   UARTTxEmptyIntControl
+80001ba8   UARTTxFIFOFullStatusGet
+80001bc4   UARTTxFIFOLevelGet
+800016c8   UARTWakeUpControl
+800019e8   UARTWakeUpEventsDisable
+800019b8   UARTWakeUpEventsEnable
+800017a0   UARTXON1XOFF1ValProgram
+800017d0   UARTXON2XOFF2ValProgram
+80001800   UARTXONAnyFeatureControl
+80002ab8   UndefInstHandler
+87fffff8   __STACK_END
+00000008   __STACK_SIZE
+UNDEFED    __TI_CINIT_Base
+UNDEFED    __TI_CINIT_Limit
+UNDEFED    __TI_Handler_Table_Base
+00000001   __TI_args_main
+80002bc4   __TI_auto_init
+80000000   __TI_static_base__
+80002844   __aeabi_memcpy
+80002844   __aeabi_memcpy4
+80002844   __aeabi_memcpy8
+80002ad0   __aeabi_uidivmod
+ffffffff   __binit__
+ffffffff   __c_args__
+87fffff0   __stack
+ffffffff   binit
+800030c8   bss_end
+80002ec8   bss_start
+80002dbc   copy_in
+80002ec8   fnRAMVectors
+80002648   main
+80002844   memcpy
+80002d38   start_boot
+80003104   txArray
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000008   __STACK_SIZE
+80000000   Entry
+80000000   __TI_static_base__
+800000d4   UARTOperatingModeSelect
+80000134   UARTDivisorValCompute
+800001f0   UARTDivisorLatchWrite
+80000374   UARTDivisorLatchEnable
+80000398   UARTDivisorLatchDisable
+800003bc   UARTRegConfigModeEnable
+80000434   UARTRegConfModeRestore
+80000454   UARTBreakCtl
+80000498   UARTLineCharacConfig
+80000510   UARTParityModeSet
+80000554   UARTParityModeGet
+80000570   UARTFIFOConfig
+80000934   UARTDMAEnable
+80000990   UARTDMADisable
+800009c8   UARTFIFORegisterWrite
+80000a54   UARTEnhanFuncEnable
+80000ab4   UARTEnhanFuncBitValRestore
+80000b18   UARTSubConfigMSRSPRModeEn
+80000bf0   UARTSubConfigTCRTLRModeEn
+80000cc8   UARTSubConfigXOFFModeEn
+80000da0   UARTTCRTLRBitValRestore
+80000e7c   UARTIntEnable
+80000f60   UARTIntDisable
+80001028   UARTSpaceAvail
+8000107c   UARTCharsAvail
+800010d0   UARTCharPutNonBlocking
+8000113c   UARTCharGetNonBlocking
+80001194   UARTCharGet
+800011ec   UARTCharGetTimeout
+8000127c   UARTCharPut
+800012d0   UARTFIFOCharPut
+800012f0   UARTFIFOCharGet
+8000130c   UARTFIFOWrite
+80001378   UARTRxErrorGet
+800013c4   UARTIntIdentityGet
+80001410   UARTIntPendingStatusGet
+80001464   UARTFIFOEnableStatusGet
+800014b8   UARTAutoRTSAutoCTSControl
+80001544   UARTSpecialCharDetectControl
+800015a8   UARTSoftwareFlowCtrlOptSet
+8000160c   UARTPulseShapingControl
+80001650   UARTModuleReset
+80001684   UARTIdleModeConfigure
+800016c8   UARTWakeUpControl
+8000170c   UARTAutoIdleModeControl
+80001750   UARTFlowCtrlTrigLvlConfig
+800017a0   UARTXON1XOFF1ValProgram
+800017d0   UARTXON2XOFF2ValProgram
+80001800   UARTXONAnyFeatureControl
+800018c4   UARTLoopbackModeControl
+80001908   UARTModemControlSet
+80001938   UARTModemControlClear
+80001968   UARTModemStatusGet
+80001984   UARTModemStatusChangeCheck
+800019a0   UARTResumeOperation
+800019b8   UARTWakeUpEventsEnable
+800019e8   UARTWakeUpEventsDisable
+80001a18   UARTFIFOTrigLvlGranControl
+80001a7c   UARTDSRInterruptControl
+80001ac0   UARTTxEmptyIntControl
+80001b04   UARTRXCTSDSRWakeUpConfigure
+80001b48   UARTRXCTSDSRTransitionStatusGet
+80001b64   UARTDMACounterResetControl
+80001ba8   UARTTxFIFOFullStatusGet
+80001bc4   UARTTxFIFOLevelGet
+80001bdc   UARTRxFIFOLevelGet
+80001bf4   UARTAutobaudParityGet
+80001c40   UARTAutobaudWordLenGet
+80001c8c   UARTAutobaudSpeedGet
+80001cd8   UARTScratchPadRegWrite
+80001d1c   UARTScratchPadRegRead
+80001d38   UARTModuleVersionNumberGet
+80001d54   UARTTxDMAThresholdControl
+80001d98   UARTTxDMAThresholdValConfig
+80001ddc   CP15ICacheDisable
+80001df8   CP15DCacheDisable
+80001e14   CP15ICacheEnable
+80001e24   CP15DCacheEnable
+80001e34   CP15DCacheFlush
+80001ec8   CP15DCacheClean
+80001f5c   CP15DCacheCleanFlush
+80001ff0   CP15ICacheFlush
+80002000   CP15DCacheCleanBuff
+80002054   CP15DCacheCleanFlushBuff
+800020a8   CP15DCacheFlushBuff
+8000210c   CP15ICacheFlushBuff
+80002160   CP15Ttb0Set
+8000216c   CP15TlbInvalidate
+80002178   CP15MMUDisable
+80002190   CP15MMUEnable
+800021a4   CP15VectorBaseAddrSet
+800021b0   CP15BranchPredictorInvalidate
+800021bc   CP15BranchPredictionEnable
+800021cc   CP15BranchPredictionDisable
+800021dc   CP15DomainAccessClientSet
+800021ec   CP15ControlFeatureDisable
+80002200   CP15ControlFeatureEnable
+80002214   CP15TtbCtlTtb0Config
+80002224   CP15AuxControlFeatureEnable
+80002238   CP15AuxControlFeatureDisable
+8000224c   CP15MainIdPrimPartNumGet
+80002268   IntRegister
+8000228c   IntUnRegister
+800022ac   IntAINTCInit
+8000231c   IntPrioritySet
+80002354   IntSystemEnable
+80002388   IntSystemDisable
+800023bc   IntIfClkFreeRunSet
+800023d0   IntIfClkAutoGateSet
+800023e4   IntActiveIrqNumGet
+800023f4   IntSpurIrqFlagGet
+80002408   IntProtectionEnable
+80002418   IntProtectionDisable
+8000242c   IntSyncClkFreeRunSet
+80002440   IntSyncClkAutoGateSet
+80002454   IntFuncClkFreeRunSet
+80002468   IntFuncClkAutoGateSet
+8000247c   IntCurrIrqPriorityGet
+8000248c   IntPriorityThresholdGet
+8000249c   IntPriorityThresholdSet
+800024bc   IntRawStatusGet
+800024fc   IntSoftwareIntSet
+8000252c   IntSoftwareIntClear
+8000255c   IntPendingIrqMaskedStatusGet
+80002598   IntMasterIRQEnable
+800025a4   IntMasterIRQDisable
+800025b0   IntMasterFIQEnable
+800025bc   IntMasterFIQDisable
+800025c8   IntMasterStatusGet
+800025d4   IntDisable
+800025ec   IntEnable
+80002648   main
+80002844   __aeabi_memcpy
+80002844   __aeabi_memcpy4
+80002844   __aeabi_memcpy8
+80002844   memcpy
+800029e0   SVC_Handler
+80002a08   IRQHandler
+80002ab4   FIQHandler
+80002ab8   AbortHandler
+80002ab8   UndefInstHandler
+80002ad0   __aeabi_uidivmod
+80002bc4   __TI_auto_init
+80002c98   UARTPinMuxSetup
+80002ce0   UART0ModuleClkConfig
+80002d38   start_boot
+80002dbc   copy_in
+80002e3c   CPUSwitchToPrivilegedMode
+80002e44   CPUSwitchToUserMode
+80002e58   CPUAbortHandler
+80002e5c   CPUirqd
+80002e6c   CPUirqe
+80002e7c   CPUfiqd
+80002e8c   CPUfiqe
+80002e9c   IND_CALL
+80002ebc   CPUIntStatus
+80002ec8   bss_start
+80002ec8   fnRAMVectors
+800030c8   bss_end
+80003100   AM335X_VECTOR_BASE
+80003104   txArray
+87fffff0   __stack
+87fffff8   __STACK_END
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+UNDEFED    __TI_CINIT_Base
+UNDEFED    __TI_CINIT_Limit
+UNDEFED    __TI_Handler_Table_Base
+
+[175 symbols]

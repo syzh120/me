@@ -1,0 +1,389 @@
+* Texas Instruments Data Flash File
+* File created Mon Mar 16 16:24:37 2015
+*
+* Device Number 2610
+* Firmware Version 0.16
+* Build Number 20
+* Order Number 0
+*
+* bqz Device Number 2610
+* bqz Firmware Version 0.16
+* bqz Build Number 20
+*
+* Field Order: Class name, Subclass name, Parameter name, Parameter Value, Units
+Calibration,Voltage,Cell Gain,12101,-
+Calibration,Voltage,Pack Gain,49669,-
+Calibration,Voltage,BAT Gain,48936,-
+Calibration,Current,CC Gain,1.036,mOhm
+Calibration,Current,Capacity Gain,1.036,mOhm
+Calibration,Current Offset,CC Offset,0,-
+Calibration,Current Offset,Coulomb Counter Offset Samples,64,-
+Calibration,Current Offset,Board Offset,0,-
+Calibration,Current Offset,CC Auto Config,03,hex
+Calibration,Current Offset,CC Auto Offset,0,-
+Calibration,Temperature,Internal Temp Offset,0,degC
+Calibration,Temperature,External1 Temp Offset,0,degC
+Calibration,Internal Temp Model,Int Gain,-12143,-
+Calibration,Internal Temp Model,Int base offset,6232,-
+Calibration,Internal Temp Model,Int Minimum AD,0,-
+Calibration,Internal Temp Model,Int Maximum Temp,6232,0.1degK
+Calibration,Cell Temperature Model,Coeff a1,-11130,-
+Calibration,Cell Temperature Model,Coeff a2,19142,-
+Calibration,Cell Temperature Model,Coeff a3,-19262,-
+Calibration,Cell Temperature Model,Coeff a4,28203,-
+Calibration,Cell Temperature Model,Coeff a5,892,-
+Calibration,Cell Temperature Model,Coeff b1,328,-
+Calibration,Cell Temperature Model,Coeff b2,-605,-
+Calibration,Cell Temperature Model,Coeff b3,-2443,-
+Calibration,Cell Temperature Model,Coeff b4,4696,-
+Calibration,Cell Temperature Model,Rc0,11703,-
+Calibration,Cell Temperature Model,Adc0,11703,-
+Calibration,Cell Temperature Model,Rpad,0,-
+Calibration,Cell Temperature Model,Rint,0,-
+Calibration,Current Deadband,Deadband,3,mA
+Calibration,Current Deadband,Coulomb Counter Deadband,9,116nV
+Settings,Protection,Protection Configuration,00,hex
+Settings,Protection,Enabled Protections A,57,hex
+Settings,Protection,Enabled Protections B,35,hex
+Settings,Protection,Enabled Protections C,3c,hex
+Settings,Protection,Enabled Protections D,0c,hex
+Settings,Permanent Failure,Enabled PF A,00,hex
+Settings,Configuration,Charging Configuration,00,hex
+Settings,Configuration,Temperature Enable,03,hex
+Settings,Configuration,DA Configuration,11,hex
+Settings,Configuration,FET Options,60,hex
+Settings,Configuration,I2C Gauging Configuration,07,hex
+Settings,Configuration,I2C Configuration,00,hex
+Settings,Configuration,Power Config,00,hex
+Settings,Configuration,SOC Flag Config A,0c8c,hex
+Settings,Configuration,SOC Flag Config B,8c,hex
+Settings,Configuration,Balancing Configuration,01,hex
+Settings,Configuration,IT Gauging Configuration,d4de,hex
+Settings,AFE,AFE Protection Control,70,hex
+Settings,AFE,ZVCHG Exit Threshold,2200,mV
+Settings,Charger,Device Address,d4,hex
+Settings,Charger,Voltage Register,0c,hex
+Settings,Charger,Current Register,0a,hex
+Settings,Charger,Broadcast Pacing,15,s
+Settings,Manufacturing,Mfg Status init,0038,hex
+Protections,CUV,Threshold,2500,mV
+Protections,CUV,Delay,2,s
+Protections,CUV,Recovery,3000,mV
+Protections,COV,Threshold Low Temp,4300,mV
+Protections,COV,Threshold Standard Temp,4300,mV
+Protections,COV,Threshold High Temp,4300,mV
+Protections,COV,Threshold Rec Temp,4300,mV
+Protections,COV,Delay,2,s
+Protections,COV,Recovery Low Temp,4100,mV
+Protections,COV,Recovery Standard Temp,4100,mV
+Protections,COV,Recovery High Temp,4100,mV
+Protections,COV,Recovery Rec Temp,4100,mV
+Protections,OCC,Threshold,10000,mA
+Protections,OCC,Delay,6,s
+Protections,OCC,Recovery Threshold,-200,mA
+Protections,OCC,Recovery Delay,5,s
+Protections,OCD,Threshold,-14000,mA
+Protections,OCD,Delay,6,s
+Protections,OCD,Recovery Threshold,200,mA
+Protections,OCD,Recovery Delay,5,s
+Protections,AOLD,Recovery,5,s
+Protections,AOLD,Threshold,f4,hex
+Protections,ASCC,Recovery,5,s
+Protections,ASCC,Threshold,77,hex
+Protections,ASCD,Recovery,5,s
+Protections,ASCD,Threshold 1,77,hex
+Protections,ASCD,Threshold 2,e7,hex
+Protections,OTC,Threshold,55.0,1degC
+Protections,OTC,Delay,2,s
+Protections,OTC,Recovery,50.0,1degC
+Protections,OTD,Threshold,60.0,1degC
+Protections,OTD,Delay,2,s
+Protections,OTD,Recovery,55.0,1degC
+Protections,UTC,Threshold,0,1degC
+Protections,UTC,Delay,2,s
+Protections,UTC,Recovery,5.0,1degC
+Protections,UTD,Threshold,0,1degC
+Protections,UTD,Delay,2,s
+Protections,UTD,Recovery,5.0,1degC
+Protections,PTO,Charge Threshold,2000,mA
+Protections,PTO,Suspend Threshold,1800,mA
+Protections,PTO,Delay,1800,s
+Protections,PTO,Reset,2,mAh
+Protections,CTO,Charge Threshold,2500,mA
+Protections,CTO,Suspend Threshold,2000,mA
+Protections,CTO,Delay,54000,s
+Protections,CTO,Reset,2,mAh
+Permanent Fail,SOV,Threshold,4500,mV
+Permanent Fail,SOV,Delay,5,s
+Advanced Charge Algorithm,Temperature Ranges,T1 Temp,0,degC
+Advanced Charge Algorithm,Temperature Ranges,T2 Temp,12,degC
+Advanced Charge Algorithm,Temperature Ranges,T5 Temp,20,degC
+Advanced Charge Algorithm,Temperature Ranges,T6 Temp,25,degC
+Advanced Charge Algorithm,Temperature Ranges,T3 Temp,30,degC
+Advanced Charge Algorithm,Temperature Ranges,T4 Temp,55,degC
+Advanced Charge Algorithm,Temperature Ranges,Hysteresis Temp,1,degC
+Advanced Charge Algorithm,Low Temp Charging,Voltage,4000,mV
+Advanced Charge Algorithm,Low Temp Charging,Current Low,132,mA
+Advanced Charge Algorithm,Low Temp Charging,Current Med,352,mA
+Advanced Charge Algorithm,Low Temp Charging,Current High,264,mA
+Advanced Charge Algorithm,Standard Temp Charging,Voltage,4200,mV
+Advanced Charge Algorithm,Standard Temp Charging,Current Low,1980,mA
+Advanced Charge Algorithm,Standard Temp Charging,Current Med,4004,mA
+Advanced Charge Algorithm,Standard Temp Charging,Current High,2992,mA
+Advanced Charge Algorithm,High Temp Charging,Voltage,4000,mV
+Advanced Charge Algorithm,High Temp Charging,Current Low,1012,mA
+Advanced Charge Algorithm,High Temp Charging,Current Med,1980,mA
+Advanced Charge Algorithm,High Temp Charging,Current High,1496,mA
+Advanced Charge Algorithm,Rec Temp Charging,Voltage,4100,mV
+Advanced Charge Algorithm,Rec Temp Charging,Current Low,2508,mA
+Advanced Charge Algorithm,Rec Temp Charging,Current Med,4488,mA
+Advanced Charge Algorithm,Rec Temp Charging,Current High,3520,mA
+Advanced Charge Algorithm,Pre-Charging,Current,88,mA
+Advanced Charge Algorithm,Maintenance Charging,Current,44,mA
+Advanced Charge Algorithm,Voltage Range,Precharge Start Voltage,2500,mV
+Advanced Charge Algorithm,Voltage Range,Charging Voltage Low,2900,mV
+Advanced Charge Algorithm,Voltage Range,Charging Voltage Med,3600,mV
+Advanced Charge Algorithm,Voltage Range,Charging Voltage High,4000,mV
+Advanced Charge Algorithm,Voltage Range,Charging Voltage Hysteresis,0,mV
+Advanced Charge Algorithm,Termination Config,Charge Term Taper Current,250,mA
+Advanced Charge Algorithm,Termination Config,Charge Term Voltage,75,mV
+Advanced Charge Algorithm,Cell Balancing Config,Bal Time/mAh Cell 1,367,s/mAh
+Advanced Charge Algorithm,Cell Balancing Config,Bal Time/mAh Cell 2,514,s/mAh
+Gas Gauging,Current Thresholds,Dsg Current Threshold,100,mA
+Gas Gauging,Current Thresholds,Chg Current Threshold,50,mA
+Gas Gauging,Current Thresholds,Quit Current,10,mA
+Gas Gauging,Current Thresholds,Dsg Relax Time,1,s
+Gas Gauging,Current Thresholds,Chg Relax Time,60,s
+Gas Gauging,Standby,StandbyCurrent,-10,mA
+Gas Gauging,Max Load,Max Load Current,-500,mA
+Gas Gauging,Max Load,Max Load Rsoc,50,%
+Gas Gauging,Design,Design Capacity mAh,3500,mAh
+Gas Gauging,Design,Design Capacity cWh,2590,cWh
+Gas Gauging,Design,Design Voltage,7400,mV
+Gas Gauging,Cycle,Cycle Count Percentage,90,%
+Gas Gauging,FD,Set Voltage Threshold,3000,mV
+Gas Gauging,FD,Clear Voltage Threshold,3100,mV
+Gas Gauging,FD,Set % RSOC Threshold,0,%
+Gas Gauging,FD,Clear % RSOC Threshold,5,%
+Gas Gauging,FC,Set Voltage Threshold,4200,mV
+Gas Gauging,FC,Clear Voltage Threshold,4100,mV
+Gas Gauging,FC,Set % RSOC Threshold,100,%
+Gas Gauging,FC,Clear % RSOC Threshold,95,%
+Gas Gauging,TD,Set Voltage Threshold,3200,mV
+Gas Gauging,TD,Clear Voltage Threshold,3300,mV
+Gas Gauging,TD,Set % RSOC Threshold,6,%
+Gas Gauging,TD,Clear % RSOC Treshold,8,%
+Gas Gauging,TC,Set Voltage Threshold,4200,mV
+Gas Gauging,TC,Clear Voltage Threshold,4100,mV
+Gas Gauging,TC,Set % RSOC Threshold,100,%
+Gas Gauging,TC,Clear % RSOC Threshold,95,%
+Gas Gauging,State,Cycle Count,1,-
+Gas Gauging,State,Qmax Cell 1,3575,mAh
+Gas Gauging,State,Qmax Cell 2,3660,mAh
+Gas Gauging,State,Qmax Pack,3575,mAh
+Gas Gauging,State,Qmax Cycle Count,1,-
+Gas Gauging,State,Update Status,0e,-
+Gas Gauging,State,Cell 1 Chg Voltage at EoC,4238,mV
+Gas Gauging,State,Cell 2 Chg Voltage at EoC,4113,mV
+Gas Gauging,State,Current at EoC,244,mA
+Gas Gauging,State,Avg I Last Run,-709,mA
+Gas Gauging,State,Avg P Last Run,-533,cW
+Gas Gauging,State,Delta Voltage,23,mV
+Gas Gauging,State,Temp k,2.27,0.1degC/2560mW
+Gas Gauging,State,Temp a,9855,-
+Gas Gauging,State,Max Avg I Last Run,-2000,mA
+Gas Gauging,State,Max Avg P Last Run,-3022,cW
+Gas Gauging,IT Cfg,Load Select,7,-
+Gas Gauging,IT Cfg,Load Mode,1,-
+Gas Gauging,IT Cfg,User Rate-mA,0,mA
+Gas Gauging,IT Cfg,User Rate-cW,0,cW
+Gas Gauging,IT Cfg,Reserve Cap-mAh,0,mAh
+Gas Gauging,IT Cfg,Reserve Cap-cWh,0,cWh
+Gas Gauging,IT Cfg,Pack Resistance,30,mOhms
+Gas Gauging,IT Cfg,System Resistance,0,mOhms
+Gas Gauging,IT Cfg,Ra Filter,50.0,%
+Gas Gauging,IT Cfg,Ra Max Delta,15,%
+Gas Gauging,IT Cfg,Resistance Parameter Filter,65142,-
+Gas Gauging,IT Cfg,Near EDV Ra Param Filter,59220,-
+Gas Gauging,IT Cfg,Qmax Delta,5,%
+Gas Gauging,IT Cfg,Qmax Upper Bound,130,%
+Gas Gauging,IT Cfg,Term Voltage,6000,mV
+Gas Gauging,IT Cfg,Term Voltage Delta,300,mV
+Gas Gauging,IT Cfg,Term Min Cell V,2800,mV
+Gas Gauging,IT Cfg,Voltage Consistency Delta,300,mV
+Gas Gauging,IT Cfg,Fast Scale Start SOC,10,%
+Gas Gauging,Smoothing,Smooth Relax Time,1000,s
+Gas Gauging,Condition Flag,Max Error Limit,100,%
+Gas Gauging,SoH,SoH Load Rate,5.0,hour Rate
+Power,Power,Valid Update Voltage,2800,mV
+Power,Shutdown,Shutdown Voltage,2300,mV
+Power,Shutdown,Shutdown Time,10,s
+Power,Shutdown,Charger Present Threshold,3000,mV
+Power,Sleep,Sleep Current,10,mA
+Power,Sleep,Bus Timeout,5,s
+Power,Sleep,Voltage Time,5,s
+Power,Sleep,Current Time,20,s
+Power,Sleep,Wake Comparitor,00,hex
+Power,Ship,FET Off Time,10,s
+Power,Ship,Delay,20,s
+Power,Ship,Auto Ship Time,1440,min
+PF Status,Device Status Data,Safety Alert A,00,hex
+PF Status,Device Status Data,Safety Status A,00,hex
+PF Status,Device Status Data,Safety Alert B,00,hex
+PF Status,Device Status Data,Safety Status B,00,hex
+PF Status,Device Status Data,Safety Alert C,00,hex
+PF Status,Device Status Data,Safety Status C,00,hex
+PF Status,Device Status Data,Safety Alert D,00,hex
+PF Status,Device Status Data,Safety Status D,00,hex
+PF Status,Device Status Data,PF Alert A,00,hex
+PF Status,Device Status Data,PF Status A,00,hex
+PF Status,Device Status Data,PF Status D,00,hex
+PF Status,Device Status Data,Operation Status A,0000,hex
+PF Status,Device Status Data,Operation Status B,0000,hex
+PF Status,Device Status Data,Temp Range,00,hex
+PF Status,Device Status Data,Charging Status A,00,hex
+PF Status,Device Status Data,Charging Status B,00,hex
+PF Status,Device Status Data,Gauging Status,00,hex
+PF Status,Device Status Data,IT Status,0000,hex
+PF Status,Device Voltage Data,Cell 1 Voltage,0,mV
+PF Status,Device Voltage Data,Cell 2 Voltage,0,mV
+PF Status,Device Voltage Data,Battery Direct Voltage,0,mV
+PF Status,Device Voltage Data,Pack Voltage,0,mV
+PF Status,Device Current Data,Current,0,mA
+PF Status,Device Temperature Data,Internal Temperature,-273.2,degC
+PF Status,Device Temperature Data,External 1 Temperature,-273.2,degC
+PF Status,Device Temperature Data,External 2 Temperature,-273.2,degC
+PF Status,Device Gauging Data,Cell 1 Dod0,0,
+PF Status,Device Gauging Data,Cell 2 Dod0,0,
+PF Status,Device Gauging Data,Passed Charge,0,mAh
+PF Status,AFE Regs,AFE Interrupt Status,00,hex
+PF Status,AFE Regs,AFE FET Status,00,hex
+PF Status,AFE Regs,AFE RXIN,00,hex
+PF Status,AFE Regs,AFE Latch Status,00,hex
+PF Status,AFE Regs,AFE Interrupt Enable,00,hex
+PF Status,AFE Regs,AFE FET Control,00,hex
+PF Status,AFE Regs,AFE RXIEN,00,hex
+PF Status,AFE Regs,AFE RLOUT,00,hex
+PF Status,AFE Regs,AFE RHOUT,00,hex
+PF Status,AFE Regs,AFE RHINT,00,hex
+PF Status,AFE Regs,AFE Cell Balance,00,hex
+PF Status,AFE Regs,AFE AD/CC Control,00,hex
+PF Status,AFE Regs,AFE ADC Mux,00,hex
+PF Status,AFE Regs,AFE LED Output,00,hex
+PF Status,AFE Regs,AFE State Control,00,hex
+PF Status,AFE Regs,AFE LED/Wake Control,00,hex
+PF Status,AFE Regs,AFE Protection Control,00,hex
+PF Status,AFE Regs,AFE OCD,00,hex
+PF Status,AFE Regs,AFE SCC,00,hex
+PF Status,AFE Regs,AFE SCD1,00,hex
+PF Status,AFE Regs,AFE SCD2,00,hex
+System Data,Manufacturer Data,Manufacturer Info Block A01,01,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A02,69,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A03,73,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A04,69,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A05,6e,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A06,64,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A07,61,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A08,74,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A09,61,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A10,20,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A11,15,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A12,03,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A13,16,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A14,11,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A15,84,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A16,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A17,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A18,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A19,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A20,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A21,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A22,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A23,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A24,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A25,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A26,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A27,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A28,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A29,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A30,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A31,00,Hex
+System Data,Manufacturer Data,Manufacturer Info Block A32,00,Hex
+System Data,Integrity,Static DF Signature,0000,hex
+System Data,Integrity,Static Chem DF Signature,11f0,hex
+System Data,Integrity,All DF Signature,0000,hex
+I2C Configuration,Data,Manufacture Date,2015-3-16,date
+I2C Configuration,Data,Serial Number,0001,hex
+I2C Configuration,Data,Manufacturer Name,Texas Instruments,-
+I2C Configuration,Data,Device Name,bq28z610,-
+I2C Configuration,Data,Device Chemistry,LION,-
+Lifetimes,Voltage,Cell 1 Max Voltage,0,mV
+Lifetimes,Voltage,Cell 2 Max Voltage,0,mV
+Lifetimes,Current,Max Charge Current,0,mA
+Lifetimes,Current,Max Discharge Current,0,mA
+Lifetimes,Temperature,Max Temp Cell,-128,degC
+Lifetimes,Temperature,Min Temp Cell,127,degC
+Ra Table,R_a0,Cell0 R_a flag,0055,-
+Ra Table,R_a0,Cell0 R_a 0,102,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 1,123,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 2,115,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 3,129,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 4,105,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 5,107,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 6,121,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 7,104,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 8,102,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 9,98,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 10,95,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 11,102,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 12,116,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 13,188,2^-10ohm
+Ra Table,R_a0,Cell0 R_a 14,1964,2^-10ohm
+Ra Table,R_a1,Cell1 R_a flag,0055,-
+Ra Table,R_a1,Cell1 R_a 0,104,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 1,125,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 2,147,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 3,123,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 4,123,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 5,101,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 6,105,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 7,85,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 8,85,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 9,85,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 10,86,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 11,95,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 12,108,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 13,183,2^-10ohm
+Ra Table,R_a1,Cell1 R_a 14,1910,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a flag,ffff,-
+Ra Table,R_a0x,xCell0 R_a 0,102,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 1,123,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 2,115,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 3,129,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 4,105,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 5,107,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 6,121,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 7,104,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 8,102,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 9,98,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 10,95,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 11,102,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 12,116,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 13,188,2^-10ohm
+Ra Table,R_a0x,xCell0 R_a 14,1964,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a flag,ffff,-
+Ra Table,R_a1x,xCell1 R_a 0,104,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 1,125,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 2,147,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 3,123,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 4,123,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 5,101,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 6,105,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 7,85,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 8,85,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 9,85,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 10,86,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 11,95,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 12,108,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 13,183,2^-10ohm
+Ra Table,R_a1x,xCell1 R_a 14,1910,2^-10ohm

@@ -1,0 +1,30 @@
+计划将kernel中的logo与uboot中的logo统一，都显示烧写进nand的图片。
+1.初步做了如下尝试：
+a.在uboot中将地址改为固定值
+//	par->vram_virt = malloc(par->vram_size);
+	par->vram_virt = 0x9fe00000;
+b.在uboot传到kernel的bootargs中添加一项 mem=510m，保留2M的空间
+c.在kernel中lcd驱动中
+将uboot中的lcd显示基地址重新映射
+#if 1 //djf 20170515 add
+#define bootloaderfb 0x9fe00000u
+	if (bootloaderfb) {
+		u8 *logo_virt_buf;
+		logo_virt_buf = (void *)ioremap(bootloaderfb, da8xx_fb_info->var.yres * da8xx_fb_info->fix.line_length);
+		if(NULL != logo_virt_buf){
+			printk(KERN_EMERG "ioremap_nocache() return 0x%x !!!!\n", (unsigned int)logo_virt_buf);
+			memcpy(da8xx_fb_info->screen_base, logo_virt_buf, da8xx_fb_info->var.yres * da8xx_fb_info->fix.line_length);
+			iounmap(logo_virt_buf);
+		}
+		else
+			printk(KERN_EMERG "ioremap_nocache() return null !!!!\n");
+	}
+#endif
+
+其中必须将uboot中lcd的基地址（0x9fe00000）在kernel中reserve，后边kernel中的lcd驱动里才能成功重新映射。这里通过启动参数的设置（mem = 510m, 实际为512）来将0x9fe00000-0x9fffffff这段内存reserve。
+
+但是这样做之后并没有成功，kernel中还是黑屏。万用表测量可得背光及lcd的en脚一直有电，怀疑有可能是lcd显示功能没有打开。
+
+2.还有一种方式是将bmp的图片直接读取到0x9fe00000，然后在kernel中利用clut224的logo的显示方式，将bmp格式转换为clut224显示所用到的3个数组文件来达到效果。
+
+因项目中不再需要做这部分工作，所以作此记录留待日后需要时查看。

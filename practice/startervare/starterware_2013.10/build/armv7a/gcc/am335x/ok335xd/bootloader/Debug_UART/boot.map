@@ -1,0 +1,962 @@
+Archive member included because of file (symbol)
+
+../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                              Debug_UART/bl_platform.o (I2CMasterInitExpClk)
+../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                              Debug_UART/xmodem.o (UARTCharGetTimeout)
+../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                              Debug_UART/bl_platform.o (UARTStdioInit)
+../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+                              ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o) (ASCIIToDigit)
+../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+                              Debug_UART/bl_platform.o (I2CPinMuxSetup)
+../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                              ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o) (UARTConsoleInit)
+../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                              ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o) (UARTPinMuxSetup)
+/opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+                              Debug_UART/xmodem.o (memcpy)
+/opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+                              (__aeabi_uidiv)
+/opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+                              (__aeabi_idiv)
+/opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+                              /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+dataToSlave         0x3               Debug_UART/bl_platform.o
+rCount              0x4               Debug_UART/bl_platform.o
+numOfBytes          0x4               Debug_UART/bl_platform.o
+tCount              0x4               Debug_UART/bl_platform.o
+oppMaxIdx           0x4               Debug_UART/bl_platform.o
+deviceVersion       0x4               Debug_UART/bl_platform.o
+dataFromSlave       0x2               Debug_UART/bl_platform.o
+freqMultDDR         0x4               Debug_UART/bl_platform.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 Debug_UART/bl_copy.o
+ .data          0x00000000        0x0 Debug_UART/bl_copy.o
+ .bss           0x00000000        0x0 Debug_UART/bl_copy.o
+ .data          0x00000000        0x0 Debug_UART/bl_init.o
+ .bss           0x00000000        0x0 Debug_UART/bl_init.o
+ .text          0x00000000        0x0 Debug_UART/bl_main.o
+ .data          0x00000000        0x0 Debug_UART/bl_main.o
+ .bss           0x00000000        0x0 Debug_UART/bl_main.o
+ .bss.DspEntryPoint
+                0x00000000        0x4 Debug_UART/bl_main.o
+ .text          0x00000000        0x0 Debug_UART/bl_platform.o
+ .data          0x00000000        0x0 Debug_UART/bl_platform.o
+ .bss           0x00000000        0x0 Debug_UART/bl_platform.o
+ .data.flag     0x00000000        0x4 Debug_UART/bl_platform.o
+ .text.DDR2PhyInit
+                0x00000000      0x1f4 Debug_UART/bl_platform.o
+ .text.DDR2Init
+                0x00000000      0x27c Debug_UART/bl_platform.o
+ .text          0x00000000        0x0 Debug_UART/bl_uart.o
+ .data          0x00000000        0x0 Debug_UART/bl_uart.o
+ .bss           0x00000000        0x0 Debug_UART/bl_uart.o
+ .text.UARTGetInt
+                0x00000000       0x6c Debug_UART/bl_uart.o
+ .debug_info    0x00000000       0x9e Debug_UART/bl_uart.o
+ .debug_abbrev  0x00000000       0x7c Debug_UART/bl_uart.o
+ .debug_loc     0x00000000       0x2c Debug_UART/bl_uart.o
+ .debug_aranges
+                0x00000000       0x20 Debug_UART/bl_uart.o
+ .debug_ranges  0x00000000       0x10 Debug_UART/bl_uart.o
+ .debug_line    0x00000000       0x6f Debug_UART/bl_uart.o
+ .debug_str     0x00000000      0x100 Debug_UART/bl_uart.o
+ .comment       0x00000000       0x71 Debug_UART/bl_uart.o
+ .ARM.attributes
+                0x00000000       0x37 Debug_UART/bl_uart.o
+ .debug_frame   0x00000000       0x2c Debug_UART/bl_uart.o
+ .text          0x00000000        0x0 Debug_UART/cache.o
+ .data          0x00000000        0x0 Debug_UART/cache.o
+ .bss           0x00000000        0x0 Debug_UART/cache.o
+ .text.CacheDisable
+                0x00000000       0x7c Debug_UART/cache.o
+ .text.CacheEnable
+                0x00000000       0x94 Debug_UART/cache.o
+ .text.CacheInstInvalidateAll
+                0x00000000       0x18 Debug_UART/cache.o
+ .text.CacheInstInvalidateBuff
+                0x00000000       0x30 Debug_UART/cache.o
+ .text.CacheDataCleanInvalidateAll
+                0x00000000       0x18 Debug_UART/cache.o
+ .text.CacheDataCleanAll
+                0x00000000       0x18 Debug_UART/cache.o
+ .text.CacheDataInvalidateAll
+                0x00000000       0x18 Debug_UART/cache.o
+ .text.CacheDataCleanBuff
+                0x00000000       0x30 Debug_UART/cache.o
+ .text.CacheDataInvalidateBuff
+                0x00000000       0x30 Debug_UART/cache.o
+ .text.CacheDataCleanInvalidateBuff
+                0x00000000       0x30 Debug_UART/cache.o
+ .debug_info    0x00000000      0x1b3 Debug_UART/cache.o
+ .debug_abbrev  0x00000000       0x7a Debug_UART/cache.o
+ .debug_loc     0x00000000      0x1b8 Debug_UART/cache.o
+ .debug_aranges
+                0x00000000       0x68 Debug_UART/cache.o
+ .debug_ranges  0x00000000       0x58 Debug_UART/cache.o
+ .debug_line    0x00000000      0x110 Debug_UART/cache.o
+ .debug_str     0x00000000      0x1cf Debug_UART/cache.o
+ .comment       0x00000000       0x71 Debug_UART/cache.o
+ .ARM.attributes
+                0x00000000       0x37 Debug_UART/cache.o
+ .debug_frame   0x00000000      0x128 Debug_UART/cache.o
+ .text          0x00000000      0x488 Debug_UART/cp15.o
+ .data          0x00000000        0x0 Debug_UART/cp15.o
+ .bss           0x00000000        0x0 Debug_UART/cp15.o
+ .ARM.attributes
+                0x00000000       0x1f Debug_UART/cp15.o
+ .debug_line    0x00000000      0x18d Debug_UART/cp15.o
+ .debug_info    0x00000000       0xad Debug_UART/cp15.o
+ .debug_abbrev  0x00000000       0x14 Debug_UART/cp15.o
+ .debug_aranges
+                0x00000000       0x20 Debug_UART/cp15.o
+ .text          0x00000000        0x0 Debug_UART/crc16.o
+ .data          0x00000000        0x0 Debug_UART/crc16.o
+ .bss           0x00000000        0x0 Debug_UART/crc16.o
+ .text          0x00000000        0x0 Debug_UART/device.o
+ .data          0x00000000        0x0 Debug_UART/device.o
+ .bss           0x00000000        0x0 Debug_UART/device.o
+ .text          0x00000000        0x0 Debug_UART/mmu.o
+ .data          0x00000000        0x0 Debug_UART/mmu.o
+ .bss           0x00000000        0x0 Debug_UART/mmu.o
+ .text.MMUInit  0x00000000       0x88 Debug_UART/mmu.o
+ .text.MMUMemRegionMap
+                0x00000000      0x110 Debug_UART/mmu.o
+ .text.MMUEnable
+                0x00000000       0x38 Debug_UART/mmu.o
+ .debug_info    0x00000000      0x16d Debug_UART/mmu.o
+ .debug_abbrev  0x00000000       0xd9 Debug_UART/mmu.o
+ .debug_loc     0x00000000       0x84 Debug_UART/mmu.o
+ .debug_aranges
+                0x00000000       0x30 Debug_UART/mmu.o
+ .debug_ranges  0x00000000       0x20 Debug_UART/mmu.o
+ .debug_line    0x00000000       0xe0 Debug_UART/mmu.o
+ .debug_str     0x00000000      0x166 Debug_UART/mmu.o
+ .comment       0x00000000       0x71 Debug_UART/mmu.o
+ .ARM.attributes
+                0x00000000       0x37 Debug_UART/mmu.o
+ .debug_frame   0x00000000       0x60 Debug_UART/mmu.o
+ .text          0x00000000        0x0 Debug_UART/xmodem.o
+ .data          0x00000000        0x0 Debug_UART/xmodem.o
+ .bss           0x00000000        0x0 Debug_UART/xmodem.o
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterBusy
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterErr
+                0x00000000       0x3c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntEnableEx
+                0x00000000       0x40 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntDisableEx
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntStatus
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntStatusEx
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntRawStatusEx
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntRawStatusClearEx
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterSlaveAddrGet
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDataCountGet
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CFIFOThresholdConfig
+                0x00000000       0xb0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CFIFOClear
+                0x00000000       0x68 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMATxEventEnable
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMARxEventEnable
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMATxEventDisable
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMARxEventDisable
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CBufferStatus
+                0x00000000       0xa4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CActiveOwnAddressGet
+                0x00000000       0xc4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CClockBlockingControl
+                0x00000000      0x124 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2COwnAddressSet
+                0x00000000       0x84 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CAutoIdleEnable
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CGlobalWakeUpEnable
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CGlobalWakeUpDisable
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CIdleModeSelect
+                0x00000000       0x5c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CClockActivitySelect
+                0x00000000       0x5c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CWakeUpEnable
+                0x00000000       0xb0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CWakeUpDisable
+                0x00000000       0xbc ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CContextSave
+                0x00000000       0x70 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CContextRestore
+                0x00000000      0x10c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDivisorLatchEnable
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRegConfModeRestore
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTParityModeSet
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTParityModeGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMAEnable
+                0x00000000       0x80 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMADisable
+                0x00000000       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSubConfigMSRSPRModeEn
+                0x00000000      0x124 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSubConfigXOFFModeEn
+                0x00000000      0x124 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntEnable
+                0x00000000      0x130 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntDisable
+                0x00000000      0x110 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSpaceAvail
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharsAvail
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharPutNonBlocking
+                0x00000000       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGetNonBlocking
+                0x00000000       0x80 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGet
+                0x00000000       0x84 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOCharPut
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOCharGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOWrite
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRxErrorGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntIdentityGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntPendingStatusGet
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOEnableStatusGet
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutoRTSAutoCTSControl
+                0x00000000       0xb4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSpecialCharDetectControl
+                0x00000000       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSoftwareFlowCtrlOptSet
+                0x00000000       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTPulseShapingControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIdleModeConfigure
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutoIdleModeControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFlowCtrlTrigLvlConfig
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXON1XOFF1ValProgram
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXON2XOFF2ValProgram
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXONAnyFeatureControl
+                0x00000000      0x100 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTLoopbackModeControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemControlSet
+                0x00000000       0x44 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemControlClear
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemStatusGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemStatusChangeCheck
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTResumeOperation
+                0x00000000       0x28 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpEventsEnable
+                0x00000000       0x44 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpEventsDisable
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOTrigLvlGranControl
+                0x00000000       0x88 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDSRInterruptControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxEmptyIntControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRXCTSDSRWakeUpConfigure
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRXCTSDSRTransitionStatusGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMACounterResetControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxFIFOFullStatusGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxFIFOLevelGet
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRxFIFOLevelGet
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudParityGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudWordLenGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudSpeedGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTScratchPadRegWrite
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTScratchPadRegRead
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModuleVersionNumberGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxDMAThresholdControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxDMAThresholdValConfig
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .rodata        0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .rodata.g_pcHex
+                0x00000000        0x4 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTStdioRead
+                0x00000000       0xd0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGets
+                0x00000000       0xdc ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPutNum
+                0x00000000      0x178 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPutHexNum
+                0x00000000      0x198 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetNum
+                0x00000000      0x118 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetHexNum
+                0x00000000      0x2ec ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetc
+                0x00000000       0x20 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTwrite
+                0x00000000       0x94 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTprintf
+                0x00000000      0x6b8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTScanf
+                0x00000000      0xa68 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPrintf
+                0x00000000      0x6ac ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.ASCIIToDigit
+                0x00000000       0xe8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.DigitToASCII
+                0x00000000       0xb8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.StrToEthrAddr
+                0x00000000      0x184 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.EthrAddrToStr
+                0x00000000      0x180 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.TimeToStr
+                0x00000000      0x18c ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.DateToStr
+                0x00000000      0x18c ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_info    0x00000000      0x289 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_abbrev  0x00000000       0xce ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_loc     0x00000000      0x108 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_aranges
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_ranges  0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_line    0x00000000      0x1a6 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_str     0x00000000      0x18c ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .ARM.attributes
+                0x00000000       0x37 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_frame   0x00000000       0xb0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .text.I2C1ModuleClkConfig
+                0x00000000       0x70 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UARTConsoleGetc
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .text          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+IRAM_MEM         0x402f0400         0x0001fbff
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD Debug_UART/bl_copy.o
+LOAD Debug_UART/bl_init.o
+LOAD Debug_UART/bl_main.o
+LOAD Debug_UART/bl_platform.o
+LOAD Debug_UART/bl_uart.o
+LOAD Debug_UART/cache.o
+LOAD Debug_UART/cp15.o
+LOAD Debug_UART/crc16.o
+LOAD Debug_UART/device.o
+LOAD Debug_UART/mmu.o
+LOAD Debug_UART/xmodem.o
+                0x402f0400                BOOT_START_ADDR = 0x402f0400
+
+.rsthand        0x402f0400       0x80
+                0x402f0400                . = ALIGN (0x4)
+ *bl_init.o(.text)
+ .text          0x402f0400       0x80 Debug_UART/bl_init.o
+                0x402f0400                Entry
+
+.text           0x402f0480     0x41a0
+                0x402f0480                . = ALIGN (0x4)
+ *(.text*)
+ .text.ImageCopy
+                0x402f0480       0x30 Debug_UART/bl_copy.o
+                0x402f0480                ImageCopy
+ .text.UARTBootCopy
+                0x402f04b0       0xa4 Debug_UART/bl_copy.o
+ .text.main     0x402f0554       0xcc Debug_UART/bl_main.o
+                0x402f0554                main
+ .text.BootAbort
+                0x402f0620        0xc Debug_UART/bl_main.o
+                0x402f0620                BootAbort
+ .text.BootMaxOppGet
+                0x402f062c      0x120 Debug_UART/bl_platform.o
+                0x402f062c                BootMaxOppGet
+ .text.CorePLLInit
+                0x402f074c      0x174 Debug_UART/bl_platform.o
+                0x402f074c                CorePLLInit
+ .text.DisplayPLLInit
+                0x402f08c0      0x134 Debug_UART/bl_platform.o
+                0x402f08c0                DisplayPLLInit
+ .text.PerPLLInit
+                0x402f09f4      0x130 Debug_UART/bl_platform.o
+                0x402f09f4                PerPLLInit
+ .text.DDRPLLInit
+                0x402f0b24      0x13c Debug_UART/bl_platform.o
+                0x402f0b24                DDRPLLInit
+ .text.MPUPLLInit
+                0x402f0c60      0x140 Debug_UART/bl_platform.o
+                0x402f0c60                MPUPLLInit
+ .text.InterfaceClkInit
+                0x402f0da0      0x164 Debug_UART/bl_platform.o
+                0x402f0da0                InterfaceClkInit
+ .text.PowerDomainTransitionInit
+                0x402f0f04       0xa0 Debug_UART/bl_platform.o
+                0x402f0f04                PowerDomainTransitionInit
+ .text.PLLInit  0x402f0fa4       0x8c Debug_UART/bl_platform.o
+                0x402f0fa4                PLLInit
+ .text.SetupI2C
+                0x402f1030       0xc8 Debug_UART/bl_platform.o
+                0x402f1030                SetupI2C
+ .text.CleanupInterrupts
+                0x402f10f8       0x24 Debug_UART/bl_platform.o
+                0x402f10f8                CleanupInterrupts
+ .text.SetupI2CTransmit
+                0x402f111c      0x188 Debug_UART/bl_platform.o
+                0x402f111c                SetupI2CTransmit
+ .text.SetupReception
+                0x402f12a4      0x278 Debug_UART/bl_platform.o
+                0x402f12a4                SetupReception
+ .text.TPS65217RegRead
+                0x402f151c       0x68 Debug_UART/bl_platform.o
+                0x402f151c                TPS65217RegRead
+ .text.TPS65217RegWrite
+                0x402f1584      0x1f4 Debug_UART/bl_platform.o
+                0x402f1584                TPS65217RegWrite
+ .text.TPS65217VoltageUpdate
+                0x402f1778       0x64 Debug_UART/bl_platform.o
+                0x402f1778                TPS65217VoltageUpdate
+ .text.SetVdd1OpVoltage
+                0x402f17dc       0x34 Debug_UART/bl_platform.o
+                0x402f17dc                SetVdd1OpVoltage
+ .text.ConfigVddOpVoltage
+                0x402f1810       0xc0 Debug_UART/bl_platform.o
+                0x402f1810                ConfigVddOpVoltage
+ .text.DDR3PhyInit
+                0x402f18d0      0x364 Debug_UART/bl_platform.o
+ .text.DDR3Init
+                0x402f1c34      0x218 Debug_UART/bl_platform.o
+                0x402f1c34                DDR3Init
+ .text.EMIFInit
+                0x402f1e4c       0x94 Debug_UART/bl_platform.o
+                0x402f1e4c                EMIFInit
+ .text.UARTSetup
+                0x402f1ee0       0x50 Debug_UART/bl_platform.o
+                0x402f1ee0                UARTSetup
+ .text.BlPlatformConfig
+                0x402f1f30      0x128 Debug_UART/bl_platform.o
+                0x402f1f30                BlPlatformConfig
+ .text.BlPlatformConfigPostBoot
+                0x402f2058       0x14 Debug_UART/bl_platform.o
+                0x402f2058                BlPlatformConfigPostBoot
+ .text.crc16_ccitt
+                0x402f206c       0xb4 Debug_UART/crc16.o
+                0x402f206c                crc16_ccitt
+ .text.DeviceVersionGet
+                0x402f2120       0x34 Debug_UART/device.o
+                0x402f2120                DeviceVersionGet
+ .text.SysConfigOppDataGet
+                0x402f2154       0x2c Debug_UART/device.o
+                0x402f2154                SysConfigOppDataGet
+ .text.check    0x402f2180      0x10c Debug_UART/xmodem.o
+ .text.flushinput
+                0x402f228c       0x2c Debug_UART/xmodem.o
+ .text.xmodemReceive
+                0x402f22b8      0x460 Debug_UART/xmodem.o
+                0x402f22b8                xmodemReceive
+ .text._inbyte  0x402f2718       0x38 Debug_UART/xmodem.o
+                0x402f2718                _inbyte
+ .text._outbyte
+                0x402f2750       0x30 Debug_UART/xmodem.o
+                0x402f2750                _outbyte
+ .text.I2CMasterInitExpClk
+                0x402f2780       0xa4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2780                I2CMasterInitExpClk
+ .text.I2CMasterEnable
+                0x402f2824       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2824                I2CMasterEnable
+ .text.I2CMasterDisable
+                0x402f285c       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f285c                I2CMasterDisable
+ .text.I2CMasterBusBusy
+                0x402f2894       0x50 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2894                I2CMasterBusBusy
+ .text.I2CMasterControl
+                0x402f28e4       0x34 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f28e4                I2CMasterControl
+ .text.I2CMasterStart
+                0x402f2918       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2918                I2CMasterStart
+ .text.I2CMasterStop
+                0x402f2950       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2950                I2CMasterStop
+ .text.I2CMasterIntRawStatus
+                0x402f2988       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2988                I2CMasterIntRawStatus
+ .text.I2CMasterIntClearEx
+                0x402f29b4       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f29b4                I2CMasterIntClearEx
+ .text.I2CMasterSlaveAddrSet
+                0x402f29e4       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f29e4                I2CMasterSlaveAddrSet
+ .text.I2CSetDataCount
+                0x402f2a14       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2a14                I2CSetDataCount
+ .text.I2CSoftReset
+                0x402f2a44       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2a44                I2CSoftReset
+ .text.I2CAutoIdleDisable
+                0x402f2a7c       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2a7c                I2CAutoIdleDisable
+ .text.I2CSystemStatusGet
+                0x402f2ab4       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2ab4                I2CSystemStatusGet
+ .text.I2CMasterDataPut
+                0x402f2ae4       0x34 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2ae4                I2CMasterDataPut
+ .text.I2CMasterDataGet
+                0x402f2b18       0x34 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f2b18                I2CMasterDataGet
+ .text.UARTOperatingModeSelect
+                0x402f2b4c       0x84 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f2b4c                UARTOperatingModeSelect
+ .text.UARTDivisorValCompute
+                0x402f2bd0      0x104 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f2bd0                UARTDivisorValCompute
+ .text.UARTDivisorLatchWrite
+                0x402f2cd4      0x210 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f2cd4                UARTDivisorLatchWrite
+ .text.UARTDivisorLatchDisable
+                0x402f2ee4       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f2ee4                UARTDivisorLatchDisable
+ .text.UARTRegConfigModeEnable
+                0x402f2f1c       0x9c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f2f1c                UARTRegConfigModeEnable
+ .text.UARTBreakCtl
+                0x402f2fb8       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f2fb8                UARTBreakCtl
+ .text.UARTLineCharacConfig
+                0x402f3018       0xa4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f3018                UARTLineCharacConfig
+ .text.UARTFIFOConfig
+                0x402f30bc      0x480 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f30bc                UARTFIFOConfig
+ .text.UARTFIFORegisterWrite
+                0x402f353c       0xc0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f353c                UARTFIFORegisterWrite
+ .text.UARTEnhanFuncEnable
+                0x402f35fc       0x88 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f35fc                UARTEnhanFuncEnable
+ .text.UARTEnhanFuncBitValRestore
+                0x402f3684       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f3684                UARTEnhanFuncBitValRestore
+ .text.UARTSubConfigTCRTLRModeEn
+                0x402f3710      0x124 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f3710                UARTSubConfigTCRTLRModeEn
+ .text.UARTTCRTLRBitValRestore
+                0x402f3834      0x128 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f3834                UARTTCRTLRBitValRestore
+ .text.UARTCharGetTimeout
+                0x402f395c       0xac ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f395c                UARTCharGetTimeout
+ .text.UARTCharPut
+                0x402f3a08       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f3a08                UARTCharPut
+ .text.UARTModuleReset
+                0x402f3a80       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402f3a80                UARTModuleReset
+ .text.UARTStdioInit
+                0x402f3ad4       0x18 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x402f3ad4                UARTStdioInit
+ .text.UARTPuts
+                0x402f3aec       0xec ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x402f3aec                UARTPuts
+ .text.UARTPutc
+                0x402f3bd8       0x30 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x402f3bd8                UARTPutc
+ .text.I2CPinMuxSetup
+                0x402f3c08       0x78 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+                0x402f3c08                I2CPinMuxSetup
+ .text.I2C0ModuleClkConfig
+                0x402f3c80       0xa0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+                0x402f3c80                I2C0ModuleClkConfig
+ .text.UARTStdioInitExpClk
+                0x402f3d20       0xd0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UartFIFOConfigure
+                0x402f3df0       0x64 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UartBaudRateSet
+                0x402f3e54       0x5c ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UARTConsoleInit
+                0x402f3eb0       0x44 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                0x402f3eb0                UARTConsoleInit
+ .text.UARTConsolePutc
+                0x402f3ef4       0x38 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                0x402f3ef4                UARTConsolePutc
+ .text.UARTPinMuxSetup
+                0x402f3f2c       0x60 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                0x402f3f2c                UARTPinMuxSetup
+ .text.UART0ModuleClkConfig
+                0x402f3f8c       0x84 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                0x402f3f8c                UART0ModuleClkConfig
+ .text.memcpy   0x402f4010       0xf4 /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+                0x402f4010                memcpy
+ .text          0x402f4104      0x114 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+                0x402f4104                __udivsi3
+                0x402f4104                __aeabi_uidiv
+                0x402f41f8                __aeabi_uidivmod
+ .text          0x402f4218      0x148 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+                0x402f4218                __aeabi_idiv
+                0x402f4218                __divsi3
+                0x402f4340                __aeabi_idivmod
+ .text          0x402f4360        0x4 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+                0x402f4360                __aeabi_ldiv0
+                0x402f4360                __aeabi_idiv0
+ *(.rodata*)
+ .rodata        0x402f4364       0x68 Debug_UART/bl_copy.o
+ .rodata        0x402f43cc       0x4c Debug_UART/bl_main.o
+ .rodata        0x402f4418        0x8 Debug_UART/bl_platform.o
+ .rodata.crc16tab
+                0x402f4420      0x200 Debug_UART/crc16.o
+
+.glue_7         0x402f4620        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x402f4620        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x402f4620        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x402f4620        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x402f4620        0x0
+ .iplt          0x00000000        0x0 Debug_UART/bl_copy.o
+
+.rel.dyn        0x402f4620        0x0
+ .rel.iplt      0x00000000        0x0 Debug_UART/bl_copy.o
+
+.data           0x402f4620       0x54
+                0x402f4620                . = ALIGN (0x4)
+ *(.data*)
+ .data.deviceType
+                0x402f4620        0x4 Debug_UART/bl_platform.o
+                0x402f4620                deviceType
+ .data.oppTable
+                0x402f4624       0x50 Debug_UART/bl_platform.o
+                0x402f4624                oppTable
+
+.igot.plt       0x402f4674        0x0
+ .igot.plt      0x00000000        0x0 Debug_UART/bl_copy.o
+
+.bss            0x402f4674       0x28
+                0x402f4674                . = ALIGN (0x4)
+                0x402f4674                _bss_start = .
+ *(.bss*)
+ .bss.appEntry  0x402f4674        0x4 Debug_UART/bl_main.o
+ .bss.entryPoint
+                0x402f4678        0x4 Debug_UART/bl_main.o
+                0x402f4678                entryPoint
+ *(COMMON)
+ COMMON         0x402f467c       0x20 Debug_UART/bl_platform.o
+                0x402f467c                dataToSlave
+                0x402f4680                rCount
+                0x402f4684                numOfBytes
+                0x402f4688                tCount
+                0x402f468c                oppMaxIdx
+                0x402f4690                deviceVersion
+                0x402f4694                dataFromSlave
+                0x402f4698                freqMultDDR
+                0x402f469c                _bss_end = .
+
+.heap           0x402f469c      0x800
+                0x402f469c                . = ALIGN (0x4)
+                0x402f469c                __end__ = .
+                0x402f469c                end = __end__
+                0x402f469c                __HeapBase = __end__
+ *(.heap*)
+                0x402f4e9c                . = (. + 0x800)
+ *fill*         0x402f469c      0x800 00
+                0x402f4e9c                __HeapLimit = .
+
+.stack          0x402f4e9c      0x864
+                0x402f4f00                . = ALIGN (0x100)
+ *fill*         0x402f4e9c       0x64 00
+                0x402f4f00                __StackLimit = .
+ *(.stack*)
+                0x402f5700                . = (. + 0x800)
+ *fill*         0x402f4f00      0x800 00
+                0x402f5700                __StackTop = .
+                0x402f5700                _stack = __StackTop
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a
+LOAD ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a
+LOAD ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a
+OUTPUT(Debug_UART/boot.out elf32-littlearm)
+
+.debug_info     0x00000000     0x3410
+ .debug_info    0x00000000       0x8e Debug_UART/bl_copy.o
+ .debug_info    0x0000008e       0xb0 Debug_UART/bl_init.o
+ .debug_info    0x0000013e       0xcb Debug_UART/bl_main.o
+ .debug_info    0x00000209      0x60e Debug_UART/bl_platform.o
+ .debug_info    0x00000817       0xc3 Debug_UART/crc16.o
+ .debug_info    0x000008da       0x7f Debug_UART/device.o
+ .debug_info    0x00000959      0x29d Debug_UART/xmodem.o
+ .debug_info    0x00000bf6      0xa6d ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_info    0x00001663     0x14ab ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_info    0x00002b0e      0x69a ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_info    0x000031a8       0x94 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_info    0x0000323c      0x156 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_info    0x00003392       0x7e ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+
+.debug_abbrev   0x00000000      0xa4b
+ .debug_abbrev  0x00000000       0x73 Debug_UART/bl_copy.o
+ .debug_abbrev  0x00000073       0x14 Debug_UART/bl_init.o
+ .debug_abbrev  0x00000087       0xa4 Debug_UART/bl_main.o
+ .debug_abbrev  0x0000012b      0x14d Debug_UART/bl_platform.o
+ .debug_abbrev  0x00000278       0x9c Debug_UART/crc16.o
+ .debug_abbrev  0x00000314       0x66 Debug_UART/device.o
+ .debug_abbrev  0x0000037a      0x149 Debug_UART/xmodem.o
+ .debug_abbrev  0x000004c3      0x14d ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_abbrev  0x00000610      0x14e ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_abbrev  0x0000075e      0x186 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_abbrev  0x000008e4       0x62 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_abbrev  0x00000946       0xa3 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_abbrev  0x000009e9       0x62 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+
+.debug_loc      0x00000000     0x1f54
+ .debug_loc     0x00000000       0x58 Debug_UART/bl_copy.o
+ .debug_loc     0x00000058       0x58 Debug_UART/bl_main.o
+ .debug_loc     0x000000b0      0x478 Debug_UART/bl_platform.o
+ .debug_loc     0x00000528       0x2c Debug_UART/crc16.o
+ .debug_loc     0x00000554       0x58 Debug_UART/device.o
+ .debug_loc     0x000005ac       0xdc Debug_UART/xmodem.o
+ .debug_loc     0x00000688      0x7bc ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_loc     0x00000e44      0xcb8 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_loc     0x00001afc      0x274 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_loc     0x00001d70       0x84 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_loc     0x00001df4      0x108 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_loc     0x00001efc       0x58 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+
+.debug_aranges  0x00000000      0x6f0
+ .debug_aranges
+                0x00000000       0x28 Debug_UART/bl_copy.o
+ .debug_aranges
+                0x00000028       0x20 Debug_UART/bl_init.o
+ .debug_aranges
+                0x00000048       0x28 Debug_UART/bl_main.o
+ .debug_aranges
+                0x00000070       0xe8 Debug_UART/bl_platform.o
+ .debug_aranges
+                0x00000158       0x20 Debug_UART/crc16.o
+ .debug_aranges
+                0x00000178       0x28 Debug_UART/device.o
+ .debug_aranges
+                0x000001a0       0x40 Debug_UART/xmodem.o
+ .debug_aranges
+                0x000001e0      0x180 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_aranges
+                0x00000360      0x268 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_aranges
+                0x000005c8       0x88 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_aranges
+                0x00000650       0x30 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_aranges
+                0x00000680       0x48 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_aranges
+                0x000006c8       0x28 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+
+.debug_ranges   0x00000000      0x610
+ .debug_ranges  0x00000000       0x18 Debug_UART/bl_copy.o
+ .debug_ranges  0x00000018       0x18 Debug_UART/bl_main.o
+ .debug_ranges  0x00000030       0xd8 Debug_UART/bl_platform.o
+ .debug_ranges  0x00000108       0x10 Debug_UART/crc16.o
+ .debug_ranges  0x00000118       0x18 Debug_UART/device.o
+ .debug_ranges  0x00000130       0x30 Debug_UART/xmodem.o
+ .debug_ranges  0x00000160      0x170 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_ranges  0x000002d0      0x258 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_ranges  0x00000528       0x78 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_ranges  0x000005a0       0x20 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_ranges  0x000005c0       0x38 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_ranges  0x000005f8       0x18 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+
+.debug_line     0x00000000     0x1c56
+ .debug_line    0x00000000       0xa6 Debug_UART/bl_copy.o
+ .debug_line    0x000000a6       0x8b Debug_UART/bl_init.o
+ .debug_line    0x00000131       0x7b Debug_UART/bl_main.o
+ .debug_line    0x000001ac      0x4ee Debug_UART/bl_platform.o
+ .debug_line    0x0000069a       0x7a Debug_UART/crc16.o
+ .debug_line    0x00000714       0x7b Debug_UART/device.o
+ .debug_line    0x0000078f      0x148 Debug_UART/xmodem.o
+ .debug_line    0x000008d7      0x3ef ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_line    0x00000cc6      0x741 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_line    0x00001407      0x628 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_line    0x00001a2f       0xc4 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_line    0x00001af3       0xcf ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_line    0x00001bc2       0x94 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+
+.debug_str      0x00000000     0x16c0
+ .debug_str     0x00000000      0x107 Debug_UART/bl_copy.o
+                                0x114 (size before relaxing)
+ .debug_str     0x00000107       0x5c Debug_UART/bl_main.o
+                                0x11d (size before relaxing)
+ .debug_str     0x00000163      0x30d Debug_UART/bl_platform.o
+                                0x412 (size before relaxing)
+ .debug_str     0x00000470       0x4b Debug_UART/crc16.o
+                                0x102 (size before relaxing)
+ .debug_str     0x000004bb       0x5d Debug_UART/device.o
+                                0x121 (size before relaxing)
+ .debug_str     0x00000518       0xb0 Debug_UART/xmodem.o
+                                0x1e8 (size before relaxing)
+ .debug_str     0x000005c8      0x483 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+                                0x501 (size before relaxing)
+ .debug_str     0x00000a4b      0x897 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                                0x965 (size before relaxing)
+ .debug_str     0x000012e2      0x216 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                                0x2a2 (size before relaxing)
+ .debug_str     0x000014f8       0xbc ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+                                0x129 (size before relaxing)
+ .debug_str     0x000015b4       0xb0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                                0x193 (size before relaxing)
+ .debug_str     0x00001664       0x5c ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                                0x119 (size before relaxing)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 Debug_UART/bl_copy.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 Debug_UART/bl_main.o
+ .comment       0x00000000       0x71 Debug_UART/bl_platform.o
+ .comment       0x00000000       0x71 Debug_UART/crc16.o
+ .comment       0x00000000       0x71 Debug_UART/device.o
+ .comment       0x00000000       0x71 Debug_UART/xmodem.o
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+
+.ARM.attributes
+                0x00000000       0x35
+ .ARM.attributes
+                0x00000000       0x37 Debug_UART/bl_copy.o
+ .ARM.attributes
+                0x00000037       0x1f Debug_UART/bl_init.o
+ .ARM.attributes
+                0x00000056       0x37 Debug_UART/bl_main.o
+ .ARM.attributes
+                0x0000008d       0x37 Debug_UART/bl_platform.o
+ .ARM.attributes
+                0x000000c4       0x37 Debug_UART/crc16.o
+ .ARM.attributes
+                0x000000fb       0x37 Debug_UART/device.o
+ .ARM.attributes
+                0x00000132       0x37 Debug_UART/xmodem.o
+ .ARM.attributes
+                0x00000169       0x37 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .ARM.attributes
+                0x000001a0       0x37 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .ARM.attributes
+                0x000001d7       0x37 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .ARM.attributes
+                0x0000020e       0x37 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .ARM.attributes
+                0x00000245       0x37 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .ARM.attributes
+                0x0000027c       0x37 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .ARM.attributes
+                0x000002b3       0x30 /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000002e3       0x18 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000002fb       0x18 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x00000313       0x18 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+
+.debug_frame    0x00000000     0x137c
+ .debug_frame   0x00000000       0x48 Debug_UART/bl_copy.o
+ .debug_frame   0x00000048       0x44 Debug_UART/bl_main.o
+ .debug_frame   0x0000008c      0x2c0 Debug_UART/bl_platform.o
+ .debug_frame   0x0000034c       0x28 Debug_UART/crc16.o
+ .debug_frame   0x00000374       0x40 Debug_UART/device.o
+ .debug_frame   0x000003b4       0xa0 Debug_UART/xmodem.o
+ .debug_frame   0x00000454      0x44c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_frame   0x000008a0      0x778 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_frame   0x00001018      0x1a8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_frame   0x000011c0       0x58 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_frame   0x00001218       0xb8 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_frame   0x000012d0       0x40 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_frame   0x00001310       0x2c /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000133c       0x20 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000135c       0x20 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)

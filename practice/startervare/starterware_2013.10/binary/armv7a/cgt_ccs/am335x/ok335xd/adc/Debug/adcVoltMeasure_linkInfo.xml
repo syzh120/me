@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<link_info>
+   <banner>TI ARM Linker PC v5.0.4</banner>
+   <copyright>Copyright (c) 1996-2013 Texas Instruments Incorporated</copyright>
+   <link_time>0x5261102c</link_time>
+   <output_file>../../../../../../../binary/armv7a/cgt_ccs/am335x/evmskAM335x/adc/Debug/adcVoltMeasure.out</output_file>
+   <input_file_list>
+      <input_file id="fl-2">
+         <path>.\</path>
+         <kind>object</kind>
+         <file>adcVoltMeasure.obj</file>
+         <name>adcVoltMeasure.obj</name>
+      </input_file>
+      <input_file id="fl-12f">
+         <path>D:\ti\ccsv5\tools\compiler\arm_5.0.4\lib\</path>
+         <kind>archive</kind>
+         <file>rtsv7A8_A_le_eabi.lib</file>
+         <name>u_div32.obj</name>
+      </input_file>
+   </input_file_list>
+   <object_component_list>
+   </object_component_list>
+   <logical_group_list>
+      <logical_group id="lg-2">
+         <name>.text:Entry</name>
+         <run_address>0x0</run_address>
+         <size>0x0</size>
+         <contents>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-3">
+         <name>.text</name>
+         <run_address>0x0</run_address>
+         <size>0x0</size>
+         <contents>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-4">
+         <name>.data</name>
+         <run_address>0x0</run_address>
+         <size>0x0</size>
+         <contents>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-5">
+         <name>.bss</name>
+         <run_address>0x80000000</run_address>
+         <size>0x0</size>
+         <contents>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-6">
+         <name>.const</name>
+         <run_address>0x0</run_address>
+         <size>0x0</size>
+         <contents>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-7">
+         <name>.stack</name>
+         <run_address>0x0</run_address>
+         <size>0x0</size>
+         <contents>
+         </contents>
+      </logical_group>
+   </logical_group_list>
+   <placement_map>
+      <memory_area>
+         <name>DDR_MEM</name>
+         <page_id>0x0</page_id>
+         <origin>0x80000000</origin>
+         <length>0x7ffffff</length>
+         <used_space>0x0</used_space>
+         <unused_space>0x7ffffff</unused_space>
+         <attributes>RWIX</attributes>
+         <usage_details>
+            <allocated_space>
+               <start_address>0x80000000</start_address>
+               <size>0x0</size>
+               <logical_group_ref idref="lg-5"/>
+            </allocated_space>
+            <available_space>
+               <start_address>0x80000000</start_address>
+               <size>0x7ffffff</size>
+            </available_space>
+         </usage_details>
+      </memory_area>
+   </placement_map>
+   <symbol_table>
+      <symbol id="sm-1">
+         <name>bss_start</name>
+         <value>0x80000000</value>
+      </symbol>
+      <symbol id="sm-2">
+         <name>bss_end</name>
+         <value>0x80000000</value>
+      </symbol>
+      <symbol id="sm-3">
+         <name>binit</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-4">
+         <name>__binit__</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-5">
+         <name>__c_args__</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-6">
+         <name>__TI_static_base__</name>
+         <value>0x80000000</value>
+      </symbol>
+      <symbol id="sm-f">
+         <name>Entry</name>
+         <value>0x0</value>
+      </symbol>
+   </symbol_table>
+</link_info>

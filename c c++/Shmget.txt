@@ -1,0 +1,51 @@
+Shmget
+头文件
+　　#include <sys/ipc.h> 
+　　#include <sys/shm.h> 
+参数
+　　int shmget(key_t key, size_t size, int shmflg); 
+　　key_t key 
+　　key标识共享内存的键值: 0/IPC_PRIVATE。 当key的取值为IPC_PRIVATE，则函数shmget()将创建一块新的共享内存；如果key的取值为0，而参数shmflg中设置了IPC_PRIVATE这个标志，则同样将创建一块新的共享内存。 在IPC的通信模式下，不管是使用消息队列还是共享内存，甚至是信号量，每个IPC的对象(object)都有唯一的名字，称为“键”(key)。通过“键”，进程能够识别所用的对象。“键”与IPC对象的关系就如同文件名称之于文件，通过文件名，进程能够读写文件内的数据，甚至多个进程能够共用一个文件。而在IPC的通讯模式下，通过“键”的使用也使得一个IPC对象能为多个进程所共用。 Linux系统中的所有表示SystemV中IPC对象的数据结构都包括一个ipc_perm结构，其中包含有IPC对象的键值，该键用于查找SystemV中IPC对象的引用标识符。如果不使用“键”，进程将无法存取IPC对象，因为IPC对象并不存在于进程本身使用的内存中。 通常，都希望自己的程序能和其他的程序预先约定一个唯一的键值，但实际上并不是总可能的成行的，因为自己的程序无法为一块共享内存选择一个键值。因此，在此把key设为IPC_PRIVATE，这样，操作系统将忽略键，建立一个新的共享内存，指定一个键值，然后返回这块共享内存IPC标识符ID。而将这个新的共享内存的标识符ID告诉其他进程可以在建立共享内存后通过派生子进程，或写入文件或管道来实现。 
+　　int size(单位字节Byte) 
+　　size是要建立共享内存的长度。所有的内存分配操作都是以页为单位的。所以如果一段进程只申请一块只有一个字节的内存，内存也会分配整整一页(在i386机器中一页的缺省大小PACE_SIZE=4096字节)这样，新创建的共享内存的大小实际上是从size这个参数调整而来的页面大小。即如果size为1至4096，则实际申请到的共享内存大小为4K(一页)；4097到8192，则实际申请到的共享内存大小为8K(两页)，依此类推。 
+　　int shmflg 
+　　shmflg主要和一些标志有关。其中有效的包括IPC_CREAT和IPC_EXCL，它们的功能与open()的O_CREAT和O_EXCL相当。 IPC_CREAT 如果共享内存不存在，则创建一个共享内存，否则打开操作。 IPC_EXCL 只有在共享内存不存在的时候，新的共享内存才建立，否则就产生错误。 如果单独使用IPC_CREAT，shmget()函数要么返回一个已经存在的共享内存的操作符，要么返回一个新建的共享内存的标识符。如果将IPC_CREAT和IPC_EXCL标志一起使用，shmget()将返回一个新建的共享内存的标识符；如果该共享内存已存在，或者返回-1。IPC_EXEL标志本身并没有太大的意义，但是和IPC_CREAT标志一起使用可以用来保证所得的对象是新建的，而不是打开已有的对象。对于用户的读取和写入许可指定SHM_R和SHM_W,(SHM_R>3)和(SHM_W>3)是一组读取和写入许可，而(SHM_R>6)和(SHM_W>6)是全局读取和写入许可。 
+　　需要注意的是，使用参数要加上 | 0666 作为校验，在有些Linux系统中，如果不加此校验，则不能顺利获取共享空间的值（如Ubuntu）。此外，有两个常用参数，一般要同时出现，他们是：S_IRUSH | S_IWUSR 。由于这两个参数非常常用，程序员一般做这样的操作 
+　　#define PERM S_IRUSR | S_IWUSR | IPC_CREAT 
+　　这样一来，第三个参数就可以直接用PERM来表示了！ 
+返回值
+　　成功返回共享内存的标识符；不成功返回-1，errno储存错误原因。 
+　　EINVAL 参数size小于SHMMIN或大于SHMMAX。 
+　　EEXIST 预建立key所致的共享内存，但已经存在。 
+　　EIDRM 参数key所致的共享内存已经删除。 ENOSPC 超过了系统允许建立的共享内存的最大值(SHMALL )。 ENOENT 参数key所指的共享内存不存在，参数shmflg也未设IPC_CREAT位。 
+　　EACCES 没有权限。 ENOMEM 核心内存不足。 
+　　struct shmid_ds 
+　　shmid_ds数据结构表示每个新建的共享内存。当shmget()创建了一块新的共享内存后，返回一个可以用于引用该共享内存的shmid_ds数据结构的标识符。 
+　　include/linux/shm.h 
+　　struct shmid_ds 
+　　{ 
+　　struct ipc_perm shm_perm; /* operation perms */ 
+　　int shm_segsz; /* size of segment (bytes) */ 
+　　__kernel_time_t shm_atime; /* last attach time */ 
+　　__kernel_time_t shm_dtime; /* last detach time */ 
+　　__kernel_time_t shm_ctime; /* last change time */ 
+　　__kernel_ipc_pid_t shm_cpid; /* pid of creator */ 
+　　__kernel_ipc_pid_t shm_lpid; /* pid of last operator */ 
+　　unsigned short shm_nattch; /* no. of current attaches */ 
+　　unsigned short shm_unused; /* compatibility */ 
+　　void *shm_unused2; /* ditto - used by DIPC */ 
+　　void *shm_unused3; /* unused */ 
+　　}; 
+　　struct ipc_perm 
+　　对于每个IPC对象，系统共用一个struct ipc_perm的数据结构来存放权限信息，以确定一个ipc操作是否可以访问该IPC对象。 
+　　struct ipc_perm 
+　　{ 
+　　__kernel_key_t key; 
+　　__kernel_uid_t uid; 
+　　__kernel_gid_t gid; 
+　　__kernel_uid_t cuid; 
+　　__kernel_gid_t cgid; 
+　　__kernel_mode_t mode; 
+　　unsigned short seq; 
+　　};
+

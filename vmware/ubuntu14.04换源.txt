@@ -1,0 +1,41 @@
+为了防止意外发生可以先将 /etc/apt/下面的sources.list复制一份并重命名为sources_old.list, 然后将sources.list里面的内容修改为下面（上面的是中科大的源下面的是阿里云的源，可以任选其一,教育网用户推荐使用中科大源）:
+
+deb http://debian.ustc.edu.cn/ubuntu/ trusty main multiverse restricted universe
+
+deb http://debian.ustc.edu.cn/ubuntu/ trusty-backports main multiverse restricted universe
+
+deb http://debian.ustc.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe
+
+deb http://debian.ustc.edu.cn/ubuntu/ trusty-security main multiverse restricted universe
+
+deb http://debian.ustc.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe
+
+deb-src http://debian.ustc.edu.cn/ubuntu/ trusty main multiverse restricted universe
+
+deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-backports main multiverse restricted universe
+
+deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-proposed main multiverse restricted universe
+
+deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-security main multiverse restricted universe
+
+deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-updates main multiverse restricted universe
+
+下面的是阿里云的源：
+
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+
+修改过后别忘了使用sudo apt-get update更新一下。
+
+如果发生错误可以把sources.list删除,再把sources_old.list名字改为sources.list即可.
+
+注意上面方法只适用于ubuntu14.04系统,其他版本的系统不适合.

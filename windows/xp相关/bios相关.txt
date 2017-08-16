@@ -1,0 +1,58 @@
+Load Optimized Defaults :恢复默认设置
+LEGANCY Mode Support :早期硬盘的工作模式，新硬盘基本不用
+SATA Port ：串行硬件驱动接口
+LEGANCY USB Mode : 开机识别USB设备
+Halt on ：挂起 ，一般选择no error即可，选择all error 可以检查机器有无问题，可用作检查新电脑
+
+
+Init Display First（显示启动设定）：
+设定值：依主板不同，选项不同。
+pci slot  （PCI插槽的独立显卡）
+OnBoard   （集成板载卡）
+agp       （agp插槽独立卡）
+PCI-E     （PCI-E插槽独立卡）
+如果你现在可正常使用，建议你不要动，就采用默认项。对一般使用没有太大影响。如果你想动，那就应该选定：
+init display first(开机显示选择)
+
+    当您安装了pci express显示卡及pci显示卡时，此选项可让您设定系统由何处开机。
+
+    1 pci slot 系统会从pci显示卡开机。
+
+    2 peg(slot2) 系统会从pci express显示卡(slot2)开机。(预设值)
+
+    3 peg(slot1) 系统会从pci express显示卡(slot1)开机。
+
+    4 peg(slot3) 系统会从pci express显示卡(slot3)开机。
+
+    5 peg(slot4) 系统会从pci express显示卡(slot4)开机。
+    
+
+1、超频造成不能开机
+一般可以采用两种方法解决CPU超频后电脑不能启动的总题。
+(1)按下机箱上的Power按钮开启电脑的同时，按住键盘上中右侧控制键盘区上的'insert"按键，大多数主板都将这个按键设置为让cpu以最低频率启动并进入BIOS设置程序。如果不奏效，可以按"Home"试试。成功进入BIOS设置程序后，在主菜单中选择"Frequency/Viltage Control"(频率/电压控制)，将"CPU Host Clock Control"(主频控制)设置成"Disabled",或将下级的"CPU Host Frequency(MHz)"(CPU外频)调节成适当的频率。
+(2)如果第一种方法无法实现，可按照主板说明书提示，打开机箱，找到主板上控制CMOS芯片供电的3针跳线，将跳线改插为清除状态，清除CMOS参数同样可以达到让CPU以最低频率启动的目的。启动电脑后可以进入BIOS设置程序，重新设置CMOS参数。
+2、BIOS设置为何会失效
+开机画面出现"CMOS checksum error Defaults loaded"提示，屏幕下方显示按F1继续，当计算机开机之后时间就会被调整为1997年1月1日12:00(或其他日期)。
+这说明CMOS参数有问题，一般是开机后BIOS自检时，发现设置值与实际设置不符便会出现此提示。这时应在开机自检时，按"Del"按键进入BIOS设置程序，然后选择"Load Optimized Defaults"(载入优化的缺省设置)进行恢复。如果不能解决问题，可能是主板上的钮扣电池失效，请将主板上圆型的钮扣电池换颗新的试试。
+3、接上电源，电脑会自启动？！
+进入"Power Management Setup"(省电功能设置)主菜单，将"A C BACK Function"设置成"Soft-Off"。这样只有按下机箱Power按钮才能启动电脑。
+4、有电话打进，电脑会自启动？！
+这是由于BIOS设置成Modem唤醒，进入"Power Management Setup"将"Modem Ring On/Wake On Lan"设置成"Disabled"即关闭Modem对系统的唤醒功能。
+5、主板喇叭警钟长鸣
+查看机箱中的风扇是否安装妥当并运转正常，如果正常可能是主板的测温装置设计上有问题，或是BIOS设置程序的"PC Health Status"(电源健康状态)下设置不对，当中主要是显示系统自动检测的电压、温度及风扇转速等相关参数，并设定超负荷时发出警报和自动关机。将"CPU Warning Temperature"(CPU温度监控)设置比原来值高一二级或直接设置为"Disabled"。
+6、解决电脑运行速度过慢
+要想提高CPU的性能，CPU的一级缓存和二级缓存必须打开。进入"Advanced BIOS Features"(高级BIOS功能设置)主菜单，将"CPU L1&L2 Cache"(CPU的一级和二级缓存)设置成"Enabled"，这样就能加速CPU的访问速度了。
+7、开机不能进入BIOS设置也不能从A驱启动
+屏幕提示为"CMOS System options not set,CMOS display Type mismatch,Run set utility.Press <F1> to resume"。按F1后，屏幕字符显示"on board parity error addr(hex)=(0000:0002)，system halted"后死机，再开机不能进入BIOS设置程序，也不能从A驱启动。
+这是BIOS设置程序中校验出错产生的问题，打开机箱，按照主板说明书的图示对CMOS电池进行放电恢复原样。重启按"Del"按键进入把校验(Parity)功能关闭。
+8、电脑进入休眠状态后就死机
+这种情况一般出现在BIOS支持硬件电源管理功能的主板上。并且是既在BIOS设置程序开启了硬件控制系统休眠功能，又在Windows中开启了软件控制系统休眠功能，从而造成电源管理冲突。进入"Power Management Setup"中将"PME Event Wake Up"设置成"Disabled"即可。
+9、不能规格的内存条混用造成系统不稳定
+例：在i848主板上使用800MHz FSB的Pentium4处理器，并将DDR333和DDR400内存混用，系统经常出现死机现象。
+进入"Frequency/Viltage Control"(频率/电压控制)，将"Momory Frequency For"由为1.6表示当前端总线频率为800MHz时，内存工作频率为外频的1.6倍，即320MHz。
+10、提高AGP显示的传输速率
+进入"Advanced BIOS Features"中检查一下"AGP Device 4X Support(支持AGP4X设备)是不是"Enabled"。另外，还可以将"AGP Graphics Aperture Size"设置AGP显卡的显示内存大小，一般设为"128MB"，根据显卡的显存大小而定。如果是板载显卡，可以设置"On-chip Frame Buffer Size"的显示内存大小。
+11、关闭板载AC'97声卡
+"Integrated Peripherals"(综合外部设备设置)将"AC97 Audio"设置为"Disabled"进行屏蔽。
+12、解决盘符交错问题
+"Standad CMOS setup"将需要屏蔽的IDE硬盘所在的通道(Primary Master、Primary Slave、Secondary Master或Secondary Slave)设为"None"。

@@ -1,0 +1,28 @@
+问题：
+打开VMware出现Cannot open the disk *.vmdk or one of the snapshot disks it depends on.Reason: Failed to lock the file.错误的解决办法！
+
+
+   今天客户单位做的虚拟化服务器出现故障意外重启了，主系统启动之后，在启动VMware虚拟机的时候出现了Cannot open the disk '*.vmdk' or one of the snapshot disks it depends on.Reason: Failed to lock the file.的错误，一个虚拟机无法启动将影响到很多用户的业务使用，该问题产生的原因有可能是因为磁盘意外关闭导致锁没有及时释放，也有可能是因为磁盘文件的类似时间戳没有同步，也有可能有更多的可能... ...
+
+
+解决办法一：
+   1、在VMware该虚拟机路径下的所有.lck文件和文件夹下删除或迁移至其它目录，一般就可以解决了。
+   2、如果再次启动VMware的Windows Vista系统失败，尝试右键虚拟机出错的系统->Settings->Hardware->Hard Disk->Utilities->Map->映射虚拟硬盘到某盘符
+   3、断开虚拟硬盘，重新加载，启动。系统就可以正常启动了
+
+
+
+
+解决办法二：
+
+
+   使用记事本打开*.VMX文件上加上一行代码disk.locking = "FALSE"，重新启动该虚拟机。
+
+
+重新启动VMware正常启动，不会再出现Cannot open the disk '*.vmdk' or one of the snapshot disks it depends on.Reason: Failed to lock the file.错误。
+
+
+注：不过由于某些磁盘文件本身非常大，建议使用内存比较大的机器或者服务器打开，否则速度会异常的漫长。
+
+问题出现的原因：
+虚拟磁盘(.vmdk)本身有一个磁盘保护机制，为了防止多台虚拟机同时访问同一个虚拟磁盘(.vmdk)带来的数据丢失和性能削减方面的隐患，每次启动虚拟机的时候虚拟机会使用扩展名为.lck（磁盘锁）文件对虚拟磁盘(.vmdk)进行锁定保护。当虚拟机关闭时.lck（磁盘锁）文件自动删除。但是可能由于您非正常关闭虚拟机，这时虚拟机还没来得及删除您系统上的.lck（磁盘锁）文件，所以当下次您启动虚拟机的时候出现了上述错误。

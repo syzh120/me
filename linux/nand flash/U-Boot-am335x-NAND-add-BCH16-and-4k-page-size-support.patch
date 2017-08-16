@@ -1,0 +1,421 @@
+From patchwork Mon Jan 28 13:35:40 2013
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: [U-Boot] am335x: NAND: add BCH16 and 4k page size support
+From: Jordy van Wolferen <jordyvanwolferen@gmail.com>
+X-Patchwork-Id: 216188
+Message-Id: <1359380140-9842-1-git-send-email-jordyvanwolferen@gmail.com>
+To: u-boot@lists.denx.de
+Cc: trini@ti.com
+Date: Mon, 28 Jan 2013 14:35:40 +0100
+
+This is tested with a custom AM3359 (rev 2.0) board.
+NAND chip: MT29F16G08ABABAWP
+
+This code allows me to boot from ROM code.
+The ROM code forces BCH16 on NAND chips with a 4k page size.
+
+BCH16 is not enabled by default.
+---
+ arch/arm/include/asm/arch-am33xx/cpu.h       |   8 +-
+ arch/arm/include/asm/arch-am33xx/omap_gpmc.h |  43 ++++++++
+ drivers/mtd/nand/omap_gpmc.c                 | 150 +++++++++++++++++----------
+ include/linux/mtd/mtd-abi.h                  |   2 +-
+ 4 files changed, 148 insertions(+), 55 deletions(-)
+
+--
+1.8.1.1
+
+diff --git a/arch/arm/include/asm/arch-am33xx/cpu.h b/arch/arm/include/asm/arch-am33xx/cpu.h
+index 16e8a80..0a1f1ff 100644
+--- a/arch/arm/include/asm/arch-am33xx/cpu.h
++++ b/arch/arm/include/asm/arch-am33xx/cpu.h
+@@ -78,6 +78,10 @@ struct bch_res_0_3 {
+ 	u32 bch_result_x[4];
+ };
+
++struct bch_res_4_6 {
++	u32 bch_result_x[3];
++};
++
+ struct gpmc {
+ 	u8 res1[0x10];
+ 	u32 sysconfig;		/* 0x10 */
+@@ -107,7 +111,9 @@ struct gpmc {
+ 	u8 res7[12];		/* 0x224 */
+ 	u32 testmomde_ctrl;	/* 0x230 */
+ 	u8 res8[12];		/* 0x234 */
+-	struct bch_res_0_3 bch_result_0_3[2];	/* 0x240 */
++	struct bch_res_0_3 bch_result_0_3;	/* 0x240 */
++	u32 dummy[44];		/* not used */
++	struct bch_res_4_6 bch_result_4_6;	/* 300 */
+ };
+
+ /* Used for board specific gpmc initialization */
+diff --git a/arch/arm/include/asm/arch-am33xx/omap_gpmc.h b/arch/arm/include/asm/arch-am33xx/omap_gpmc.h
+index 572f9d0..534fa6e 100644
+--- a/arch/arm/include/asm/arch-am33xx/omap_gpmc.h
++++ b/arch/arm/include/asm/arch-am33xx/omap_gpmc.h
+@@ -117,4 +117,47 @@
+ 		{.offset = 106,\
+ 		 .length = 8 } } \
+ }
++
++#define GPMC_NAND_4K_HW_BCH8_ECC_LAYOUT {\
++	.eccbytes = 112,\
++	.eccpos = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,\
++				16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,\
++				28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,\
++				40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,\
++				52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,\
++				64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75,\
++				76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87,\
++				88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99,\
++				100, 101, 102, 103, 104, 105, 106, 107, 108, 109,\
++				110, 111, 112, 113},\
++	.oobfree = {\
++		{.offset = 114,\
++		 .length = 110 } } \
++}
++
++#define GPMC_NAND_4K_HW_BCH16_ECC_LAYOUT {\
++	.eccbytes = 208,\
++	.eccpos = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,\
++				16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,\
++				28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,\
++				40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,\
++				52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,\
++				64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75,\
++				76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87,\
++				88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99,\
++				100, 101, 102, 103, 104, 105, 106, 107, 108, 109,\
++				110, 111, 112, 113, 114, 115, 116, 117, 118, 119,\
++				120, 121, 122, 123, 124, 125, 126, 127, 128, 129,\
++				130, 131, 132, 133, 134, 135, 136, 137, 138, 139,\
++				140, 141, 142, 143, 144, 145, 146, 147, 148, 149,\
++				150, 151, 152, 153, 154, 155, 156, 157, 158, 159,\
++				160, 161, 162, 163, 164, 165, 166, 167, 168, 169,\
++				170, 171, 172, 173, 174, 175, 176, 177, 178, 179,\
++				180, 181, 182, 183, 184, 185, 186, 187, 188, 189,\
++				190, 191, 192, 193, 194, 195, 196, 197, 198, 199,\
++				200, 201, 202, 203, 204, 205, 206, 207, 208, 209},\
++	.oobfree = {\
++		{.offset = 210,\
++		 .length = 14 } } \
++}
+ #endif /* __ASM_ARCH_OMAP_GPMC_H */
+diff --git a/drivers/mtd/nand/omap_gpmc.c b/drivers/mtd/nand/omap_gpmc.c
+index cee394e..3c42a54 100644
+--- a/drivers/mtd/nand/omap_gpmc.c
++++ b/drivers/mtd/nand/omap_gpmc.c
+@@ -76,8 +76,8 @@ int omap_spl_dev_ready(struct mtd_info *mtd)
+
+ /*
+  * omap_hwecc_init - Initialize the Hardware ECC for NAND flash in
+- *                   GPMC controller
+- * @mtd:        MTD device structure
++ *					 GPMC controller
++ * @mtd:		MTD device structure
+  *
+  */
+ static void __maybe_unused omap_hwecc_init(struct nand_chip *chip)
+@@ -170,19 +170,19 @@ static int __maybe_unused omap_correct_data(struct mtd_info *mtd, uint8_t *dat,
+ }
+
+ /*
+- *  omap_calculate_ecc - Generate non-inverted ECC bytes.
++ *	omap_calculate_ecc - Generate non-inverted ECC bytes.
+  *
+- *  Using noninverted ECC can be considered ugly since writing a blank
+- *  page ie. padding will clear the ECC bytes. This is no problem as
+- *  long nobody is trying to write data on the seemingly unused page.
+- *  Reading an erased page will produce an ECC mismatch between
+- *  generated and read ECC bytes that has to be dealt with separately.
+- *  E.g. if page is 0xFF (fresh erased), and if HW ECC engine within GPMC
+- *  is used, the result of read will be 0x0 while the ECC offsets of the
+- *  spare area will be 0xFF which will result in an ECC mismatch.
+- *  @mtd:	MTD structure
+- *  @dat:	unused
+- *  @ecc_code:	ecc_code buffer
++ *	Using noninverted ECC can be considered ugly since writing a blank
++ *	page ie. padding will clear the ECC bytes. This is no problem as
++ *	long nobody is trying to write data on the seemingly unused page.
++ *	Reading an erased page will produce an ECC mismatch between
++ *	generated and read ECC bytes that has to be dealt with separately.
++ *	E.g. if page is 0xFF (fresh erased), and if HW ECC engine within GPMC
++ *	is used, the result of read will be 0x0 while the ECC offsets of the
++ *	spare area will be 0xFF which will result in an ECC mismatch.
++ *	@mtd:	MTD structure
++ *	@dat:	unused
++ *	@ecc_code:	ecc_code buffer
+  */
+ static int __maybe_unused omap_calculate_ecc(struct mtd_info *mtd,
+ 		const uint8_t *dat, uint8_t *ecc_code)
+@@ -207,8 +207,8 @@ static int __maybe_unused omap_calculate_ecc(struct mtd_info *mtd,
+
+ /*
+  * omap_enable_ecc - This function enables the hardware ecc functionality
+- * @mtd:        MTD device structure
+- * @mode:       Read/Write mode
++ * @mtd:		MTD device structure
++ * @mode:		Read/Write mode
+  */
+ static void __maybe_unused omap_enable_hwecc(struct mtd_info *mtd, int32_t mode)
+ {
+@@ -258,7 +258,7 @@ struct nand_bch_priv {
+ #define ECC_BCH8_NIBBLES	26
+ #define ECC_BCH16_NIBBLES	52
+
+-static struct nand_ecclayout hw_bch8_nand_oob = GPMC_NAND_HW_BCH8_ECC_LAYOUT;
++static struct nand_ecclayout nand_ecclayout = GPMC_NAND_HW_BCH8_ECC_LAYOUT;
+
+ static struct nand_bch_priv bch_priv = {
+ 	.mode = NAND_ECC_HW_BCH,
+@@ -280,21 +280,21 @@ static void omap_read_bch8_result(struct mtd_info *mtd, uint8_t big_endian,
+ 	int8_t i = 0, j;
+
+ 	if (big_endian) {
+-		ptr = &gpmc_cfg->bch_result_0_3[0].bch_result_x[3];
++		ptr = &gpmc_cfg->bch_result_0_3.bch_result_x[3];
+ 		ecc_code[i++] = readl(ptr) & 0xFF;
+ 		ptr--;
+ 		for (j = 0; j < 3; j++) {
+ 			ecc_code[i++] = (readl(ptr) >> 24) & 0xFF;
+ 			ecc_code[i++] = (readl(ptr) >> 16) & 0xFF;
+-			ecc_code[i++] = (readl(ptr) >>  8) & 0xFF;
++			ecc_code[i++] = (readl(ptr) >>	8) & 0xFF;
+ 			ecc_code[i++] = readl(ptr) & 0xFF;
+ 			ptr--;
+ 		}
+ 	} else {
+-		ptr = &gpmc_cfg->bch_result_0_3[0].bch_result_x[0];
++		ptr = &gpmc_cfg->bch_result_0_3.bch_result_x[0];
+ 		for (j = 0; j < 3; j++) {
+ 			ecc_code[i++] = readl(ptr) & 0xFF;
+-			ecc_code[i++] = (readl(ptr) >>  8) & 0xFF;
++			ecc_code[i++] = (readl(ptr) >>	8) & 0xFF;
+ 			ecc_code[i++] = (readl(ptr) >> 16) & 0xFF;
+ 			ecc_code[i++] = (readl(ptr) >> 24) & 0xFF;
+ 			ptr++;
+@@ -304,6 +304,53 @@ static void omap_read_bch8_result(struct mtd_info *mtd, uint8_t big_endian,
+ 	}
+ }
+
++static void omap_read_bch16_result(struct mtd_info *mtd, uint8_t big_endian,
++				uint8_t *ecc_code)
++{
++	uint32_t *ptr;
++	int8_t i = 0, j;
++	uint32_t data;
++
++	if(big_endian) {
++		ptr = &gpmc_cfg->bch_result_4_6.bch_result_x[2];
++
++		for (j = 0; j < 7; j++) {
++			if(j == 3) {
++				ptr = &gpmc_cfg->bch_result_0_3.bch_result_x[3];
++			}
++
++			data = readl(ptr);
++			ptr--;
++
++			if(i > 0) {
++				ecc_code[i++] = (data >> 24) & 0xFF;
++				ecc_code[i++] = (data >> 16) & 0xFF;
++			}
++			ecc_code[i++] = (data >> 8) & 0xFF;
++			ecc_code[i++] = data & 0xFF;
++		}
++		ecc_code[i++] = 0;
++		ecc_code[i++] = 0;
++	}
++	else {
++		ptr = &gpmc_cfg->bch_result_0_3.bch_result_x[0];
++
++		for (j = 0; j < 7; j++) {
++			if(j == 4) {
++				ptr = &gpmc_cfg->bch_result_4_6.bch_result_x[0];
++			}
++
++			data = readl(ptr);
++			ptr++;
++
++			ecc_code[i++] = data & 0xFF;
++			ecc_code[i++] = (data >> 8) & 0xFF;
++			ecc_code[i++] = (data >> 16) & 0xFF;
++			ecc_code[i++] = (data >> 24) & 0xFF;
++		}
++	}
++}
++
+ /*
+  * omap_ecc_disable - Disable H/W ECC calculation
+  *
+@@ -330,7 +377,7 @@ static void omap_rotate_ecc_bch(struct mtd_info *mtd, uint8_t *calc_ecc,
+ 	struct nand_chip *chip = mtd->priv;
+ 	struct nand_bch_priv *bch = chip->priv;
+ 	uint8_t n_bytes = 0;
+-	int8_t i, j;
++	int8_t i;
+
+ 	switch (bch->type) {
+ 	case ECC_BCH4:
+@@ -338,7 +385,12 @@ static void omap_rotate_ecc_bch(struct mtd_info *mtd, uint8_t *calc_ecc,
+ 		break;
+
+ 	case ECC_BCH16:
+-		n_bytes = 28;
++		n_bytes = 26;
++
++		/* Last 2 register of ELM need to be zero */
++		syndrome[26] = 0;
++		syndrome[27] = 0;
++
+ 		break;
+
+ 	case ECC_BCH8:
+@@ -347,16 +399,17 @@ static void omap_rotate_ecc_bch(struct mtd_info *mtd, uint8_t *calc_ecc,
+ 		break;
+ 	}
+
+-	for (i = 0, j = (n_bytes-1); i < n_bytes; i++, j--)
+-		syndrome[i] =  calc_ecc[j];
++	for (i = 0; i < n_bytes; i++) {
++		syndrome[i] = calc_ecc[(n_bytes-1)-i];
++	}
+ }
+
+ /*
+- *  omap_calculate_ecc_bch - Read BCH ECC result
++ *	omap_calculate_ecc_bch - Read BCH ECC result
+  *
+- *  @mtd:	MTD structure
+- *  @dat:	unused
+- *  @ecc_code:	ecc_code buffer
++ *	@mtd:	MTD structure
++ *	@dat:	unused
++ *	@ecc_code:	ecc_code buffer
+  */
+ static int omap_calculate_ecc_bch(struct mtd_info *mtd, const uint8_t *dat,
+ 				uint8_t *ecc_code)
+@@ -368,7 +421,9 @@ static int omap_calculate_ecc_bch(struct mtd_info *mtd, const uint8_t *dat,
+
+ 	if (bch->type == ECC_BCH8)
+ 		omap_read_bch8_result(mtd, big_endian, ecc_code);
+-	else /* BCH4 and BCH16 currently not supported */
++	else if(bch->type == ECC_BCH16)
++		omap_read_bch16_result(mtd, big_endian, ecc_code);
++	else /* BCH4 currently not supported */
+ 		ret = -1;
+
+ 	/*
+@@ -434,7 +489,7 @@ static int omap_correct_data_bch(struct mtd_info *mtd, uint8_t *dat,
+ 	struct nand_bch_priv *bch = chip->priv;
+ 	uint8_t syndrome[28];
+ 	uint32_t error_count = 0;
+-	uint32_t error_loc[8];
++	uint32_t error_loc[16];
+ 	uint32_t i, ecc_flag;
+
+ 	ecc_flag = 0;
+@@ -470,7 +525,7 @@ static int omap_correct_data_bch(struct mtd_info *mtd, uint8_t *dat,
+ /*
+  * omap_hwecc_init_bch - Initialize the BCH Hardware ECC for NAND flash in
+  *				GPMC controller
+- * @mtd:       MTD device structure
++ * @mtd:	   MTD device structure
+  * @mode:	Read/Write mode
+  */
+ static void omap_hwecc_init_bch(struct nand_chip *chip, int32_t mode)
+@@ -525,8 +580,8 @@ static void omap_hwecc_init_bch(struct nand_chip *chip, int32_t mode)
+
+ /*
+  * omap_enable_ecc_bch- This function enables the bch h/w ecc functionality
+- * @mtd:        MTD device structure
+- * @mode:       Read/Write mode
++ * @mtd:		MTD device structure
++ * @mode:		Read/Write mode
+  *
+  */
+ static void omap_enable_ecc_bch(struct mtd_info *mtd, int32_t mode)
+@@ -611,12 +666,13 @@ static int omap_read_page_bch(struct mtd_info *mtd, struct nand_chip *chip,
+  */
+ void omap_nand_switch_ecc(int32_t hardware)
+ {
++#ifndef CONFIG_AM33XX
+ 	struct nand_chip *nand;
+ 	struct mtd_info *mtd;
+
+ 	if (nand_curr_device < 0 ||
+-	    nand_curr_device >= CONFIG_SYS_MAX_NAND_DEVICE ||
+-	    !nand_info[nand_curr_device].name) {
++		nand_curr_device >= CONFIG_SYS_MAX_NAND_DEVICE ||
++		!nand_info[nand_curr_device].name) {
+ 		printf("Error: Can't switch ecc, no devices available\n");
+ 		return;
+ 	}
+@@ -646,19 +702,6 @@ void omap_nand_switch_ecc(int32_t hardware)
+ 		nand->ecc.calculate = omap_calculate_ecc;
+ 		omap_hwecc_init(nand);
+ 		printf("HW ECC selected\n");
+-#ifdef CONFIG_AM33XX
+-	} else if (hardware == 2) {
+-		nand->ecc.mode = NAND_ECC_HW;
+-		nand->ecc.layout = &hw_bch8_nand_oob;
+-		nand->ecc.size = 512;
+-		nand->ecc.bytes = 14;
+-		nand->ecc.read_page = omap_read_page_bch;
+-		nand->ecc.hwctl = omap_enable_ecc_bch;
+-		nand->ecc.correct = omap_correct_data_bch;
+-		nand->ecc.calculate = omap_calculate_ecc_bch;
+-		omap_hwecc_init_bch(nand, NAND_ECC_READ);
+-		printf("HW BCH8 selected\n");
+-#endif
+ 	} else {
+ 		nand->ecc.mode = NAND_ECC_SOFT;
+ 		/* Use mtd default settings */
+@@ -671,6 +714,7 @@ void omap_nand_switch_ecc(int32_t hardware)
+ 	nand_scan_tail(mtd);
+
+ 	nand->options &= ~NAND_OWN_BUFFERS;
++#endif
+ }
+ #endif /* CONFIG_SPL_BUILD */
+
+@@ -684,10 +728,10 @@ void omap_nand_switch_ecc(int32_t hardware)
+  * - ecc.hwctl: function to enable (reset) hardware ecc generator
+  * - ecc.mode: mode of ecc, see defines
+  * - chip_delay: chip dependent delay for transfering data from array to
+- *   read regs (tR)
++ *	 read regs (tR)
+  * - options: various chip options. They can partly be set to inform
+- *   nand_scan about special functionality. See the defines for further
+- *   explanation
++ *	 nand_scan about special functionality. See the defines for further
++ *	 explanation
+  */
+ int board_nand_init(struct nand_chip *nand)
+ {
+@@ -742,7 +786,7 @@ int board_nand_init(struct nand_chip *nand)
+ 	/* Default ECC mode */
+ #ifdef CONFIG_AM33XX
+ 	nand->ecc.mode = NAND_ECC_HW;
+-	nand->ecc.layout = &hw_bch8_nand_oob;
++	nand->ecc.layout = &nand_ecclayout;
+ 	nand->ecc.size = CONFIG_SYS_NAND_ECCSIZE;
+ 	nand->ecc.bytes = CONFIG_SYS_NAND_ECCBYTES;
+ 	nand->ecc.hwctl = omap_enable_ecc_bch;
+diff --git a/include/linux/mtd/mtd-abi.h b/include/linux/mtd/mtd-abi.h
+index 8bdd231..6979a2a 100644
+--- a/include/linux/mtd/mtd-abi.h
++++ b/include/linux/mtd/mtd-abi.h
+@@ -125,7 +125,7 @@ struct nand_oobfree {
+  */
+ struct nand_ecclayout {
+ 	uint32_t eccbytes;
+-	uint32_t eccpos[128];
++	uint32_t eccpos[208];
+ 	uint32_t oobavail;
+ 	struct nand_oobfree oobfree[MTD_MAX_OOBFREE_ENTRIES];
+ };

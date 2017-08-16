@@ -1,0 +1,114 @@
+一·git简单使用方法：
+1.git branch name //创建新分支
+2.git checkout name //切换到新分支
+3.git branch //查看当前所在分支
+4.修改文件
+5.git status //查看当前文件变化
+6.git checkout filename //恢复某一文件到未修改前
+7.git add . //将当前目录及子目录的修改全部保存到暂存区
+8.git commit -m "简单说明" //将暂存区提交为本地一个更新
+9.git log --abbrev-commit //查看简化commit号的提交历史
+10.git reset --hard commit号 //彻底回退到某个版本，包括log及代码
+11.git diff commit号1 commit号2 > 20161207_diff.patch //生成两个提交的变化的patch包，此处注意后边的包名不要有特殊符号，另外在有二进制文件时，需要增加参数 --binary
+12.git apply --check 20161207_diff.patch //检查是否可正常应用patch
+13.git apply 20161207_diff.patch --whitespace=fix //应用patch，参数是删除多余空格，完成后需要git add 及commit
+
+14.git 删除所有修改：
+git reset --hard 后会有一些新创建的文件不能删除
+git clean -xdf 即可
+
+15.在主分支修改东西后，想新建分支commit，可
+git checkout -b new branch name 即可创建一个新分支并切换过去，与git branch然后git checkout效果一样
+此时主分支和新分支都有修改而没有提交的所有文件，直到新分支commit后，主分支就没有了。
+
+16.git diff的方式打包，只能将所有提交生成为一个大的提交，不能保留每一次的commit信息，如果想保留，可使用 git format-patch生成包后使用 git am 应用包。
+
+
+二·将radxa的代码中的某一个branch拷贝一份
+1.直接 clone 或者clone -b都会报错：
+fatal: attempt to fetch/clone from a shallow repository
+fatal: The remote end hung up unexpectedly
+2.先添加远程仓库然后push
+git remote add xianmiji  /home/dragoniye/sde1/philisense_P101/radxa_rock_android4-4
+git push xianmiji xianmiji
+会报错：
+fatal: attempt to push into a shallow repository
+fatal: The remote end hung up unexpectedly
+
+git remote add xianmmiji /home/dragoniye/sde1/philisense_P101/radxa_rock_android4-4/.git
+git push xianmmiji xianmiji
+现象一样
+3.升级git版本
+
+a.git remote add xianmiji  /home/dragoniye/sde1/philisense_P101/radxa_rock_android4-4/.git
+git push -u xianmiji xianmiji
+会马上返回：
+Branch xianmiji set up to track remote branch xianmiji from xianmiji.
+Everything up-to-date
+
+b.先创建空文件夹：/home/dragoniye/sde1/xianmiji/android
+djf@djf-vm:~/sde1/xianmiji/android$ git init 
+Initialized empty Git repository in /home/dragoniye/sde1/xianmiji/android/.git/
+然后
+git remote add xianmiji /home/dragoniye/sde1/xianmiji/android/.git
+git push -u xianmiji xianmiji
+执行结果：
+Compressing objects: 100% (242002/242002), done.
+Writing objects: 100% (343862/343862), 4.25 GiB | 445.00 KiB/s, done.
+Total 343862 (delta 84266), reused 343065 (delta 83777)
+remote: Resolving deltas: 100% (84266/84266), done.
+To /home/dragoniye/sde1/xianmiji/android/.git
+ ! [remote rejected]       xianmiji -> xianmiji (shallow update not allowed)
+error: failed to push some refs to '/home/dragoniye/sde1/xianmiji/android/.git'
+
+c.直接git clone ，等待6个多小时后Ubuntu重启了。。。
+
+4.可行办法：
+git clone xxx -b remote-branch --single-branch耗时较长，但是可拷贝所有log
+git clone --depth 1 xxx -b remote-branch 耗时较短，只能拷贝指定数量的log
+format-patch的方式
+
+
+git clone
+引用来自“sadjason”的评论
+「克隆某一个特定的远程分支」这个说法有问题，git clone会把所有分支拷贝过来，默认情况下，git clone会把HEAD指针所指向的分支文件拷贝到工作区，-b的作用是指定checkout的目标branch罢了
+引用来自“BluesChow”的评论
+但是我使用git clone -b 下载了特定的分支之后，我在项目里面使用git branch命令得到的分支 只有我clone的那个分支，连master分支都没有，这该怎么解释呢？
+@sadjason 说的没有错，git clone xxx -b remote_branch 的结果是fetch所有remote branch并checkout特定branch。你用git branch 看不到是因为它只显示本地分支。用git branch -a可以全部看到。如果只想fetch特定分支，需要用 git clone xxx -b remote-branch --single-branch。 git的帮助里都已经说明。 
+
+git clone xxx -b remote-branch --single-branch之后，如果想要跟踪远程分支基础之上的一个新分支，则可以使用：
+git remote add branchname xxx -t remote-branch
+git checkout -b newbranch
+git pull branchname
+
+
+
+
+三·git stash — 暂存临时代码
+
+stash命令可以很好的解决这样的问题。当你不想提交当前完成了一半的代码，但是却不得不修改一个紧急Bug，那么使用’Git stash’就可以将你当前未提交到本地(和服务器)的代码推入到Git的栈中，这时候你的工作区间和上一次提交的内容是完全一样的，所以你可以放心的修 Bug，等到修完Bug，提交到服务器上后，再使用’git stash apply’将以前一半的工作应用回来。
+
+当你多次使用’git stash’命令后，你的栈里将充满了未提交的代码，这时候你会对将哪个版本应用回来有些困惑，’git stash list’命令可以将当前的Git栈信息打印出来，你只需要将找到对应的版本号，例如使用’git stash apply stash@{1}’就可以将你指定版本号为stash@{1}的工作取出来，当你将所有的栈都应用回来的时候，可以使用’git stash clear’来将栈清空
+
+git stash [save message] [-k|--no-keep-index] [--patch]
+
+这是git stash保存进度的完整命令形式
+使用save可以对进度添加备注
+# git stash save "这是保存的进度"
+
+现在执行list，会发现后面会出现自定义的备注
+# git stash list
+stash@{0}: On master: 这是保存的进度
+
+-k和--no-keep-index指定保存进度后，是否重置暂存区
+--patch 会显示工作区和HEAD的差异,通过编辑差异文件，排除不需要保存的内容。和git add -p命令类似
+
+
+四·git reset --soft HEAD^
+可以将最近的一次提交撤销，然后再重新add 和 commit，这样可以将之前忘记提交的文件补上，而commit还是保持一个。另一种方法是commit时使用--amend，来修正之前的提交。
+
+五·git reset 后代码丢失 代码未commit 
+reset之前如果执行过git add 操作的话，执行 git fsck --lost-found，然后到.git/lost-found目录下找（可grep）
+
+六·github中的 README.md 内容怎么换行
+空格两个以上 回车！ 或者因为兼容html也可以直接＜/br＞ 

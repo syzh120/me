@@ -1,0 +1,99 @@
+//延时，11.0592MHz的大概4-5us
+void delay()
+{;;}
+
+
+//初始化
+void init()
+{
+	SCL=1;
+	delay();
+	SDA=1;
+	delay();
+}
+//总线都拉高以释放总线
+
+
+//启动信号
+void start()
+{
+	SDA=1;
+	delay();
+	SCL=1;
+	delay();
+	SDA=0;
+	delay();
+}
+//SCL在高电平期间，SDA一个下降沿启动信号
+
+
+//应答信号
+void respons()
+{
+	uchar i=0;
+	SCL=1;
+	delay();
+	while((SDA==1)&&(i<255))
+		i++;             //防止程序在此停止
+	SCL=0;
+	delay();
+}
+//SCL在高电平期间，SDA被从设备拉为低电平表示应答
+
+
+
+//停止信号
+void stop()
+{
+	SDA=0;
+	delay();
+	SCL=1;
+	delay();
+	SDA=1;
+	delay();
+}
+//SCL在高电平期间，SDA一个上升沿停止信号
+
+
+//写一个字节
+void writebyte(uchar data)
+{
+	uchar i,temp;
+	temp=data;
+	for i=0;i<8;i++;
+	{
+		temp=temp<<1;
+		SCL=0;
+		delay();
+		SDA=CY;
+		delay();
+		SCL=1;
+		delay();
+	}
+	SCL=0;
+	delay();
+	SDA=1;
+	delay();
+}
+//需要一位一位的发送
+
+
+//读一个字节
+void readbyte()
+{
+	uchar i,k;
+	SCL=0;
+	delay();
+	SDA=1;
+	for(i=0;i<8;i++)
+	{
+		SCL=1;
+		delay();
+		k=(k<<1)|SDA;
+		SCL=0;
+		delay();
+	}
+	delay();
+	return k;
+}
+//同样的，需要一位一位的接收

@@ -1,0 +1,1004 @@
+Archive member included because of file (symbol)
+
+../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                              Debug/adcVoltMeasure.o (TSCADCIntStatusClear)
+../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                              Debug/adcVoltMeasure.o (ConsoleUtilsInit)
+../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                              ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o) (UARTStdioInit)
+../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+                              ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o) (ASCIIToDigit)
+../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+                              Debug/adcVoltMeasure.o (TSCADCModuleClkConfig)
+../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                              ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o) (UARTConsoleInit)
+../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                              ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o) (UARTPinMuxSetup)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+                              Debug/adcVoltMeasure.o (CacheEnable)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+                              ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o) (CP15ICacheDisable)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+                              (Entry)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                              Debug/adcVoltMeasure.o (IntRegister)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+                              Debug/adcVoltMeasure.o (MMUInit)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                              ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o) (start_boot)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+                              ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o) (CPUIntStatus)
+../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+                              ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o) (IRQHandler)
+/opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+                              (__aeabi_uidiv)
+/opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+                              (__aeabi_idiv)
+/opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+                              /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                              ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o) (UARTOperatingModeSelect)
+
+Allocating common symbols
+Common symbol       size              file
+
+sample2             0x4               Debug/adcVoltMeasure.o
+val2                0x4               Debug/adcVoltMeasure.o
+sample1             0x4               Debug/adcVoltMeasure.o
+fnRAMVectors        0x200             ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+val1                0x4               Debug/adcVoltMeasure.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 Debug/adcVoltMeasure.o
+ .data          0x00000000        0x0 Debug/adcVoltMeasure.o
+ .bss           0x00000000        0x0 Debug/adcVoltMeasure.o
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCGetRevision
+                0x00000000       0x28 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCIdleModeSet
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCRawIntStatusSet
+                0x00000000       0x40 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCRawIntStatusRead
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCRawIntStatus
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCIntStatusRead
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCEventInterruptDisable
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCWakeUpPenEventConfig
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCDMAFIFOEnable
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCDMAFIFODisable
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCIsDMAFIFOEnabled
+                0x00000000       0x3c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCConfigHWEventPrempt
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCHWEventMapSet
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCSetADCPowerDown
+                0x00000000       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCSetADCPowerUp
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCBiasConfig
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCStepConfigProtectionEnable
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCSequencerPenIrqStatusRead
+                0x00000000       0x5c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCSequencerFSMBusyStatus
+                0x00000000       0x34 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCSequencerCurrentStepID
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCOutputRangeConfig
+                0x00000000       0xb4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCConfigureMisc
+                0x00000000       0xa8 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCIdleStepOperationModeControl
+                0x00000000       0x68 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCIdleStepConfig
+                0x00000000      0x128 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCIdleStepAnalogSupplyConfig
+                0x00000000       0xe8 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCIdleStepAnalogGroundConfig
+                0x00000000      0x128 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCChargeStepOperationModeControl
+                0x00000000       0x68 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCChargeStepConfig
+                0x00000000      0x128 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCChargeStepAnalogSupplyConfig
+                0x00000000       0xe8 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCChargeStepAnalogGroundConfig
+                0x00000000      0x128 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCTSChargeStepOpenDelayConfig
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCTSStepOutOfRangeCheckEnable
+                0x00000000       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCTSStepOutOfRangeCheckDisable
+                0x00000000       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCTSStepAverageConfig
+                0x00000000       0x94 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCTSStepSampleDelayConfig
+                0x00000000       0x94 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCTSStepOpenDelayConfig
+                0x00000000       0x98 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCFIFOChannelIDRead
+                0x00000000       0x44 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCFIFOWordCountRead
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCFIFOIRQThresholdLevelConfig
+                0x00000000       0x5c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text.TSCADCFIFODMAThresholdLevelConfig
+                0x00000000       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .text.ConsoleUtilsScanf
+                0x00000000       0x80 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .text.ConsoleUtilsGets
+                0x00000000       0x74 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .text.ConsoleUtilsPuts
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .text.ConsoleUtilsGetChar
+                0x00000000       0xa8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .text.ConsoleUtilsPutChar
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTStdioRead
+                0x00000000       0xd0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGets
+                0x00000000       0xdc ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPutNum
+                0x00000000      0x178 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPutHexNum
+                0x00000000      0x198 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetNum
+                0x00000000      0x118 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetHexNum
+                0x00000000      0x2ec ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetc
+                0x00000000       0x20 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTprintf
+                0x00000000      0x6b8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTScanf
+                0x00000000      0xa68 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.ASCIIToDigit
+                0x00000000       0xe8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.DigitToASCII
+                0x00000000       0xb8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.StrToEthrAddr
+                0x00000000      0x184 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.EthrAddrToStr
+                0x00000000      0x180 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.TimeToStr
+                0x00000000      0x18c ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text.DateToStr
+                0x00000000      0x18c ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_info    0x00000000      0x289 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_abbrev  0x00000000       0xce ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_loc     0x00000000      0x108 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_aranges
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_ranges  0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_line    0x00000000      0x1a6 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_str     0x00000000      0x18c ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .ARM.attributes
+                0x00000000       0x37 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .debug_frame   0x00000000       0xb0 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(ascii.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UARTConsoleGetc
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheDisable
+                0x00000000       0x7c ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheInstInvalidateAll
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheInstInvalidateBuff
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheDataCleanInvalidateAll
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheDataCleanAll
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheDataInvalidateAll
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheDataCleanBuff
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheDataInvalidateBuff
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .text.CacheDataCleanInvalidateBuff
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntUnRegister
+                0x00000000       0x34 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntSystemDisable
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntIfClkFreeRunSet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntIfClkAutoGateSet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntActiveIrqNumGet
+                0x00000000       0x28 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntSpurIrqFlagGet
+                0x00000000       0x28 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntProtectionEnable
+                0x00000000       0x24 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntProtectionDisable
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntSyncClkFreeRunSet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntSyncClkAutoGateSet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntFuncClkFreeRunSet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntFuncClkAutoGateSet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntCurrIrqPriorityGet
+                0x00000000       0x28 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntPriorityThresholdGet
+                0x00000000       0x28 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntPriorityThresholdSet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntRawStatusGet
+                0x00000000       0x5c ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntSoftwareIntSet
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntSoftwareIntClear
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntPendingIrqMaskedStatusGet
+                0x00000000       0x58 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntMasterIRQDisable
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntMasterFIQEnable
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntMasterFIQDisable
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntMasterStatusGet
+                0x00000000       0x20 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntDisable
+                0x00000000       0x3c ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntEnable
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .text.CPUSwitchToPrivilegedMode
+                0x00000000       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .text.CPUSwitchToUserMode
+                0x00000000       0x24 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .text.CPUAbortHandler
+                0x00000000       0x14 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .text.CPUIntStatus
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .text.CPUirqd  0x00000000       0x24 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .text.CPUfiqd  0x00000000       0x24 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .text.CPUfiqe  0x00000000       0x24 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+ .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .data          0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .bss           0x00000000        0x0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDivisorLatchEnable
+                0x00000000       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRegConfModeRestore
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTParityModeSet
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTParityModeGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMAEnable
+                0x00000000       0x80 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMADisable
+                0x00000000       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSubConfigMSRSPRModeEn
+                0x00000000      0x124 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSubConfigXOFFModeEn
+                0x00000000      0x124 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntEnable
+                0x00000000      0x130 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntDisable
+                0x00000000      0x110 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSpaceAvail
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharsAvail
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharPutNonBlocking
+                0x00000000       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGetNonBlocking
+                0x00000000       0x80 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGet
+                0x00000000       0x84 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGetTimeout
+                0x00000000       0xac ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOCharPut
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOCharGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOWrite
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRxErrorGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntIdentityGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntPendingStatusGet
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOEnableStatusGet
+                0x00000000       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutoRTSAutoCTSControl
+                0x00000000       0xb4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSpecialCharDetectControl
+                0x00000000       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSoftwareFlowCtrlOptSet
+                0x00000000       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTPulseShapingControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIdleModeConfigure
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutoIdleModeControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFlowCtrlTrigLvlConfig
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXON1XOFF1ValProgram
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXON2XOFF2ValProgram
+                0x00000000       0x4c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXONAnyFeatureControl
+                0x00000000      0x100 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTLoopbackModeControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemControlSet
+                0x00000000       0x44 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemControlClear
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemStatusGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemStatusChangeCheck
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTResumeOperation
+                0x00000000       0x28 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpEventsEnable
+                0x00000000       0x44 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpEventsDisable
+                0x00000000       0x48 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOTrigLvlGranControl
+                0x00000000       0x88 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDSRInterruptControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxEmptyIntControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRXCTSDSRWakeUpConfigure
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRXCTSDSRTransitionStatusGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMACounterResetControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxFIFOFullStatusGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxFIFOLevelGet
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRxFIFOLevelGet
+                0x00000000       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudParityGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudWordLenGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudSpeedGet
+                0x00000000       0x6c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTScratchPadRegWrite
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTScratchPadRegRead
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModuleVersionNumberGet
+                0x00000000       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxDMAThresholdControl
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxDMAThresholdValConfig
+                0x00000000       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+DDR0             0x80000000         0x10000000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD Debug/adcVoltMeasure.o
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a
+LOAD ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a
+LOAD ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a
+LOAD ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/arm-none-eabi/lib//libc.a
+LOAD /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a
+
+.startcode      0x80000000       0xb4
+                0x80000000                . = ALIGN (0x4)
+ *init.o(.text)
+ .text          0x80000000       0xb4 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+                0x80000000                Entry
+
+.text           0x800000b4     0x3c8c
+                0x800000b4                . = ALIGN (0x4)
+ *(.text*)
+ .text.MMUConfigAndEnable
+                0x800000b4       0xd8 Debug/adcVoltMeasure.o
+                0x800000b4                MMUConfigAndEnable
+ .text.main     0x8000018c      0x1d0 Debug/adcVoltMeasure.o
+                0x8000018c                main
+ .text.ADCConfigure
+                0x8000035c      0x148 Debug/adcVoltMeasure.o
+ .text.StepConfigure
+                0x800004a4       0xfc Debug/adcVoltMeasure.o
+ .text.CleanUpInterrupts
+                0x800005a0       0x54 Debug/adcVoltMeasure.o
+ .text.ADCIsr   0x800005f4      0x1b4 Debug/adcVoltMeasure.o
+ .text.SetupIntc
+                0x800007a8       0x64 Debug/adcVoltMeasure.o
+ .text.TSCADCIntStatusClear
+                0x8000080c       0x30 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x8000080c                TSCADCIntStatusClear
+ .text.TSCADCIntStatus
+                0x8000083c       0x2c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x8000083c                TSCADCIntStatus
+ .text.TSCADCEventInterruptEnable
+                0x80000868       0x40 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000868                TSCADCEventInterruptEnable
+ .text.TSCADCTSTransistorConfig
+                0x800008a8       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x800008a8                TSCADCTSTransistorConfig
+ .text.TSCADCTSModeConfig
+                0x80000908       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000908                TSCADCTSModeConfig
+ .text.TSCADCStepConfigProtectionDisable
+                0x80000968       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000968                TSCADCStepConfigProtectionDisable
+ .text.TSCADCStepIDTagConfig
+                0x800009a0       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x800009a0                TSCADCStepIDTagConfig
+ .text.TSCADCModuleStateSet
+                0x80000a00       0x5c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000a00                TSCADCModuleStateSet
+ .text.TSCADCConfigureAFEClock
+                0x80000a5c       0x74 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000a5c                TSCADCConfigureAFEClock
+ .text.TSCADCConfigureStepEnable
+                0x80000ad0       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000ad0                TSCADCConfigureStepEnable
+ .text.TSCADCTSStepOperationModeControl
+                0x80000b48       0x9c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000b48                TSCADCTSStepOperationModeControl
+ .text.TSCADCTSStepConfig
+                0x80000be4      0x1e8 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000be4                TSCADCTSStepConfig
+ .text.TSCADCTSStepAnalogSupplyConfig
+                0x80000dcc      0x178 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000dcc                TSCADCTSStepAnalogSupplyConfig
+ .text.TSCADCTSStepAnalogGroundConfig
+                0x80000f44      0x1e8 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80000f44                TSCADCTSStepAnalogGroundConfig
+ .text.TSCADCTSStepFIFOSelConfig
+                0x8000112c       0x94 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x8000112c                TSCADCTSStepFIFOSelConfig
+ .text.TSCADCTSStepModeConfig
+                0x800011c0       0x90 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x800011c0                TSCADCTSStepModeConfig
+ .text.TSCADCFIFOADCDataRead
+                0x80001250       0x44 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                0x80001250                TSCADCFIFOADCDataRead
+ .text.ConsoleUtilsInit
+                0x80001294       0x18 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                0x80001294                ConsoleUtilsInit
+ .text.ConsoleUtilsSetType
+                0x800012ac       0x54 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                0x800012ac                ConsoleUtilsSetType
+ .text.ConsoleUtilsPrintf
+                0x80001300       0x6c ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                0x80001300                ConsoleUtilsPrintf
+ .text.UARTStdioInit
+                0x8000136c       0x18 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x8000136c                UARTStdioInit
+ .text.UARTPuts
+                0x80001384       0xec ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x80001384                UARTPuts
+ .text.UARTPutc
+                0x80001470       0x30 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x80001470                UARTPutc
+ .text.UARTwrite
+                0x800014a0       0x94 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x800014a0                UARTwrite
+ .text.UARTPrintf
+                0x80001534      0x6ac ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x80001534                UARTPrintf
+ .text.TSCADCModuleClkConfig
+                0x80001be0       0xa0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+                0x80001be0                TSCADCModuleClkConfig
+ .text.TSCADCPinMuxSetUp
+                0x80001c80       0xb4 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+                0x80001c80                TSCADCPinMuxSetUp
+ .text.UARTStdioInitExpClk
+                0x80001d34       0xd0 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UartFIFOConfigure
+                0x80001e04       0x64 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UartBaudRateSet
+                0x80001e68       0x5c ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UARTConsoleInit
+                0x80001ec4       0x44 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                0x80001ec4                UARTConsoleInit
+ .text.UARTConsolePutc
+                0x80001f08       0x38 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                0x80001f08                UARTConsolePutc
+ .text.UARTPinMuxSetup
+                0x80001f40       0x60 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                0x80001f40                UARTPinMuxSetup
+ .text.UART0ModuleClkConfig
+                0x80001fa0       0x84 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                0x80001fa0                UART0ModuleClkConfig
+ .text.CacheEnable
+                0x80002024       0x94 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+                0x80002024                CacheEnable
+ .text          0x800020b8      0x488 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+                0x800020b8                CP15ICacheDisable
+                0x800020d4                CP15DCacheDisable
+                0x800020f0                CP15ICacheEnable
+                0x80002100                CP15DCacheEnable
+                0x80002110                CP15DCacheFlush
+                0x800021a4                CP15DCacheClean
+                0x80002238                CP15DCacheCleanFlush
+                0x800022cc                CP15ICacheFlush
+                0x800022dc                CP15DCacheCleanBuff
+                0x80002330                CP15DCacheCleanFlushBuff
+                0x80002384                CP15DCacheFlushBuff
+                0x800023e8                CP15ICacheFlushBuff
+                0x8000243c                CP15Ttb0Set
+                0x80002448                CP15TlbInvalidate
+                0x80002454                CP15MMUDisable
+                0x8000246c                CP15MMUEnable
+                0x80002480                CP15VectorBaseAddrSet
+                0x8000248c                CP15BranchPredictorInvalidate
+                0x80002498                CP15BranchPredictionEnable
+                0x800024a8                CP15BranchPredictionDisable
+                0x800024b8                CP15DomainAccessClientSet
+                0x800024c8                CP15ControlFeatureDisable
+                0x800024dc                CP15ControlFeatureEnable
+                0x800024f0                CP15TtbCtlTtb0Config
+                0x80002500                CP15AuxControlFeatureEnable
+                0x80002514                CP15AuxControlFeatureDisable
+                0x80002528                CP15MainIdPrimPartNumGet
+ .text.IntDefaultHandler
+                0x80002540       0x14 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .text.IntRegister
+                0x80002554       0x34 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002554                IntRegister
+ .text.IntAINTCInit
+                0x80002588       0x90 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002588                IntAINTCInit
+ .text.IntPrioritySet
+                0x80002618       0x50 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002618                IntPrioritySet
+ .text.IntSystemEnable
+                0x80002668       0x4c ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002668                IntSystemEnable
+ .text.IntMasterIRQEnable
+                0x800026b4       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x800026b4                IntMasterIRQEnable
+ .text.MMUInit  0x800026cc       0x88 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+                0x800026cc                MMUInit
+ .text.MMUMemRegionMap
+                0x80002754      0x110 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+                0x80002754                MMUMemRegionMap
+ .text.MMUEnable
+                0x80002864       0x38 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+                0x80002864                MMUEnable
+ .text.start_boot
+                0x8000289c       0x24 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                0x8000289c                start_boot
+ .text.CopyVectorTable
+                0x800028c0       0x98 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .text.CPUirqe  0x80002958       0x24 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+                0x80002958                CPUirqe
+ .text          0x8000297c       0xf0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+                0x8000297c                SVC_Handler
+                0x800029a4                IRQHandler
+                0x80002a50                FIQHandler
+                0x80002a54                UndefInstHandler
+                0x80002a54                AbortHandler
+ .text          0x80002a6c      0x114 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+                0x80002a6c                __udivsi3
+                0x80002a6c                __aeabi_uidiv
+                0x80002b60                __aeabi_uidivmod
+ .text          0x80002b80      0x148 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+                0x80002b80                __aeabi_idiv
+                0x80002b80                __divsi3
+                0x80002ca8                __aeabi_idivmod
+ .text          0x80002cc8        0x4 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+                0x80002cc8                __aeabi_ldiv0
+                0x80002cc8                __aeabi_idiv0
+ .text.UARTOperatingModeSelect
+                0x80002ccc       0x84 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80002ccc                UARTOperatingModeSelect
+ .text.UARTDivisorValCompute
+                0x80002d50      0x104 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80002d50                UARTDivisorValCompute
+ .text.UARTDivisorLatchWrite
+                0x80002e54      0x210 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80002e54                UARTDivisorLatchWrite
+ .text.UARTDivisorLatchDisable
+                0x80003064       0x38 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80003064                UARTDivisorLatchDisable
+ .text.UARTRegConfigModeEnable
+                0x8000309c       0x9c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x8000309c                UARTRegConfigModeEnable
+ .text.UARTBreakCtl
+                0x80003138       0x60 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80003138                UARTBreakCtl
+ .text.UARTLineCharacConfig
+                0x80003198       0xa4 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80003198                UARTLineCharacConfig
+ .text.UARTFIFOConfig
+                0x8000323c      0x480 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x8000323c                UARTFIFOConfig
+ .text.UARTFIFORegisterWrite
+                0x800036bc       0xc0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x800036bc                UARTFIFORegisterWrite
+ .text.UARTEnhanFuncEnable
+                0x8000377c       0x88 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x8000377c                UARTEnhanFuncEnable
+ .text.UARTEnhanFuncBitValRestore
+                0x80003804       0x8c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80003804                UARTEnhanFuncBitValRestore
+ .text.UARTSubConfigTCRTLRModeEn
+                0x80003890      0x124 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80003890                UARTSubConfigTCRTLRModeEn
+ .text.UARTTCRTLRBitValRestore
+                0x800039b4      0x128 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x800039b4                UARTTCRTLRBitValRestore
+ .text.UARTCharPut
+                0x80003adc       0x78 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80003adc                UARTCharPut
+ .text.UARTModuleReset
+                0x80003b54       0x54 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80003b54                UARTModuleReset
+ *(.rodata*)
+ .rodata        0x80003ba8       0xa8 Debug/adcVoltMeasure.o
+ .rodata        0x80003c50       0x50 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .rodata        0x80003ca0       0x60 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .rodata.g_pcHex
+                0x80003d00        0x4 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .rodata.AM335X_VECTOR_BASE
+                0x80003d04        0x4 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                0x80003d04                AM335X_VECTOR_BASE
+ .rodata.vecTbl
+                0x80003d08       0x38 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+
+.glue_7         0x80003d40        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x80003d40        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x80003d40        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x80003d40        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x80003d40        0x0
+ .iplt          0x00000000        0x0 Debug/adcVoltMeasure.o
+
+.rel.dyn        0x80003d40        0x0
+ .rel.iplt      0x00000000        0x0 Debug/adcVoltMeasure.o
+
+.data           0x80003d40        0x4
+                0x80003d40                . = ALIGN (0x4)
+ *(.data*)
+ .data.flag     0x80003d40        0x4 Debug/adcVoltMeasure.o
+                0x80003d40                flag
+
+.igot.plt       0x80003d44        0x0
+ .igot.plt      0x00000000        0x0 Debug/adcVoltMeasure.o
+
+.bss            0x80004000     0x4214
+                0x80004000                . = ALIGN (0x4)
+                0x80004000                _bss_start = .
+ *(.bss*)
+ .bss.pageTable
+                0x80004000     0x4000 Debug/adcVoltMeasure.o
+ .bss.ConsoleType
+                0x80008000        0x1 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ *(COMMON)
+ *fill*         0x80008001        0x3 00
+ COMMON         0x80008004       0x10 Debug/adcVoltMeasure.o
+                0x80008004                sample2
+                0x80008008                val2
+                0x8000800c                sample1
+                0x80008010                val1
+ COMMON         0x80008014      0x200 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80008014                fnRAMVectors
+                0x80008214                _bss_end = .
+
+.heap           0x80008214      0x800
+                0x80008214                . = ALIGN (0x4)
+                0x80008214                __end__ = .
+                0x80008214                end = __end__
+                0x80008214                __HeapBase = __end__
+ *(.heap*)
+                0x80008a14                . = (. + 0x800)
+ *fill*         0x80008214      0x800 00
+                0x80008a14                __HeapLimit = .
+
+.stack          0x80008a14  0x7fffff8
+                0x80008a14                . = ALIGN (0x4)
+                0x80008a14                __StackLimit = .
+ *(.stack*)
+                0x88008a0c                . = (. + 0x7fffff8)
+ *fill*         0x80008a14  0x7fffff8 00
+                0x88008a0c                __StackTop = .
+                0x88008a0c                _stack = __StackTop
+OUTPUT(Debug/adcVoltMeasure.out elf32-littlearm)
+
+.debug_info     0x00000000     0x3d2c
+ .debug_info    0x00000000      0x290 Debug/adcVoltMeasure.o
+ .debug_info    0x00000290      0xf15 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .debug_info    0x000011a5      0x29a ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_info    0x0000143f      0x69a ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_info    0x00001ad9       0x6b ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .debug_info    0x00001b44      0x156 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_info    0x00001c9a       0x7e ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_info    0x00001d18      0x1b3 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .debug_info    0x00001ecb       0xa5 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .debug_info    0x00001f70       0xa5 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .debug_info    0x00002015      0x46f ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_info    0x00002484      0x16d ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .debug_info    0x000025f1       0xe0 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_info    0x000026d1       0xf8 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_info    0x000027c9       0xb8 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+ .debug_info    0x00002881     0x14ab ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_abbrev   0x00000000      0xc10
+ .debug_abbrev  0x00000000      0x158 Debug/adcVoltMeasure.o
+ .debug_abbrev  0x00000158       0xf7 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .debug_abbrev  0x0000024f      0x156 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_abbrev  0x000003a5      0x186 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_abbrev  0x0000052b       0x39 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .debug_abbrev  0x00000564       0xa3 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_abbrev  0x00000607       0x62 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_abbrev  0x00000669       0x7a ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .debug_abbrev  0x000006e3       0x14 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .debug_abbrev  0x000006f7       0x14 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .debug_abbrev  0x0000070b      0x1c2 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_abbrev  0x000008cd       0xd9 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .debug_abbrev  0x000009a6       0xa4 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_abbrev  0x00000a4a       0x64 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_abbrev  0x00000aae       0x14 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+ .debug_abbrev  0x00000ac2      0x14e ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_loc      0x00000000     0x26a4
+ .debug_loc     0x00000000      0x134 Debug/adcVoltMeasure.o
+ .debug_loc     0x00000134      0x9cc ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .debug_loc     0x00000b00      0x178 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_loc     0x00000c78      0x274 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_loc     0x00000eec       0x58 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .debug_loc     0x00000f44      0x108 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_loc     0x0000104c       0x58 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_loc     0x000010a4      0x1b8 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .debug_loc     0x0000125c      0x554 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_loc     0x000017b0       0x84 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .debug_loc     0x00001834       0x58 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_loc     0x0000188c      0x160 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_loc     0x000019ec      0xcb8 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_aranges  0x00000000      0x898
+ .debug_aranges
+                0x00000000       0x50 Debug/adcVoltMeasure.o
+ .debug_aranges
+                0x00000050      0x1e0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .debug_aranges
+                0x00000230       0x58 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_aranges
+                0x00000288       0x88 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_aranges
+                0x00000310       0x28 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .debug_aranges
+                0x00000338       0x48 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_aranges
+                0x00000380       0x28 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_aranges
+                0x000003a8       0x68 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .debug_aranges
+                0x00000410       0x20 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .debug_aranges
+                0x00000430       0x20 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .debug_aranges
+                0x00000450      0x110 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_aranges
+                0x00000560       0x30 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .debug_aranges
+                0x00000590       0x28 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_aranges
+                0x000005b8       0x58 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_aranges
+                0x00000610       0x20 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+ .debug_aranges
+                0x00000630      0x268 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_ranges   0x00000000      0x768
+ .debug_ranges  0x00000000       0x40 Debug/adcVoltMeasure.o
+ .debug_ranges  0x00000040      0x1d0 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .debug_ranges  0x00000210       0x48 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_ranges  0x00000258       0x78 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_ranges  0x000002d0       0x18 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .debug_ranges  0x000002e8       0x38 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_ranges  0x00000320       0x18 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_ranges  0x00000338       0x58 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .debug_ranges  0x00000390      0x100 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_ranges  0x00000490       0x20 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .debug_ranges  0x000004b0       0x18 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_ranges  0x000004c8       0x48 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_ranges  0x00000510      0x258 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_line     0x00000000     0x2079
+ .debug_line    0x00000000      0x199 Debug/adcVoltMeasure.o
+ .debug_line    0x00000199      0x4f2 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .debug_line    0x0000068b      0x191 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_line    0x0000081c      0x628 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_line    0x00000e44       0xa5 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .debug_line    0x00000ee9       0xcf ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_line    0x00000fb8       0x94 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_line    0x0000104c      0x10d ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .debug_line    0x00001159      0x18a ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .debug_line    0x000012e3       0x93 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .debug_line    0x00001376      0x2bb ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_line    0x00001631       0xda ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .debug_line    0x0000170b       0x96 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_line    0x000017a1       0xde ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_line    0x0000187f       0xb9 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+ .debug_line    0x00001938      0x741 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_str      0x00000000     0x1d1a
+ .debug_str     0x00000000      0x23a Debug/adcVoltMeasure.o
+                                0x247 (size before relaxing)
+ .debug_str     0x0000023a      0x7de ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+                                0x84a (size before relaxing)
+ .debug_str     0x00000a18      0x192 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                                0x285 (size before relaxing)
+ .debug_str     0x00000baa      0x1a9 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                                0x2a2 (size before relaxing)
+ .debug_str     0x00000d53       0xa5 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+                                0x112 (size before relaxing)
+ .debug_str     0x00000df8       0xd6 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+                                0x193 (size before relaxing)
+ .debug_str     0x00000ece       0x5c ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+                                0x119 (size before relaxing)
+ .debug_str     0x00000f2a      0x167 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+                                0x1c7 (size before relaxing)
+ .debug_str     0x00001091      0x2a5 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                                0x37b (size before relaxing)
+ .debug_str     0x00001336       0x69 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+                                0x15e (size before relaxing)
+ .debug_str     0x0000139f       0x70 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                                0x130 (size before relaxing)
+ .debug_str     0x0000140f       0x9f ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+                                0x142 (size before relaxing)
+ .debug_str     0x000014ae      0x86c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                                0x965 (size before relaxing)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 Debug/adcVoltMeasure.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .comment       0x00000000       0x71 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.ARM.attributes
+                0x00000000       0x3b
+ .ARM.attributes
+                0x00000000       0x37 Debug/adcVoltMeasure.o
+ .ARM.attributes
+                0x00000037       0x37 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .ARM.attributes
+                0x0000006e       0x37 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .ARM.attributes
+                0x000000a5       0x37 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .ARM.attributes
+                0x000000dc       0x37 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .ARM.attributes
+                0x00000113       0x37 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .ARM.attributes
+                0x0000014a       0x37 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .ARM.attributes
+                0x00000181       0x3d ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .ARM.attributes
+                0x000001be       0x23 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .ARM.attributes
+                0x000001e1       0x23 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .ARM.attributes
+                0x00000204       0x3d ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .ARM.attributes
+                0x00000241       0x3d ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .ARM.attributes
+                0x0000027e       0x3d ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .ARM.attributes
+                0x000002bb       0x3d ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .ARM.attributes
+                0x000002f8       0x23 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+ .ARM.attributes
+                0x0000031b       0x18 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000333       0x18 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x0000034b       0x18 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000363       0x37 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_frame    0x00000000     0x1798
+ .debug_frame   0x00000000       0xd4 Debug/adcVoltMeasure.o
+ .debug_frame   0x000000d4      0x56c ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(tsc_adc.o)
+ .debug_frame   0x00000640      0x108 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_frame   0x00000748      0x1a8 ../../../../../..//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_frame   0x000008f0       0x40 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(tscAdc.o)
+ .debug_frame   0x00000930       0xb8 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_frame   0x000009e8       0x40 ../../../../../..//binary/armv7a/gcc/am335x/ok335xd/platform/Debug/libplatform.a(uart.o)
+ .debug_frame   0x00000a28      0x128 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cache.o)
+ .debug_frame   0x00000b50      0x314 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_frame   0x00000e64       0x60 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(mmu.o)
+ .debug_frame   0x00000ec4       0x48 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_frame   0x00000f0c       0xd4 ../../../../../..//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_frame   0x00000fe0       0x20 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001000       0x20 /opt/gcc-arm-none-eabi-4_7-2013q1/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .debug_frame   0x00001020      0x778 ../../../../../..//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)

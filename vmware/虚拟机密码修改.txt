@@ -1,0 +1,16 @@
+1.重启虚拟机，一直按shift键，进入grub菜单
+2.选择recovery mode 按e进行编辑，将ro改为rw，不修改的话进入后文件系统是只读的，不可修改任何文件。
+3.回车后进入，在Recovery Menu中，选择 root  Drop to root shell prompt
+4.回车进入shell界面
+此时可以使用 passwd root修改root密码及其它用户密码
+
+注：之前修改过/etc/passwd文件，导致系统出错，修改不成功，需修改/etc/passwd
+及对应/etc/shadow 相应项，记得此时最好不要修改用户主目录，若修改需要将/home下对应主目录修改。
+
+我的修改：
+1./etc/passwd
+djf:x:1000:1000:djf:/home/dragoniye:/bin/bash
+第一项及第五项为修改项，没有修改第六项，估计修改第六项后还需将/home/dragoniye改名为/home/djf，才能正常登录
+2./etc/shadow
+djf:........将第一项修改为djf
+3.都修改保存后，再passwd djf即可修改用户密码了

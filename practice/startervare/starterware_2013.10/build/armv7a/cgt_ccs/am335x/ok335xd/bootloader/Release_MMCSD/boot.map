@@ -1,0 +1,797 @@
+******************************************************************************
+                  TI ARM Linker PC v5.0.4                      
+******************************************************************************
+>> Linked Fri Nov 08 17:22:48 2013
+
+OUTPUT FILE NAME:   <../../../../../../../binary/armv7a/cgt_ccs/am335x/ok335xd/bootloader/Release_MMCSD/boot.out>
+ENTRY POINT SYMBOL: "Entry"  address: 402f0400
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  IRAM_MEM              402f0400   0001fbff  0000a33c  000158c3  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+402f0400    402f0400    00009ac8   00009ac8    r-x
+  402f0400    402f0400    00000088   00000088    r-x .init
+  402f0488    402f0488    00009a38   00009a38    r-x .text
+  402f9ec0    402f9ec0    00000008   00000008    r-- .const
+402f9f00    402f9f00    000007e8   00000000    rw-
+  402f9f00    402f9f00    000007e8   00000000    rw- .bss
+402fa6e8    402fa6e8    00000084   00000084    rw-
+  402fa6e8    402fa6e8    00000084   00000084    rw- .data
+4030fff0    4030fff0    00000008   00000000    rw-
+  4030fff0    4030fff0    00000008   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.cinit     0    402f0400    00000000     UNINITIALIZED
+
+.init      0    402f0400    00000088     
+                  402f0400    00000088     bl_init.obj (.text)
+
+.text      0    402f0488    00009a38     
+                  402f0488    0000367c     ff.obj (.text)
+                  402f3b04    000015fc     bl_platform.obj (.text)
+                  402f5100    00000f2c     utils.lib : uartStdio.obj (.text)
+                  402f602c    00000e8c     drivers.lib : uart_irda_cir.obj (.text)
+                  402f6eb8    00000848     bl_hsmmcsd.obj (.text)
+                  402f7700    00000848     libmmcsd.lib : mmcsd_proto.obj (.text)
+                  402f7f48    00000580     drivers.lib : hs_mmcsd.obj (.text)
+                  402f84c8    000004c8                 : hsi2c.obj (.text)
+                  402f8990    00000488     cp15.obj (.text)
+                  402f8e18    00000290     utils.lib : ascii.obj (.text)
+                  402f90a8    00000260     libmmcsd.lib : hs_mmcsdlib.obj (.text)
+                  402f9308    00000210     fat_mmcsd.obj (.text)
+                  402f9518    00000180     rtsv7A8_A_le_eabi.lib : memcpy32.obj (.text)
+                  402f9698    00000130     cache.obj (.text)
+                  402f97c8    0000010c     platform.lib : uartConsole.obj (.text)
+                  402f98d4    000000f4     rtsv7A8_A_le_eabi.lib : u_div32.obj (.text)
+                  402f99c8    000000d4                           : auto_init.obj (.text)
+                  402f9a9c    000000c4     bl_main.obj (.text)
+                  402f9b60    000000c4     platform.lib : hsi2c.obj (.text)
+                  402f9c24    000000b0     rtsv7A8_A_le_eabi.lib : memset32.obj (.text)
+                  402f9cd4    00000080                           : cpy_tbl.obj (.text)
+                  402f9d54    00000064     platform.lib : uart.obj (.text)
+                  402f9db8    00000058                  : hs_mmcsd.obj (.text)
+                  402f9e10    00000038     device.obj (.text)
+                  402f9e48    00000034     rtsv7A8_A_le_eabi.lib : memcmp.obj (.text)
+                  402f9e7c    00000024     bl_copy.obj (.text)
+                  402f9ea0    00000020     rtsv7A8_A_le_eabi.lib : icall32.obj (.text)
+
+.const     0    402f9ec0    00000008     
+                  402f9ec0    00000008     bl_platform.obj (.const:.string)
+
+.bss       0    402f9f00    000007e8     UNINITIALIZED
+                  402f9f00    00000248     bl_hsmmcsd.obj (.bss:g_sFileObject)
+                  402fa148    00000240     bl_hsmmcsd.obj (.bss:g_sFatFs)
+                  402fa388    00000018     fat_mmcsd.obj (.bss)
+                  402fa3a0    00000200     bl_hsmmcsd.obj (.bss:g_cTmpBuf)
+                  402fa5a0    00000050     bl_hsmmcsd.obj (.bss:ctrlInfo)
+                  402fa5f0    0000000a     ff.obj (.bss)
+                  402fa5fa    00000002     --HOLE--
+                  402fa5fc    00000004     bl_main.obj (.bss)
+                  402fa600    00000080     libmmcsd.lib : mmcsd_proto.obj (.bss:dataBuffer)
+                  402fa680    00000048     bl_hsmmcsd.obj (.bss:sdCard)
+                  402fa6c8    00000020     bl_platform.obj (.bss)
+
+.data      0    402fa6e8    00000084     
+                  402fa6e8    00000050     bl_platform.obj (.data:oppTable)
+                  402fa738    00000024     bl_hsmmcsd.obj (.data)
+                  402fa75c    00000008     bl_main.obj (.data)
+                  402fa764    00000008     bl_platform.obj (.data)
+
+.stack     0    4030fff0    00000008     UNINITIALIZED
+                  4030fff0    00000008     --HOLE--
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+402f8edc   ASCIIToDigit
+402f4e68   BlPlatformConfig
+402f4f20   BlPlatformConfigPostBoot
+402f4f2c   BlPlatformMMCSDImageCopy
+402f4e08   BlPlatformMMCSDSetup
+402f9b04   BootAbort
+402f3b04   BootMaxOppGet
+402f8dec   CP15AuxControlFeatureDisable
+402f8dd8   CP15AuxControlFeatureEnable
+402f8d80   CP15BranchPredictionDisable
+402f8d70   CP15BranchPredictionEnable
+402f8d64   CP15BranchPredictorInvalidate
+402f8da0   CP15ControlFeatureDisable
+402f8db4   CP15ControlFeatureEnable
+402f8a7c   CP15DCacheClean
+402f8bb4   CP15DCacheCleanBuff
+402f8b10   CP15DCacheCleanFlush
+402f8c08   CP15DCacheCleanFlushBuff
+402f89ac   CP15DCacheDisable
+402f89d8   CP15DCacheEnable
+402f89e8   CP15DCacheFlush
+402f8c5c   CP15DCacheFlushBuff
+402f8d90   CP15DomainAccessClientSet
+402f8990   CP15ICacheDisable
+402f89c8   CP15ICacheEnable
+402f8ba4   CP15ICacheFlush
+402f8cc0   CP15ICacheFlushBuff
+402f8d2c   CP15MMUDisable
+402f8d44   CP15MMUEnable
+402f8e00   CP15MainIdPrimPartNumGet
+402f8d20   CP15TlbInvalidate
+402f8d14   CP15Ttb0Set
+402f8dc8   CP15TtbCtlTtb0Config
+402f8d58   CP15VectorBaseAddrSet
+402f975c   CacheDataCleanAll
+402f9774   CacheDataCleanBuff
+402f9750   CacheDataCleanInvalidateAll
+402f97ac   CacheDataCleanInvalidateBuff
+402f9768   CacheDataInvalidateAll
+402f9790   CacheDataInvalidateBuff
+402f9698   CacheDisable
+402f96dc   CacheEnable
+402f9728   CacheInstInvalidateAll
+402f9734   CacheInstInvalidateBuff
+402f4238   CleanupInterrupts
+402f4624   ConfigVddOpVoltage
+402f3bec   CorePLLInit
+402f4bdc   DDR2Init
+402f4a3c   DDR3Init
+402f3ec0   DDRPLLInit
+402f901c   DateToStr
+402f9e10   DeviceVersionGet
+402f8e18   DigitToASCII
+402f3d0c   DisplayPLLInit
+402fa760   DspEntryPoint
+402f4d98   EMIFInit
+402f0400   Entry
+402f8fa8   EthrAddrToStr
+402f84a0   HSMMCSDBlkLenSet
+402f9290   HSMMCSDBusFreqConfig
+402f83b0   HSMMCSDBusFreqSet
+402f8350   HSMMCSDBusPower
+402f8334   HSMMCSDBusVoltSet
+402f927c   HSMMCSDBusWidthConfig
+402f82d4   HSMMCSDBusWidthSet
+402f9274   HSMMCSDCardPresent
+402f9178   HSMMCSDCmdSend
+402f8294   HSMMCSDCommandSend
+402f90b8   HSMMCSDControllerInit
+402f8278   HSMMCSDDataGet
+402f825c   HSMMCSDDataTimeoutSet
+402f73d8   HSMMCSDFsMount
+402f740c   HSMMCSDImageCopy
+402f7568   HSMMCSDInit
+402f820c   HSMMCSDInitStreamSend
+402f81d0   HSMMCSDIntClock
+402f90a8   HSMMCSDIntEnable
+402f81c0   HSMMCSDIntrEnable
+402f81b8   HSMMCSDIntrStatusClear
+402f81a8   HSMMCSDIntrStatusDisable
+402f8198   HSMMCSDIntrStatusEnable
+402f818c   HSMMCSDIntrStatusGet
+402f8180   HSMMCSDIsCardInserted
+402f8174   HSMMCSDIsCardWriteProtected
+402f8138   HSMMCSDIsCmdComplete
+402f812c   HSMMCSDIsHSupported
+402f80f0   HSMMCSDIsIntClockStable
+402f80b4   HSMMCSDIsXferComplete
+402f805c   HSMMCSDLinesReset
+402f9de4   HSMMCSDModuleClkConfig
+402f9db8   HSMMCSDPinMuxSetup
+402f8040   HSMMCSDResponseGet
+402f7fec   HSMMCSDSoftReset
+402f7fd0   HSMMCSDSupportedVoltSet
+402f7fb0   HSMMCSDSystemConfig
+402f9bc8   I2C0ModuleClkConfig
+402f9b90   I2C1ModuleClkConfig
+402f8948   I2CActiveOwnAddressGet
+402f8938   I2CAutoIdleDisable
+402f8928   I2CAutoIdleEnable
+402f88ec   I2CBufferStatus
+402f88d0   I2CClockActivitySelect
+402f8868   I2CClockBlockingControl
+402f8808   I2CContextRestore
+402f87e4   I2CContextSave
+402f87cc   I2CDMARxEventDisable
+402f87b4   I2CDMARxEventEnable
+402f879c   I2CDMATxEventDisable
+402f8784   I2CDMATxEventEnable
+402f877c   I2CDataCountGet
+402f8760   I2CFIFOClear
+402f8724   I2CFIFOThresholdConfig
+402f8714   I2CGlobalWakeUpDisable
+402f8704   I2CGlobalWakeUpEnable
+402f86e8   I2CIdleModeSelect
+402f86d4   I2CMasterBusBusy
+402f86c8   I2CMasterBusy
+402f86bc   I2CMasterControl
+402f86b0   I2CMasterDataGet
+402f86a8   I2CMasterDataPut
+402f8698   I2CMasterDisable
+402f8688   I2CMasterEnable
+402f8678   I2CMasterErr
+402f8630   I2CMasterInitExpClk
+402f8628   I2CMasterIntClearEx
+402f8620   I2CMasterIntDisableEx
+402f8610   I2CMasterIntEnableEx
+402f8608   I2CMasterIntRawStatus
+402f8600   I2CMasterIntRawStatusClearEx
+402f85f4   I2CMasterIntRawStatusEx
+402f85ec   I2CMasterIntStatus
+402f85e0   I2CMasterIntStatusEx
+402f85d4   I2CMasterSlaveAddrGet
+402f85cc   I2CMasterSlaveAddrSet
+402f85bc   I2CMasterStart
+402f85ac   I2CMasterStop
+402f8574   I2COwnAddressSet
+402f9b60   I2CPinMuxSetup
+402f856c   I2CSetDataCount
+402f855c   I2CSoftReset
+402f8550   I2CSystemStatusGet
+402f850c   I2CWakeUpDisable
+402f84c8   I2CWakeUpEnable
+402f9ea0   IND_CALL
+402f9e7c   ImageCopy
+402f4074   InterfaceClkInit
+402f79ec   MMCSDAppCmdSend
+402f7ea8   MMCSDBusWidthSet
+402f7ab0   MMCSDCardInit
+402f7aa0   MMCSDCardPresent
+402f7a74   MMCSDCardReset
+402f7a48   MMCSDCardTypeCheck
+402f7700   MMCSDCmdSend
+402f7f7c   MMCSDContextRestore
+402f7f48   MMCSDContextSave
+402f79dc   MMCSDCtrlInit
+402f79cc   MMCSDIntEnable
+402f78f8   MMCSDReadCmdSend
+402f7710   MMCSDStopCmdSend
+402f7824   MMCSDTranSpeedSet
+402f7750   MMCSDWriteCmdSend
+402f3f90   MPUPLLInit
+402f41a4   PLLInit
+402f3de8   PerPLLInit
+402f4150   PowerDomainTransitionInit
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+402f460c   SetVdd1OpVoltage
+402f41e0   SetupI2C
+402f424c   SetupI2CTransmit
+402f4304   SetupReception
+402f8f3c   StrToEthrAddr
+402f9e30   SysConfigOppDataGet
+402f4434   TPS65217RegRead
+402f4474   TPS65217RegWrite
+402f45d4   TPS65217VoltageUpdate
+402f8e50   TimeToStr
+402f9d74   UART0ModuleClkConfig
+402f6e98   UARTAutoIdleModeControl
+402f6e4c   UARTAutoRTSAutoCTSControl
+402f6e28   UARTAutobaudParityGet
+402f6e04   UARTAutobaudSpeedGet
+402f6de0   UARTAutobaudWordLenGet
+402f6dc0   UARTBreakCtl
+402f6d90   UARTCharGet
+402f6d60   UARTCharGetNonBlocking
+402f6d14   UARTCharGetTimeout
+402f6ce4   UARTCharPut
+402f6cb0   UARTCharPutNonBlocking
+402f6c84   UARTCharsAvail
+402f98b0   UARTConsoleGetc
+402f988c   UARTConsoleInit
+402f97c8   UARTConsolePutc
+402f6c64   UARTDMACounterResetControl
+402f6c48   UARTDMADisable
+402f6c1c   UARTDMAEnable
+402f6bfc   UARTDSRInterruptControl
+402f6bec   UARTDivisorLatchDisable
+402f6bdc   UARTDivisorLatchEnable
+402f67d8   UARTDivisorLatchWrite
+402f6b9c   UARTDivisorValCompute
+402f6918   UARTEnhanFuncBitValRestore
+402f68e8   UARTEnhanFuncEnable
+402f6b90   UARTFIFOCharGet
+402f6b88   UARTFIFOCharPut
+402f69d0   UARTFIFOConfig
+402f69a4   UARTFIFOEnableStatusGet
+402f6950   UARTFIFORegisterWrite
+402f67a8   UARTFIFOTrigLvlGranControl
+402f6780   UARTFIFOWrite
+402f676c   UARTFlowCtrlTrigLvlConfig
+402f5f0c   UARTGetHexNum
+402f5eb8   UARTGetNum
+402f98b0   UARTGetc
+402f5e50   UARTGets
+402f674c   UARTIdleModeConfigure
+402f66d0   UARTIntDisable
+402f664c   UARTIntEnable
+402f6628   UARTIntIdentityGet
+402f65fc   UARTIntPendingStatusGet
+402f65c0   UARTLineCharacConfig
+402f65a0   UARTLoopbackModeControl
+402f6584   UARTModemControlClear
+402f6570   UARTModemControlSet
+402f6564   UARTModemStatusChangeCheck
+402f6558   UARTModemStatusGet
+402f653c   UARTModuleReset
+402f6530   UARTModuleVersionNumberGet
+402f6504   UARTOperatingModeSelect
+402f64f8   UARTParityModeGet
+402f64d8   UARTParityModeSet
+402f9d54   UARTPinMuxSetup
+402f5b74   UARTPrintf
+402f64b8   UARTPulseShapingControl
+402f5aa4   UARTPutHexNum
+402f5a00   UARTPutNum
+402f97c8   UARTPutc
+402f5450   UARTPuts
+402f64ac   UARTRXCTSDSRTransitionStatusGet
+402f648c   UARTRXCTSDSRWakeUpConfigure
+402f6484   UARTRegConfModeRestore
+402f602c   UARTRegConfigModeEnable
+402f647c   UARTResumeOperation
+402f6458   UARTRxErrorGet
+402f6450   UARTRxFIFOLevelGet
+402f54d0   UARTScanf
+402f6444   UARTScratchPadRegRead
+402f6424   UARTScratchPadRegWrite
+402f4e28   UARTSetup
+402f63ec   UARTSoftwareFlowCtrlOptSet
+402f63c0   UARTSpaceAvail
+402f6388   UARTSpecialCharDetectControl
+402f988c   UARTStdioInit
+402f6310   UARTSubConfigMSRSPRModeEn
+402f6298   UARTSubConfigTCRTLRModeEn
+402f6220   UARTSubConfigXOFFModeEn
+402f61a0   UARTTCRTLRBitValRestore
+402f6180   UARTTxDMAThresholdControl
+402f6160   UARTTxDMAThresholdValConfig
+402f6140   UARTTxEmptyIntControl
+402f6134   UARTTxFIFOFullStatusGet
+402f612c   UARTTxFIFOLevelGet
+402f610c   UARTWakeUpControl
+402f60f0   UARTWakeUpEventsDisable
+402f60dc   UARTWakeUpEventsEnable
+402f60d0   UARTXON1XOFF1ValProgram
+402f60c4   UARTXON2XOFF2ValProgram
+402f6060   UARTXONAnyFeatureControl
+402f5148   UARTprintf
+402f5100   UARTwrite
+4030fff8   __STACK_END
+00000008   __STACK_SIZE
+UNDEFED    __TI_CINIT_Base
+UNDEFED    __TI_CINIT_Limit
+UNDEFED    __TI_Handler_Table_Base
+00000001   __TI_args_main
+402f99c8   __TI_auto_init
+402f0400   __TI_static_base__
+402f9c24   __aeabi_memclr
+402f9c24   __aeabi_memclr4
+402f9c24   __aeabi_memclr8
+402f9518   __aeabi_memcpy
+402f9518   __aeabi_memcpy4
+402f9518   __aeabi_memcpy8
+402f9c28   __aeabi_memset
+402f9c28   __aeabi_memset4
+402f9c28   __aeabi_memset8
+402f98d4   __aeabi_uidivmod
+ffffffff   __binit__
+ffffffff   __c_args__
+4030fff0   __stack
+ffffffff   binit
+402fa6e8   bss_end
+402f9f00   bss_start
+402fa73c   cmdCompFlag
+402fa740   cmdTimeout
+402f9cd4   copy_in
+402fa5a0   ctrlInfo
+402fa6c8   dataFromSlave
+402fa6cc   dataToSlave
+402fa764   deviceType
+402fa6e0   deviceVersion
+402f9308   disk_initialize
+402f94d0   disk_ioctl
+402f93f0   disk_read
+402f93dc   disk_status
+402f9460   disk_write
+402fa75c   entryPoint
+402fa744   errFlag
+402f38c0   f_chmod
+402f2b84   f_close
+402f3174   f_getfree
+402f2bbc   f_lseek
+402f3584   f_mkdir
+402f1dac   f_mount
+402f1e2c   f_open
+402f2ebc   f_opendir
+402f2244   f_read
+402f2fc8   f_readdir
+402f398c   f_rename
+402f30e0   f_stat
+402f29ac   f_sync
+402f33a0   f_unlink
+402f25b4   f_write
+402fa388   fat_devices
+402fa768   flag
+402fa6e4   freqMultDDR
+402fa758   g_sCState
+402fa754   g_sPState
+402f94ec   get_fattime
+402fa750   hsmmcsd_buffer
+402fa74c   hsmmcsd_dataLen
+402f9a9c   main
+402f9e48   memcmp
+402f9518   memcpy
+402f9c34   memset
+402fa6d8   numOfBytes
+402fa6dc   oppMaxIdx
+402fa6e8   oppTable
+402fa6d4   rCount
+402fa748   sdBlkSize
+402fa680   sdCard
+402fa6d0   tCount
+402fa738   xferPend
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000008   __STACK_SIZE
+402f0400   Entry
+402f0400   __TI_static_base__
+402f1dac   f_mount
+402f1e2c   f_open
+402f2244   f_read
+402f25b4   f_write
+402f29ac   f_sync
+402f2b84   f_close
+402f2bbc   f_lseek
+402f2ebc   f_opendir
+402f2fc8   f_readdir
+402f30e0   f_stat
+402f3174   f_getfree
+402f33a0   f_unlink
+402f3584   f_mkdir
+402f38c0   f_chmod
+402f398c   f_rename
+402f3b04   BootMaxOppGet
+402f3bec   CorePLLInit
+402f3d0c   DisplayPLLInit
+402f3de8   PerPLLInit
+402f3ec0   DDRPLLInit
+402f3f90   MPUPLLInit
+402f4074   InterfaceClkInit
+402f4150   PowerDomainTransitionInit
+402f41a4   PLLInit
+402f41e0   SetupI2C
+402f4238   CleanupInterrupts
+402f424c   SetupI2CTransmit
+402f4304   SetupReception
+402f4434   TPS65217RegRead
+402f4474   TPS65217RegWrite
+402f45d4   TPS65217VoltageUpdate
+402f460c   SetVdd1OpVoltage
+402f4624   ConfigVddOpVoltage
+402f4a3c   DDR3Init
+402f4bdc   DDR2Init
+402f4d98   EMIFInit
+402f4e08   BlPlatformMMCSDSetup
+402f4e28   UARTSetup
+402f4e68   BlPlatformConfig
+402f4f20   BlPlatformConfigPostBoot
+402f4f2c   BlPlatformMMCSDImageCopy
+402f5100   UARTwrite
+402f5148   UARTprintf
+402f5450   UARTPuts
+402f54d0   UARTScanf
+402f5a00   UARTPutNum
+402f5aa4   UARTPutHexNum
+402f5b74   UARTPrintf
+402f5e50   UARTGets
+402f5eb8   UARTGetNum
+402f5f0c   UARTGetHexNum
+402f602c   UARTRegConfigModeEnable
+402f6060   UARTXONAnyFeatureControl
+402f60c4   UARTXON2XOFF2ValProgram
+402f60d0   UARTXON1XOFF1ValProgram
+402f60dc   UARTWakeUpEventsEnable
+402f60f0   UARTWakeUpEventsDisable
+402f610c   UARTWakeUpControl
+402f612c   UARTTxFIFOLevelGet
+402f6134   UARTTxFIFOFullStatusGet
+402f6140   UARTTxEmptyIntControl
+402f6160   UARTTxDMAThresholdValConfig
+402f6180   UARTTxDMAThresholdControl
+402f61a0   UARTTCRTLRBitValRestore
+402f6220   UARTSubConfigXOFFModeEn
+402f6298   UARTSubConfigTCRTLRModeEn
+402f6310   UARTSubConfigMSRSPRModeEn
+402f6388   UARTSpecialCharDetectControl
+402f63c0   UARTSpaceAvail
+402f63ec   UARTSoftwareFlowCtrlOptSet
+402f6424   UARTScratchPadRegWrite
+402f6444   UARTScratchPadRegRead
+402f6450   UARTRxFIFOLevelGet
+402f6458   UARTRxErrorGet
+402f647c   UARTResumeOperation
+402f6484   UARTRegConfModeRestore
+402f648c   UARTRXCTSDSRWakeUpConfigure
+402f64ac   UARTRXCTSDSRTransitionStatusGet
+402f64b8   UARTPulseShapingControl
+402f64d8   UARTParityModeSet
+402f64f8   UARTParityModeGet
+402f6504   UARTOperatingModeSelect
+402f6530   UARTModuleVersionNumberGet
+402f653c   UARTModuleReset
+402f6558   UARTModemStatusGet
+402f6564   UARTModemStatusChangeCheck
+402f6570   UARTModemControlSet
+402f6584   UARTModemControlClear
+402f65a0   UARTLoopbackModeControl
+402f65c0   UARTLineCharacConfig
+402f65fc   UARTIntPendingStatusGet
+402f6628   UARTIntIdentityGet
+402f664c   UARTIntEnable
+402f66d0   UARTIntDisable
+402f674c   UARTIdleModeConfigure
+402f676c   UARTFlowCtrlTrigLvlConfig
+402f6780   UARTFIFOWrite
+402f67a8   UARTFIFOTrigLvlGranControl
+402f67d8   UARTDivisorLatchWrite
+402f68e8   UARTEnhanFuncEnable
+402f6918   UARTEnhanFuncBitValRestore
+402f6950   UARTFIFORegisterWrite
+402f69a4   UARTFIFOEnableStatusGet
+402f69d0   UARTFIFOConfig
+402f6b88   UARTFIFOCharPut
+402f6b90   UARTFIFOCharGet
+402f6b9c   UARTDivisorValCompute
+402f6bdc   UARTDivisorLatchEnable
+402f6bec   UARTDivisorLatchDisable
+402f6bfc   UARTDSRInterruptControl
+402f6c1c   UARTDMAEnable
+402f6c48   UARTDMADisable
+402f6c64   UARTDMACounterResetControl
+402f6c84   UARTCharsAvail
+402f6cb0   UARTCharPutNonBlocking
+402f6ce4   UARTCharPut
+402f6d14   UARTCharGetTimeout
+402f6d60   UARTCharGetNonBlocking
+402f6d90   UARTCharGet
+402f6dc0   UARTBreakCtl
+402f6de0   UARTAutobaudWordLenGet
+402f6e04   UARTAutobaudSpeedGet
+402f6e28   UARTAutobaudParityGet
+402f6e4c   UARTAutoRTSAutoCTSControl
+402f6e98   UARTAutoIdleModeControl
+402f73d8   HSMMCSDFsMount
+402f740c   HSMMCSDImageCopy
+402f7568   HSMMCSDInit
+402f7700   MMCSDCmdSend
+402f7710   MMCSDStopCmdSend
+402f7750   MMCSDWriteCmdSend
+402f7824   MMCSDTranSpeedSet
+402f78f8   MMCSDReadCmdSend
+402f79cc   MMCSDIntEnable
+402f79dc   MMCSDCtrlInit
+402f79ec   MMCSDAppCmdSend
+402f7a48   MMCSDCardTypeCheck
+402f7a74   MMCSDCardReset
+402f7aa0   MMCSDCardPresent
+402f7ab0   MMCSDCardInit
+402f7ea8   MMCSDBusWidthSet
+402f7f48   MMCSDContextSave
+402f7f7c   MMCSDContextRestore
+402f7fb0   HSMMCSDSystemConfig
+402f7fd0   HSMMCSDSupportedVoltSet
+402f7fec   HSMMCSDSoftReset
+402f8040   HSMMCSDResponseGet
+402f805c   HSMMCSDLinesReset
+402f80b4   HSMMCSDIsXferComplete
+402f80f0   HSMMCSDIsIntClockStable
+402f812c   HSMMCSDIsHSupported
+402f8138   HSMMCSDIsCmdComplete
+402f8174   HSMMCSDIsCardWriteProtected
+402f8180   HSMMCSDIsCardInserted
+402f818c   HSMMCSDIntrStatusGet
+402f8198   HSMMCSDIntrStatusEnable
+402f81a8   HSMMCSDIntrStatusDisable
+402f81b8   HSMMCSDIntrStatusClear
+402f81c0   HSMMCSDIntrEnable
+402f81d0   HSMMCSDIntClock
+402f820c   HSMMCSDInitStreamSend
+402f825c   HSMMCSDDataTimeoutSet
+402f8278   HSMMCSDDataGet
+402f8294   HSMMCSDCommandSend
+402f82d4   HSMMCSDBusWidthSet
+402f8334   HSMMCSDBusVoltSet
+402f8350   HSMMCSDBusPower
+402f83b0   HSMMCSDBusFreqSet
+402f84a0   HSMMCSDBlkLenSet
+402f84c8   I2CWakeUpEnable
+402f850c   I2CWakeUpDisable
+402f8550   I2CSystemStatusGet
+402f855c   I2CSoftReset
+402f856c   I2CSetDataCount
+402f8574   I2COwnAddressSet
+402f85ac   I2CMasterStop
+402f85bc   I2CMasterStart
+402f85cc   I2CMasterSlaveAddrSet
+402f85d4   I2CMasterSlaveAddrGet
+402f85e0   I2CMasterIntStatusEx
+402f85ec   I2CMasterIntStatus
+402f85f4   I2CMasterIntRawStatusEx
+402f8600   I2CMasterIntRawStatusClearEx
+402f8608   I2CMasterIntRawStatus
+402f8610   I2CMasterIntEnableEx
+402f8620   I2CMasterIntDisableEx
+402f8628   I2CMasterIntClearEx
+402f8630   I2CMasterInitExpClk
+402f8678   I2CMasterErr
+402f8688   I2CMasterEnable
+402f8698   I2CMasterDisable
+402f86a8   I2CMasterDataPut
+402f86b0   I2CMasterDataGet
+402f86bc   I2CMasterControl
+402f86c8   I2CMasterBusy
+402f86d4   I2CMasterBusBusy
+402f86e8   I2CIdleModeSelect
+402f8704   I2CGlobalWakeUpEnable
+402f8714   I2CGlobalWakeUpDisable
+402f8724   I2CFIFOThresholdConfig
+402f8760   I2CFIFOClear
+402f877c   I2CDataCountGet
+402f8784   I2CDMATxEventEnable
+402f879c   I2CDMATxEventDisable
+402f87b4   I2CDMARxEventEnable
+402f87cc   I2CDMARxEventDisable
+402f87e4   I2CContextSave
+402f8808   I2CContextRestore
+402f8868   I2CClockBlockingControl
+402f88d0   I2CClockActivitySelect
+402f88ec   I2CBufferStatus
+402f8928   I2CAutoIdleEnable
+402f8938   I2CAutoIdleDisable
+402f8948   I2CActiveOwnAddressGet
+402f8990   CP15ICacheDisable
+402f89ac   CP15DCacheDisable
+402f89c8   CP15ICacheEnable
+402f89d8   CP15DCacheEnable
+402f89e8   CP15DCacheFlush
+402f8a7c   CP15DCacheClean
+402f8b10   CP15DCacheCleanFlush
+402f8ba4   CP15ICacheFlush
+402f8bb4   CP15DCacheCleanBuff
+402f8c08   CP15DCacheCleanFlushBuff
+402f8c5c   CP15DCacheFlushBuff
+402f8cc0   CP15ICacheFlushBuff
+402f8d14   CP15Ttb0Set
+402f8d20   CP15TlbInvalidate
+402f8d2c   CP15MMUDisable
+402f8d44   CP15MMUEnable
+402f8d58   CP15VectorBaseAddrSet
+402f8d64   CP15BranchPredictorInvalidate
+402f8d70   CP15BranchPredictionEnable
+402f8d80   CP15BranchPredictionDisable
+402f8d90   CP15DomainAccessClientSet
+402f8da0   CP15ControlFeatureDisable
+402f8db4   CP15ControlFeatureEnable
+402f8dc8   CP15TtbCtlTtb0Config
+402f8dd8   CP15AuxControlFeatureEnable
+402f8dec   CP15AuxControlFeatureDisable
+402f8e00   CP15MainIdPrimPartNumGet
+402f8e18   DigitToASCII
+402f8e50   TimeToStr
+402f8edc   ASCIIToDigit
+402f8f3c   StrToEthrAddr
+402f8fa8   EthrAddrToStr
+402f901c   DateToStr
+402f90a8   HSMMCSDIntEnable
+402f90b8   HSMMCSDControllerInit
+402f9178   HSMMCSDCmdSend
+402f9274   HSMMCSDCardPresent
+402f927c   HSMMCSDBusWidthConfig
+402f9290   HSMMCSDBusFreqConfig
+402f9308   disk_initialize
+402f93dc   disk_status
+402f93f0   disk_read
+402f9460   disk_write
+402f94d0   disk_ioctl
+402f94ec   get_fattime
+402f9518   __aeabi_memcpy
+402f9518   __aeabi_memcpy4
+402f9518   __aeabi_memcpy8
+402f9518   memcpy
+402f9698   CacheDisable
+402f96dc   CacheEnable
+402f9728   CacheInstInvalidateAll
+402f9734   CacheInstInvalidateBuff
+402f9750   CacheDataCleanInvalidateAll
+402f975c   CacheDataCleanAll
+402f9768   CacheDataInvalidateAll
+402f9774   CacheDataCleanBuff
+402f9790   CacheDataInvalidateBuff
+402f97ac   CacheDataCleanInvalidateBuff
+402f97c8   UARTConsolePutc
+402f97c8   UARTPutc
+402f988c   UARTConsoleInit
+402f988c   UARTStdioInit
+402f98b0   UARTConsoleGetc
+402f98b0   UARTGetc
+402f98d4   __aeabi_uidivmod
+402f99c8   __TI_auto_init
+402f9a9c   main
+402f9b04   BootAbort
+402f9b60   I2CPinMuxSetup
+402f9b90   I2C1ModuleClkConfig
+402f9bc8   I2C0ModuleClkConfig
+402f9c24   __aeabi_memclr
+402f9c24   __aeabi_memclr4
+402f9c24   __aeabi_memclr8
+402f9c28   __aeabi_memset
+402f9c28   __aeabi_memset4
+402f9c28   __aeabi_memset8
+402f9c34   memset
+402f9cd4   copy_in
+402f9d54   UARTPinMuxSetup
+402f9d74   UART0ModuleClkConfig
+402f9db8   HSMMCSDPinMuxSetup
+402f9de4   HSMMCSDModuleClkConfig
+402f9e10   DeviceVersionGet
+402f9e30   SysConfigOppDataGet
+402f9e48   memcmp
+402f9e7c   ImageCopy
+402f9ea0   IND_CALL
+402f9f00   bss_start
+402fa388   fat_devices
+402fa5a0   ctrlInfo
+402fa680   sdCard
+402fa6c8   dataFromSlave
+402fa6cc   dataToSlave
+402fa6d0   tCount
+402fa6d4   rCount
+402fa6d8   numOfBytes
+402fa6dc   oppMaxIdx
+402fa6e0   deviceVersion
+402fa6e4   freqMultDDR
+402fa6e8   bss_end
+402fa6e8   oppTable
+402fa738   xferPend
+402fa73c   cmdCompFlag
+402fa740   cmdTimeout
+402fa744   errFlag
+402fa748   sdBlkSize
+402fa74c   hsmmcsd_dataLen
+402fa750   hsmmcsd_buffer
+402fa754   g_sPState
+402fa758   g_sCState
+402fa75c   entryPoint
+402fa760   DspEntryPoint
+402fa764   deviceType
+402fa768   flag
+4030fff0   __stack
+4030fff8   __STACK_END
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+UNDEFED    __TI_CINIT_Base
+UNDEFED    __TI_CINIT_Limit
+UNDEFED    __TI_Handler_Table_Base
+
+[344 symbols]

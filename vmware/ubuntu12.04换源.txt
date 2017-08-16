@@ -1,0 +1,66 @@
+ Ubuntu12.04换源
+标签： ubuntu换源-Linux
+2016-04-06 10:11 2850人阅读 评论(0) 收藏 举报
+分类：
+Linux环境（3）
+
+版权声明：本文为博主原创文章，未经博主允许不得转载。
+
+sudo gedit /etc/apt/sources.list
+
+使用下面的源替换即可
+网易163源 —速度很快（推荐）
+deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+搜狐源
+deb http://mirrors.sohu.com/ubuntu/ precise main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ precise-security main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ precise-updates main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ precise-proposed main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ precise-backports main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ precise main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ precise-security main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ precise-updates main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ precise-proposed main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ precise-backports main restricted universe multiverse
+
+阿里源
+deb http://mirrors.aliyun.com/ubuntu/ precise main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ precise-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ precise-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ precise-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ precise-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ precise main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ precise-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ precise-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ precise-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ precise-backports main restricted universe multiverse
+
+中科大
+deb http://mirrors.ustc.edu.cn/ubuntu/ precise main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ precise-security main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ precise-updates main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ precise-proposed main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ precise-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ precise main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ precise-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ precise-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ precise-proposed main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ precise-backports main restricted universe multiverse
+
+具体的源还有很多，可以去网上搜搜
+
+更新玩源后 记得 sudo apt-get update
+
+
+首先请LZ查看下/etc/update-manager目录下的./release-upgrades配置文件，是否设置为Prompt=never或者lts了，若已经设置为上述两个选项，请修改为normal。然后在运行do-release-upgrade -d命令再次直升版本。上述的前提是，你的操作系统环境不是用于生产环境，若为生产环境切记不能直升为normal的最新版，因为这个不是lts版本(长期支持版本)。
+然后还有一个小技巧，您需要确定下系统的sources.list是否为稳定源，原版操作系统的源由于伟大的GFW，造成连接不稳定和下载速度极慢。首先先把你的源改称为国内源，比如aliyun、163,或者最推荐的中科大源。然后在顺序执行apt-get update和apt-get upgrade命令。

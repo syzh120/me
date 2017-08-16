@@ -1,0 +1,11 @@
+安装 Git 2.2.0，有PPA可用，支持Ubuntu 12.04、14.04、14.10、15.04 及其衍生版本。
+
+安装命令：
+
+sudo add-apt-repository ppa:git-core/ppa
+ sudo apt-get update
+ sudo apt-get install git
+
+卸载 Git 2.2 命令：
+
+sudo apt-get remove git

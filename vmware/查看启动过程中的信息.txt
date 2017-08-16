@@ -1,0 +1,1 @@
+Grub选择启动项的菜单中，按E进入编辑模式，找到 linux /vmlinuz-XXX root=XXX 那一行，把quiet splash 修改成text, 就能看到启动过程中报告的信息了。

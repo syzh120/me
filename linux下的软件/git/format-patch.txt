@@ -1,0 +1,24 @@
+git format-patch -M --binary origin/rock2014 -o ../format-patch/
+//生成当前分支所有超前origin/rock2014的提交的patch，-o表示patch存放目录，-M表示允许检测重命名。
+git am --whitespace=fix ../format-patch/*.patch
+//应用所指目录下的所有patch，并修复多余空格问题
+。完成后不需要再手动commit
+
+
+
+
+# git format-patch -M master // 当前分支所有超前master的提交
+# git format-patch -s 4e16 // 某次提交以后的所有patch, --4e16指的是SHA1 ID
+# git format-patch -1 //  单次提交
+# git format-patch -3  // 从master往前3个提交的内容，可修改为你想要的数值
+# git format-patch –n 07fe // -n指patch数，07fe对应提交的名称, 某次提交（含）之前的几次提交
+# git format-patch -s --root origin // 从origin到指定提交的所有patch
+
+应用patch：
+先检查patch文件：# git apply --stat newpatch.patch
+检查能否应用成功：# git apply --check  newpatch.patch
+打补丁：# git am --signoff < newpatch.patch
+(使用-s或--signoff选项，可以commit信息中加入Signed-off-by信息)或git am
+
+在使用git-am之前， 你要首先git am –-abort 一次，来放弃掉以前的am信息，这样才可以进行一次全新的am。
+

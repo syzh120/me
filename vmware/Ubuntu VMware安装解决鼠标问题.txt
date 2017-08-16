@@ -1,0 +1,10 @@
+ Ubuntu VMware安装解决鼠标问题
+
+原来由于Ubuntu VMware的原因，不能很好的支持Ubuntu，使得安装了VMware tools之后仍然有一大堆的问题。这里只说说我遇到的Ubuntu安装VMware tools后鼠标指针平滑移动问题，细心的朋友肯定会发现在最后的提示安装成功之前会有一句警告的话。
+
+解决方法为：安装xserver-xorg-input-vmmouse
+
+命令：sudo apt-get install xserver-xorg-input-vmmouse
+然后重新启动即可。
+
+xset  m  default (default 可以换成0。。。9 ，0速度最慢，越大鼠标移动速度越快)

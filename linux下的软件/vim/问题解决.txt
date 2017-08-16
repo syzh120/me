@@ -1,0 +1,9 @@
+1.ctags 报错
+Tags file not sorted
+原因：在家目录有一个文件为tags，删除即可
+
+2.miniBufexplorer行数一直增加，在~/.vimrc中增加如下配置即可
+let g:miniBufExplForceSyntaxEnable = 1  
+let g:miniBufExplorerMoreThanOne=2  
+
+3.kernel下建立的cscope及ctags的索引数据库，包含有太多无用文件，尤其arch目录下，编写kernel下的脚本，解决此问题。但是不同体系的源码需要修改其中的内容，来包含板级文件

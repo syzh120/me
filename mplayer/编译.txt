@@ -1,0 +1,1 @@
+./configure --prefix=/home/dragoniye/sda1/MPlayer --cc=arm-arago-linux-gnueabi-gcc --host-cc=gcc --target=arm-linux --enable-static --disable-win32dll --enable-fbdev --disable-liba52 --disable-libmpeg2 --disable-mencoder --disable-live --disable-mp3lib --disable-armv5te --disable-armv6

@@ -1,0 +1,1 @@
+"./startup.obj" "./mmu.obj" "./interrupt.obj" "./init.obj" "./exceptionhandler.obj" "./device.obj" "./cpu.obj" "./cp15.obj" "./clock.obj" "./cache.obj" 

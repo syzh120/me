@@ -1,0 +1,92 @@
+Aixinde_soft 9skfKJsd-sd)
+
+邮柜系统
+13588405366
+654312
+
+root    Biometrics
+
+mount -t nfs 192.168.1.119:/nfsRoot/ /nfs -o nolock
+
+dd bs=1M count=512 if=/dev/zero of=test conv=fdatasync;rm test
+这条指令需要 先cd 到/media/mmcblk0p2 再执行
+
+mknod /dev/GpioTestDriver c 255 0 
+insmod GpioTestDriver.ko 
+rmmod /Other/modules/am335x-gpio.ko 
+
+hexdump /dev/input/event1
+
+
+
+svn:
+dengjf 
+427680
+
+bug列表
+http://192.168.1.53/mantisbt
+
+
+ping -l 65500
+
+cat /proc/cpuinfo 查看cpu信息
+free 查看内存信息
+
+
+如果你想加入内核开发社区并协助完成一些任务，却找不到从哪里开始，可以访问
+“Linux内核房管员”计划：
+http://kernelnewbies.org/KernelJanitors
+这是极佳的起点。它提供一个相对简单的任务列表，列出内核代码中需要被重新
+
+crosstool-ng制作交叉编译链(有人说更新慢，可以到linaro网站下载工具链)
+
+mount -o rw,remount /
+
+stop adbd
+setprop service.adb.tcp.port 5555
+start adbd
+PC端在终端输入如下命令：
+adb killserver
+adb connect ip 
+
+date -s 20160920.115400 
+
+pm list packages  察看已安装的包
+pm list permission-groups  察看已知的权限组
+pm list permissions   察看所有已知的权限
+pm list features  列出所有硬件相关信息
+
+pm install [-l] [-r] [-t] [-i INSTALLER_PACKAGE_NAME] [-s] [-f] PATH
+pm install /data/3dijoy_fane.apk 安装APK,PATH 指 APK文件绝对路径和文件名。
+这几个参数很有用：
+-r: 安装一个已经安装的APK，保持其数据不变。
+-i：指定安装的包名。(没试出来)
+-s: 安装到SDCard上。
+-f: 安装到内部Flash上。
+
+pm uninstall com.TDiJoy.fane    卸载APK
+ 
+pm path com.TDiJoy.fane   列出指定包名的  associated 文件(APK存档文件)所在
+
+启动压力测试apk命令：
+am start -n com.cghs.stresstest/com.cghs.stresstest.StressTestActivity
+
+
+stop //android 不再更新屏幕
+io -w -4 -l 0x7e9000 0x97000000 0x00ff0000 //rk3188 lcd 红色
+io -w -4 -l 0x7e9000 0x97000000 0x0000ff00 //rk3188 lcd 绿色
+io -w -4 -l 0x7e9000 0x97000000 0x000000ff //rk3188 lcd 蓝色
+
+
+arecord -t wav -r 44100 mic.wav
+arecord -d 10 -t wav -c 2 -r 44100 -f S16_LE linein.wav
+
+stty -F /dev/ttyS0  //查看串口0的配置
+
+logcat -b radio //查看移动网络拨号等相关日志
+getevent //android命令，获取事件信息
+
+公司禅道项目管理系统 http://project.isindata.com/
+
+udp组播使用
+route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
