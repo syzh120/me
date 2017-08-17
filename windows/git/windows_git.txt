@@ -1,0 +1,21 @@
+网页github中新建repository : me
+
+
+配置用户名及邮箱：
+git config --global user.email "dengjinfang1201@163.com"
+git config --global user.name "syhdjf"
+
+
+windows中的换行符为 CRLF， 而在Linux下的换行符为LF，所以在执行add . 时出现提示，解决办法：    
+$ rm -rf .git  // 删除.git  
+$ git config --global core.autocrlf false  //禁用自动转换
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/syhdjf/me.git
+git push -u origin master
+
+按照提示输入密码即可推送。
+
+git push --set-upstream origin master
