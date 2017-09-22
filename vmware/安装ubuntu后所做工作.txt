@@ -1,0 +1,69 @@
+按照ubuntu换源.txt中的方法换源为中科大源
+
+1.sudo apt-get update
+2.sudo apt-get upgrade
+不要升级Ubuntu版本(do-release-upgrade),可能会出问题。
+3.sudo apt-get install vim git git-core rar unrar
+4.配置共享服务samba
+sudo apt-get install samba samba-common
+这里由于是个人使用的虚拟机，不再另外创建samba专用用户，直接使用原有用户
+创建好用于共享的目录，我这里为~/work
+配置samba
+/etc/samba/smb.conf末尾添加：
+[work]
+     path = home/djf/work
+     available = yes
+     browseable = yes
+；     public = yes
+     writable = yes
+     valid users = djf
+     create mask = 0744
+     directory mask =0755
+     force user =djf
+     force group = djf
+     guest ok = no
+将security = user的注释去掉
+将passdb backend = tbdsam 改成 passdb backend = smbpasswd
+将valid users = %S 改为 valid users = djf 并去掉注释
+
+添加samba用户和密码
+  sudo touch /etc/samba/smbpasswd
+  sudo smbpasswd -a djf
+然后按照提示输入密码
+重启samba服务：
+sudo service smbd restart 
+sudo service nmbd restart
+或者 
+sudo /etc/init.d/smbd restart
+
+
+
+5.拷贝自己的ubuntu配置，
+mkdir ~/djf
+git clone https://github.com/syhdjf/Ubuntu_djf.git
+将bashrc,vimrc,vim覆盖到~/目录下（最好先比较一下！！！！！）
+
+sudo apt-get install ctags cscope
+
+9.安装编译环境，按照 ubuntu12.04编译环境搭建 来完成
+10.该步骤完成后关机重启一下，可能只能启动到logo就不动了。可以重新启动，按ctrl+alt+F1进入文本界面
+sudo apt-get remove ubuntu-desktop
+sudo apt-get install ubuntu-desktop
+
+11.完成后，鼠标不能在windows和虚拟机内切换，
+sudo apt-get install xserver-xorg-input-vmmouse
+
+12.ubuntu开机出现错误提示：piix4_smbus 0000:00:007.3: Host SMBus controller not enabled
+
+原因： ubuntu装入i2c_piix4模块所致，因为系统找不到这个模块，所以报错
+
+处理方法：
+
+1>查明装入模块的确切名字，显示输出的结果是模块的确切名字：i2c_piix4
+
+2>将该模块列入不装入名单。编辑文件sudo vim /etc/modprobe.d/blacklist.conf，在末尾加入blacklist i2c-piix4
+
+3>重启reboot
+
+5.增加一个虚拟盘
+

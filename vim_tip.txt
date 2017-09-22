@@ -1,0 +1,28 @@
+vim 使用tip
+
+"快捷键设置                                                                       
+"F2        自动补全代码                                                             
+"F3        根据头文件补全代码                                                       
+"F4        ack/ag                                                                 
+"F5        打开cscope搜索结果      
+"F6        关闭cscope搜索结果
+"F7        切换到前一项
+"F8        切换到后一项                                                       
+"F9        WinManager   
+"F10       系统占用
+"F11
+"F12       切换.c和.h文件                                                        
+"Tag       C-X C-O 补全   
+                                                          
+"cscope检索                                                                       
+"Ctrl+Shift+- 然后按s     查找本 C 符号(可以跳过注释)                               
+"Ctrl+Shift+- 然后按g     查找本定义                                                
+"Ctrl+Shift+- 然后按d     查找本函数调用的函数                                      
+"Ctrl+Shift+- 然后按c     查找调用本函数的函数                                      
+"Ctrl+Shift+- 然后按e     查找本 egrep 模式                                         
+"Ctrl+Shift+- 然后按f      查找本文件                                               
+"Ctrl+Shift+- 然后按i      查找包含本文件的文件 
+
+
+* 可以直接搜索光标处单词
+v进入VISUAL模式，移动光标选择好单词，按F4，即可用ack/ag

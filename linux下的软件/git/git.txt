@@ -23,6 +23,11 @@ git checkout -b new branch name 即可创建一个新分支并切换过去，与git branch然后gi
 
 16.git diff的方式打包，只能将所有提交生成为一个大的提交，不能保留每一次的commit信息，如果想保留，可使用 git format-patch生成包后使用 git am 应用包。
 
+17.git 颜色配置：
+git config --global color.status auto
+git config --global color.diff auto
+git config --global color.branch auto
+
 
 二·将radxa的代码中的某一个branch拷贝一份
 1.直接 clone 或者clone -b都会报错：

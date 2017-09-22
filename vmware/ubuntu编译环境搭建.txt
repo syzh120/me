@@ -1,0 +1,86 @@
+1.安装支持包
+Ubuntu12.04:
+sudo apt-get install git-core gnupg flex bison gperf libsdl1.2-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev valgrind gitk gettext texinfo uboot-mkimage gcc-multilib g++-multilib libc6-dev libc6-dev-i386 lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32readline-gplv2-dev lib32z1-dev libc6-dev libgl1-mesa-dev mingw32 tofrodos python-markdown libxml2-utils meld docbook-utils xmlto libx11-dev:i386 libreadline6-dev:i386 libreadline6-dev libgl1-mesa-glx:i386 libgl1-mesa-glx zlib1g-dev:i386 exuberant-ctags emacs cscope mutt-patched libglib2.0-dev libatk1.0-dev libdirectfb-dev libgtk2.0-dev libghc6-zlib-dev libtool libtool-doc autoconf automake xsltproc gcc-4.4 g++-4.4 g++-4.4-multilib gcc-4.4-multilib gcc-4.5-arm-linux-gnueabihf gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf c++-arm-linux-gnueabihf gawk
+
+Ubuntu14.04:
+sudo apt-get install gnupg flex bison gperf build-essential zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-dri:i386 libgl1-mesa-dev:i386 g++-multilib mingw32 tofrodos python-markdown libxml2-utils xsltproc zlib1g-dev:i386 dpkg-dev gawk u-boot-tools
+
+都需要：
+sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
+
+2.将jdk-6u45-linux-x64.rar拷贝到Ubuntu中，解压。
+将解压后的bin文件放到/opt目录下，sudo ./执行
+
+a.为了快速切换jdk版本，可做如下配置：
+1> ll /etc/alternatives/java*
+这样会列出所有java相关的软连接
+sudo update-alternatives --remove java 上面列出的路径
+
+2>设置jdk目录的快捷方式
+sudo update-alternatives --install /usr/bin/jdk jdk /opt/jdk1.6.0_45 400
+其它类似
+
+3>快捷的切换方式
+打开自己home下的.bashrc，加入以下内容：
+#djf add for change jdk
+alias cjdk='sudo update-alternatives --config jdk'
+
+JAVA_HOME=/usr/bin/jdk
+JRE_HOME=$JAVA_HOME/jre
+CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
+export JAVA_HOME
+export JRE_HOME
+export CLASSpATH
+
+PATH=/$JAVA_HOME/bin:$PATH
+export PATH 
+最后，记得需要重启一次shell才能使用。
+
+b.如果设置一个版本的 jdk，按照如下步骤
+1>因为系统可能将其他已安装的 jdk 作为默认 ，例如 open-jdk，因此需要在终端执行代码:
+$sudo update-alternatives --install /usr/bin/java java /opt/jdk1.6.0_45/bin/java 400
+（400 是权重，可以设置为更大值）
+$sudo update-alternatives --install /usr/bin/javac javac /opt/jdk1.6.0_45/bin/javac 400
+$sudo update-alternatives --install /usr/bin/jar jar /opt/jdk1.6.0_45/bin/jar 400
+sudo update-alternatives --install /usr/bin/javap javap /opt/jdk1.6.0_45/bin/javap 400
+sudo update-alternatives --install /usr/bin/javah javah /opt/jdk1.6.0_45/bin/javah 400
+sudo update-alternatives --install /usr/bin/javadoc javadoc /opt/jdk1.6.0_45/bin/javadoc 400
+
+2>接着输入：
+$sudo update-alternatives --config java
+选择对应的 jdk： 1.6.0_xx,提示“只有一个候选项”且指向的是 1.6.0_45 则属于正常情况。
+$sudo update-alternatives --config javac
+选择 1.6.0_xx，提示“只有一个候选项”且指向的是 1.6.0_45 则属于正常情况。
+$sudo update-alternatives --config jar
+选择 1.6.0_xx，提示“只有一个候选项” 且指向的是 1.6.0_45 则属于正常情况。
+
+3>输入以下命令查看当前 java 版本：
+$java -version
+$javac -version
+检查是否为 Sun(Oracle) jdk，至此已成功安装 sun-jdk。
+
+查看版本，可以：
+ll /usr/bin/ja*
+ll /etc/alternatives/ja*
+4>设置环境变量：
+sudo vim /etc/environment中添加：
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/jdk1.6.0_45/bin"
+JAVAHOME=/opt/jdk1.6.0_45
+CLASSPATH=.:/opt/jdk1.6.0_45/lib
+
+
+3.配置ccache
+sudo  apt-get  install  ccache
+将export USE_CCACHE=1加入到~/.bashrc中
+设置ccache最大缓存大小，默认单位为G
+ccache -M 20
+查看ccache -s
+
+
+4.gcc 版本设置
+$sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.4 100
+$sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 50
+$sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.4 100
+$sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 50
+$sudo update-alternatives --install /usr/bin/cpp cpp-bin /usr/bin/cpp-4.4 100
+$sudo update-alternatives --install /usr/bin/cpp cpp-bin /usr/bin/cpp-4.6 50
