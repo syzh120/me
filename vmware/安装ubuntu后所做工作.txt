@@ -65,5 +65,5 @@ sudo apt-get install xserver-xorg-input-vmmouse
 
 3>重启reboot
 
-5.增加一个虚拟盘
+6.增加一个虚拟盘
 

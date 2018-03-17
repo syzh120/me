@@ -5,6 +5,49 @@ sudo apt-get install git-core gnupg flex bison gperf libsdl1.2-dev libesd0-dev l
 Ubuntu14.04:
 sudo apt-get install gnupg flex bison gperf build-essential zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-dri:i386 libgl1-mesa-dev:i386 g++-multilib mingw32 tofrodos python-markdown libxml2-utils xsltproc zlib1g-dev:i386 dpkg-dev gawk u-boot-tools
 
+
+如果报错，请一个一个去安装，这样出现问题具体分析。我在安装这个的时候出现了问题，
+
+as@as-virtual-machine:~$ sudo apt-get installlibgl1-mesa-dri:i386
+
+Reading package lists... Done
+
+Building dependency tree       
+
+Reading state information... Done
+
+Some packages could not be installed. This may mean thatyou have
+
+requested an impossible situation or if you are using theunstable
+
+distribution that some required packages have not yetbeen created
+
+or been moved out of Incoming.
+
+The following information may help to resolve thesituation:
+
+ 
+
+The following packages have unmet dependencies:
+
+ unity-control-center : Depends:libcheese-gtk23 (>= 3.4.0) but it is not going to be installed
+
+                       Depends: libcheese7 (>= 3.0.1) but it is not going to be installed
+
+E: Error, pkgProblemResolver::Resolve generated breaks,this may be caused by held packages.
+
+解决办法：出现这个问题是，你之前已经安装了libcheese-gtk23libcheese7所以现在更新源会报错，把之前的卸载了
+
+sudo apt-get autoremove  libcheese-gtk23 libcheese7
+
+最后在：sudoapt-get install libgl1-mesa-dri:i386
+
+
+
+
+
+
+
 都需要：
 sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
 
@@ -71,9 +114,12 @@ CLASSPATH=.:/opt/jdk1.6.0_45/lib
 
 3.配置ccache
 sudo  apt-get  install  ccache
-将export USE_CCACHE=1加入到~/.bashrc中
+将
+export USE_CCACHE=1
+export CCACHE_DIR=/home/djf/ccache/.ccache
+加入到~/.bashrc中
 设置ccache最大缓存大小，默认单位为G
-ccache -M 20
+ccache -M 40
 查看ccache -s
 
 
